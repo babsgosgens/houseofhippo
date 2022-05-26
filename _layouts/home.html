@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="nl" class="no-js fx">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="theme-color" content="#FFF">
+        <title>{{ site.title }}</title>
+        <meta name="description" content="{{ page.meta.description | default: site.meta.description }}" />
+        <meta name="keywords" content="{% if page.meta.keywords %}{{ page.meta.keywords | push: site.meta.keywords | join: ", " }}{% else %}{{ site.meta.keywords | join: ", " }}{% endif %}" />
+        <meta name="author" content="{{ page.author | default: site.meta.author | join: ", " }}" />
+        <meta name="robots" content="{{ page.meta.robots | default: site.meta.robots }}">
+
+        <link rel="icon" type="image/x-icon" href="assets/images/favicon-16x16.ico" sizes="16x16">
+        <link rel="canonical" href="https://houseofhipp.nl">
+
+        <link href="assets/css/styles/screen.css" type="text/css" rel="stylesheet">
+    </head>
+
+    <body>
+
+    </body>
+  </html>
