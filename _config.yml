@@ -32,6 +32,9 @@ github_username:  babsgosgens
 
 # Build settings
 theme: minima
+sass:
+    sass_dir: _sass
+    style: compact # possible values: nested expanded compact compressed
 plugins:
   - jekyll-feed
 
