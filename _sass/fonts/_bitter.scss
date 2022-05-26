@@ -1,0 +1,43 @@
+// Copyright (C) 2014 Babs Gösgens. Licensed under MIT; see LICENSE.txt
+
+
+// Use this file as a template for creating additional font files
+// Replace the variable names accordingly
+
+// Weight reference:
+// 100 ultra-light
+// 200 light
+// 300 book
+// 400 regular, or normal
+// 500 medium
+// 600 semi-bold
+// 700 bold
+// 800 extra-bold
+// 900 heavy, or ultra-bold
+
+
+// Example
+// Available styles on Google Fonts: 100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic
+$bitter-fontface: "Bitter";
+$bitter-fallback: serif;
+$bitter-family: ($bitter-fontface, $bitter-fallback);
+
+// style, variant, weight, family
+// $bitter-ultra-light: normal normal 100 $bitter-family;
+$bitter-light: normal normal 200 $bitter-family;
+// $bitter-book: normal normal 300 $bitter-family;
+$bitter-regular: normal normal 400 $bitter-family;
+// $bitter-medium: normal normal 500 $bitter-family;
+// $bitter-semi-bold: normal normal 600 $bitter-family;
+// $bitter-bold: normal normal 700 $bitter-family;
+// $bitter-extra-bold: normal normal 800 $bitter-family;
+// $bitter-heavy: normal normal 900 $bitter-family;
+// $bitter-ultra-light-italic: italic normal 100 $bitter-family;
+// $bitter-light-italic: italic normal 200 $bitter-family;
+// $bitter-book-italic: italic normal 300 $bitter-family;
+// $bitter-regular-italic: italic normal 400 $bitter-family;
+// $bitter-medium-italic: italic normal 500 $bitter-family;
+// $bitter-semi-bold-italic: italic normal 600 $bitter-family;
+// $bitter-bold-italic: italic normal 700 $bitter-family;
+// $bitter-extra-bold-italic: italic normal 800 $bitter-family;
+// $bitter-heavy-italic: italic normal 900 $bitter-family;

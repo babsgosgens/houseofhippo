@@ -1,0 +1,43 @@
+// Copyright (C) 2014 Babs Gösgens. Licensed under MIT; see LICENSE.txt
+
+
+// Use this file as a template for creating additional font files
+// Replace the variable names accordingly
+
+// Weight reference:
+// 100 ultra-light
+// 200 light
+// 300 book
+// 400 regular, or normal
+// 500 medium
+// 600 semi-bold
+// 700 bold
+// 800 extra-bold
+// 900 heavy, or ultra-bold
+
+
+// Example
+// Available styles on Google Fonts: 100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic
+$overtherainbow-fontface: "Over the Rainbow";
+$overtherainbow-fallback: cursive;
+$overtherainbow-family: ($overtherainbow-fontface, $overtherainbow-fallback);
+
+// style, variant, weight, family
+// $overtherainbow-ultra-light: normal normal 100 $overtherainbow-family;
+// $overtherainbow-light: normal normal 200 $overtherainbow-family;
+// $overtherainbow-book: normal normal 300 $overtherainbow-family;
+$overtherainbow-regular: normal normal 400 $overtherainbow-family;
+// $overtherainbow-medium: normal normal 500 $overtherainbow-family;
+// $overtherainbow-semi-bold: normal normal 600 $overtherainbow-family;
+// $overtherainbow-bold: normal normal 700 $overtherainbow-family;
+// $overtherainbow-extra-bold: normal normal 800 $overtherainbow-family;
+// $overtherainbow-heavy: normal normal 900 $overtherainbow-family;
+// $overtherainbow-ultra-light-italic: italic normal 100 $overtherainbow-family;
+// $overtherainbow-light-italic: italic normal 200 $overtherainbow-family;
+// $overtherainbow-book-italic: italic normal 300 $overtherainbow-family;
+// $overtherainbow-regular-italic: italic normal 400 $overtherainbow-family;
+// $overtherainbow-medium-italic: italic normal 500 $overtherainbow-family;
+// $overtherainbow-semi-bold-italic: italic normal 600 $overtherainbow-family;
+// $overtherainbow-bold-italic: italic normal 700 $overtherainbow-family;
+// $overtherainbow-extra-bold-italic: italic normal 800 $overtherainbow-family;
+// $overtherainbow-heavy-italic: italic normal 900 $overtherainbow-family;
