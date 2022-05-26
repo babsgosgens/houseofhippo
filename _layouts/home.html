@@ -12,12 +12,53 @@
         <meta name="robots" content="{{ page.meta.robots | default: site.meta.robots }}">
 
         <link rel="icon" type="image/x-icon" href="assets/images/favicon-16x16.ico" sizes="16x16">
-        <link rel="canonical" href="https://houseofhipp.nl">
+        <link rel="canonical" href="{{ site.url }}">
 
         <link href="assets/css/styles/screen.css" type="text/css" rel="stylesheet">
     </head>
 
-    <body>
+    <body class="page">
+        <div class="page-frame is-no-pointer">
+        </div>
+        <div class="page-wrapper">
+            <div class="masthead">
+                <h1 class="masthead__title">
+                    House of Hippos
+                    <p class="masthead__payoff">
+                        Interieur ontwerp &amp; advies
+                    </p>
+                </h1>
+                <nav class="masthead__menu menu">
+                    <span class="menu__item">
+                        <a href="" class="anchor__cloaked">Over mij</a>
+                        <a href="" class="anchor__cloaked">Blog</a>
+                        <a href="" class="anchor__cloaked">Contact</a>
+                    </span>
+
+                </nav>
+            </div>
+            <div class="layout layout-split">
+                <div class="introduction layout-split__main">
+
+                </div>
+                <div class="introduction layout-split__aside">
+
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer-copy">
+                    © {{ 'now' | date: "%Y" }} - Babs Gösgens
+                </div>
+                <div class="footer-socials">
+                    Follow me on
+                    <ul>
+                        <li>Pinterest</li>
+                        <li>Instagram</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
 
     </body>
   </html>
