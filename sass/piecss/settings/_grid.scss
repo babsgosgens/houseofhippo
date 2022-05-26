@@ -1,0 +1,119 @@
+// Copyright (C) 2014 Babs Gösgens. Licensed under MIT; see LICENSE.txt
+
+
+// Grid settings
+
+
+// ///
+// /// Gutter widths are based on the vertical [rhythm](./#variable-rhythm) and default to 2*$rhythm. Gutters are implemented using the [gutter mixin](./#mixin-gutters) and are expressed in factors of this measure (usually 1/2).
+// ///
+// /// @since 0.1
+// ///
+// /// @type {Number}
+// ///
+
+$gutter-width: $default-line-height !default;
+
+///
+/// The final unit of output in which gutter widths are rendered
+///
+/// @since 0.1
+///
+/// @type {Number}
+///
+
+$gutter-width-unit: $unit !default;
+
+// Root settings
+// Set a max width on a root container of your choice, the content will not stretch beyond this width.
+// The root container can be positioned left or center, for alternate position you can provide your own behavior.
+
+
+///
+/// Fixes content maximum width, 72em is 1152px at a 16px [$font-size](./#variable-default-font-size). It is used by the [root mixin](./#mixin-root).
+///
+/// @since 0.1
+///
+/// @type {Number}
+///
+
+$root-max-width: 72em !default;
+
+///
+/// Aligns content inside the viewport, center by default. Used by the [root mixin](./#mixin-root).
+///
+/// @since 0.1
+///
+/// @type {Number}
+///
+
+$root-position: center !default;
+
+///
+/// The page's default number of columns. Used in debug-layout to visualize column layout.
+///
+/// @since 0.1
+///
+/// @type {Number}
+///
+
+$columns: 4 !default;
+
+///
+/// The color used for debugging
+///
+/// @since 0.7
+///
+/// @type {Color} (#ff1493)
+///
+
+$debug-color: $deeppink;
+
+///
+/// A wing is a whitespace of one or more columns. Use in conjunction with page
+/// layouts.
+///
+/// @since 0.7
+///
+/// @type {Color} (#ff1493)
+///
+
+$wings: 0;
+
+///
+/// (Totally arbitrary) Default breakpoint grids.
+/// The first breakpoint should be a `$lt-###` breakpoint and will be considered
+/// the default, smallest breakpoint.
+/// Serves as an example grid.
+///
+/// @since 0.1
+///
+/// @type {Map}
+///
+
+$grids: (
+  $lt-small-handheld: (
+    debug-color: $orange, // #ffa500
+    columns: 6,
+    rhythm: $rhythm,
+    gutter-width: $gutter-width,
+    wings: 0,
+    layouts: ()
+  ),
+  $gt-medium-handheld: (
+    debug-color: $cyan, // #0ff
+    columns: 9,
+    rhythm: $rhythm,
+    gutter-width: $gutter-width,
+    wings: 0,
+    layouts: ()
+  ),
+  $gt-small-desktop: (
+    debug-color: $becca, // #639
+    columns: 12,
+    rhythm: $rhythm,
+    gutter-width: $gutter-width,
+    wings: 0,
+    layouts: ()
+  )
+) !default;

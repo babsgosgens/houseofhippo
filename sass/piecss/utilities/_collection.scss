@@ -1,0 +1,196 @@
+// Copyright (C) 2014 Babs Gösgens. Licensed under MIT; see LICENSE.txt
+
+
+// Content:
+// 1. Functions
+//    add-selector
+//    add-properties
+//    remove-selector
+//    remove-properties
+// 2. Mixins
+//    get-properties
+//    get-selectors
+
+
+// 1. FUNCTIONS
+
+
+///
+/// Mixes in a new namespace (selector) and css properties into a collection.
+///
+/// @access public
+/// @since 0.1
+///
+/// @param {Map} $collection - Map, a collection of $selector: $property pairs
+/// @param {Map} $selector - The selector under which the properties will be rendered, for example: %placeholder
+/// @param {Map} $properties (()) - Map of CSS properties
+///
+/// @return {Map}
+///
+
+@function add-selector($collection, $selector) {
+  $_: (
+    #{$selector}: ()
+  );
+  $collection: map-merge($collection, $_);
+  @return $collection;
+}
+
+///
+/// Mixes in properties into a selector namespace
+///
+/// @access public
+/// @since 0.1
+///
+/// @param {Map} $properties - Map of CSS properties
+/// @param {Map} $selector - The selector under which the properties will be rendered, for example: %placeholder
+/// @param {Map} $collection - Map, a collection of $selector: $property pairs
+/// @param {Bool} $force (false) - When true, append properties instead of overwrite properties
+///
+/// @return {Map}
+///
+
+@function add-properties($collection, $selector, $new-properties, $force: false) {
+
+  @if not map-has-key($collection, $selector) {
+    $collection: add-selector($collection, $selector);
+  }
+
+  // Merge the nested property-map first
+  $properties: map-get($collection, $selector);
+
+  // Loop over existing properties
+  $_ps: ();
+  $_vs: ();
+  @each $property in $properties {
+    $_ps: append($_ps, nth($property, 1));
+    $_vs: append($_vs, nth($property, 2));
+  }
+
+  // Loop over new properties to find duplicates
+  @each $_p, $_v in $new-properties {
+
+    @if index($_ps, $_p) {
+      $_old_v: nth($_vs, index($_ps, $_p));
+      @if $_old_v == $_v {
+        // Skip, this property and that value exist already
+      }
+      @if $_old_v != $_v and $force {
+        // Add it, the author may do this purposefully (warn him just in case)
+        // @warn "Are you sure you want to declare \"#{$_p}\" again (\"#{$_old_v}\", \"#{$_v}\")?";
+        $_ps: append($_ps, $_p);
+        $_vs: append($_vs, $_v);
+      }
+    } @else {
+      $_ps: append($_ps, $_p);
+      $_vs: append($_vs, $_v);
+    }
+  }
+
+  $collection: map-merge($collection, ($selector: zip($_ps, $_vs)));
+
+  @return $collection;
+}
+
+///
+/// Remove namespace (selector) and css properties from a collection.
+///
+/// @access public
+/// @since 0.6
+///
+/// @param {Map} $collection - Map, a collection of $selector: $property pairs
+/// @param {Map} $selector - The selector to be removed
+///
+/// @return {Map}
+///
+
+@function remove-selector($collection, $selector) {
+  @return map-remove($collection, $selector);
+}
+
+///
+/// Remove properties from a selector in a collection
+///
+/// @access public
+/// @since 0.6
+///
+/// @param {Map} $collection - Map, a collection of $selector: $property pairs
+/// @param {Map} $selector - The selector under which the properties will be rendered, for example: %placeholder
+/// @param {List} $properties (()) - List of CSS properties, empty to remove all properties
+///
+/// @return {Map}
+///
+
+@function remove-properties($collection, $selector, $obsolete-properties: ()) {
+
+  // Loop over existing properties and convert into a map
+  $_properties: ();
+  @each $_p in map-get($collection, $selector) {
+    $_properties: map-merge($_properties, (nth($_p, 1): nth($_p, 2)));
+  }
+
+  // Remove properties
+  @if length($obsolete-properties) == 0 {
+    // Remove all properties
+    $_properties: ();
+  } @else {
+
+  }
+  @each $property in $obsolete-properties {
+    $_properties: map-remove($_properties, $property);
+  }
+
+  // Convert back into a properties list
+  $_ps: ();
+  $_vs: ();
+  @each $property in $_properties {
+    $_ps: append($_ps, nth($property, 1));
+    $_vs: append($_vs, nth($property, 2));
+  }
+
+  @return map-merge($collection, ($selector: zip($_ps, $_vs)));
+}
+
+
+// 2. MIXINS
+
+
+///
+/// Mixes in properties
+///
+/// @access public
+/// @since 0.1
+///
+/// @param {Map} $element - Map of CSS properties
+///
+
+@mixin get-properties($selector) {
+  @each $property in $selector {
+
+    $_property: nth($property, 1);
+    $_value: unquote("#{nth($property, 2)}");
+
+    #{$_property}: $_value;
+  }
+}
+
+
+///
+/// Mixes in all elements from an element collection
+///
+/// @access public
+/// @since 0.1
+///
+/// @param {Map} $elements - Map, a collection of $selector: $property pairs
+///
+
+@mixin get-selectors($collection) {
+  $selectors: map-keys($collection);
+
+  @each $selector in $selectors {
+    #{$selector} {
+      $element: map-get($collection, $selector);
+      @include get-properties($element);
+    }
+  }
+}

@@ -1,0 +1,224 @@
+// Copyright (C) 2014 Babs Gösgens. Licensed under MIT; see LICENSE.txt
+
+
+// Content:
+// 1. Collection settings
+// 2. Typography settings
+// 3. Colour settings
+// 4. Reset settings
+
+// 1. Collection settings
+
+///
+/// Base collection container.
+///
+/// @since 0.1
+///
+/// @type {Map} () - A map of selectors and properties
+///
+
+$base-collection: () !default;
+
+
+// 2. Typography settings
+
+///
+/// The default font for your project. It is set in a $font-type list, Piecss
+/// has a collection of pre-defined font-types that can be augmented.
+/// A font-type is a comma separated list of font-type, font-variant,
+/// font-weight and font-family.
+///
+/// @todo the comma separated list will be changed to a space separated list,
+/// and a Map (both will apply)
+///
+/// @since 0.1
+///
+/// @type {Number} (normal normal 400 sans-serif)
+///
+
+$default-font: $sans-serif-regular !default;
+
+
+// 3. Colour settings
+
+///
+/// The default color for the HTML background.
+///
+/// @since 0.1
+///
+/// @type {Color} (#fff)
+///
+
+$color-background: $white !default;
+
+///
+/// The default color for text.
+///
+/// @since 0.1
+///
+/// @type {Color} (#000)
+///
+
+$color-body: $black !default;
+
+///
+/// The primary color for UI elements.
+///
+/// @since 0.1
+///
+/// @type {Color} (#ff8c00)
+///
+
+$color-primary: $orange !default;
+
+///
+/// The secondary color for UI elements.
+///
+/// @since 0.1
+///
+/// @type {Color} (#fa8072)
+///
+
+$color-secondary: $salmon !default;
+
+///
+/// The color with which to darken other colors.
+///
+/// @since 0.1
+///
+/// @example
+/// mix($color-shadow, $color-primary, 20%);
+///
+/// @type {Color} (#000)
+///
+
+$color-shadow: $black !default;
+
+///
+/// The color with which to lighten other colors.
+///
+/// @since 0.1
+///
+/// @example
+/// mix($color-highlight, $color-primary, 20%);
+///
+/// @type {Color} (#fff)
+///
+
+$color-highlight: $white !default;
+
+///
+/// The default color for anchors.
+///
+/// @since 0.1
+///
+/// @type {Color} (#fa8072)
+///
+
+$color-anchor: $salmon !default;
+
+///
+/// The default color for anchor hover state.
+///
+/// @since 0.1
+///
+/// @type {Color} (#f7270f)
+///
+
+$color-anchor--hover: darken($color-anchor, 20%) !default;
+
+///
+/// The default color for anchor active state.
+///
+/// @since 0.1
+///
+/// @type {Color} (#fdc3bc)
+///
+
+$color-anchor--active: lighten($color-anchor, 15%) !default;
+
+///
+/// The default color for anchor visited state.
+///
+/// @since 0.1
+///
+/// @type {Color} (#cc1b07)
+///
+
+$color-anchor--visited: darken($color-anchor, 30%) !default;
+
+///
+/// These elements font-size, line-height and font-weight will be reset
+/// to their parent's values.
+///
+/// @since 0.5
+///
+/// @type {List} ((button, input, optgroup, select, textarea))
+///
+
+
+// 4. Reset settings
+
+$reset-font: (button, input, optgroup, select, textarea) !default;
+
+///
+/// These elements margin will be reset to 0.
+///
+/// @since 0.5
+///
+/// @type {List} ((body, figure))
+///
+
+$reset-margin: (body, figure) !default;
+
+///
+/// Apply a natural box layout model to all elements
+///
+/// @since 0.5
+///
+/// @type {List} (*)
+///
+
+$reset-box-model: "*" !default;
+
+///
+/// These elements font-weight will be set to bold
+///
+/// @since 0.5
+///
+/// @type {List} ("strong")
+///
+
+$reset-font-weight-to-bold: optgroup strong !default;
+
+///
+/// These elements font-weight will be set to italic
+///
+/// @since 0.5
+///
+/// @type {List} ("em", "dfn")
+///
+
+$reset-font-weight-to-italic: em, dfn !default;
+
+///
+/// These elements font-weight will be set to regular
+///
+/// @since 0.5
+///
+/// @type {List} ("i", "b")
+///
+
+$reset-font-weight-to-regular: i, b !default;
+
+///
+/// Based on an idea by [@csswizardry](https://twitter.com/csswizardry):
+/// apply a bottom margin of one line-height to any element in this comma
+/// separated list.
+///
+/// @since 0.1
+///
+/// @type {List} (true) (p, pre, table, hr, article)
+///
+
+$single-direction-elements: p, pre, table, hr, article !default;

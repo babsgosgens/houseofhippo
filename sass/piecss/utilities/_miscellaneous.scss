@@ -1,0 +1,218 @@
+// Copyright (C) 2014 Babs Gösgens. Licensed under MIT; see LICENSE.txt
+
+
+// Content:
+// 1. Functions
+//    to-bool
+// 2. Mixins
+//    property
+//    border
+//    outline
+//    old-ie
+//    old-mozilla
+//    inline-block
+//    pseudo-element
+
+
+// 1. Functions
+
+
+///
+/// Converts a value to a proper boolean value
+///
+/// @since 0.1
+///
+/// @param {*} $value
+///
+/// @return {Bool}
+///
+
+@function to-bool($value) {
+
+  @if not $value or $value == "" or $value == 0 {
+    @return false;
+  }
+
+  @return true;
+}
+
+///
+/// Converts a list of property values to a property map. Use to convert
+/// 'old-style' associative arrays to SASS's new Map type.
+///
+/// @example
+/// list-to-map((color $white, text-align left))
+///  // Output:
+///  (color: $white, text-align: left)
+///
+/// @since 0.1
+///
+/// @param {List} $properties
+///
+/// @return {Map}
+///
+
+@function list-to-map($properties) {
+
+  $map: ();
+  @each $property in $properties {
+    $map: map-merge($map, (nth($property, 1): nth($property, 2)));
+  }
+
+  @return $map;
+}
+
+
+// 2. Mixins
+
+
+///
+/// Provides a cross-browser method to implement opacity. This replaces
+/// [Compass's](http://compass-style.org/reference/compass/css3/opacity/) mixin
+/// by the same name with a more accessible implementation.
+///
+/// @since 0.1
+///
+/// @param {Number} $opacity - A number between 0 and 1, where 0 is transparent and 1 is opaque.
+///
+
+@mixin opacity($opacity) {
+  @include old-ie() {
+    filter: unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=#{round($opacity * 100)})");
+  }
+  opacity: $opacity;
+}
+
+
+///
+/// Conditional mixin of property
+///
+/// @since 0.1
+/// @deprecated
+///
+/// @param {String} $property - A CSS property
+/// @param {Bool | *} $value - A value for the property, or false if the property should not be rendered.
+///
+
+@mixin property($property, $value) {
+  @if to-bool($value) {
+    $property: $value;
+  }
+}
+
+///
+/// Provides a cross-browser method to implement display: inline-block;. This
+/// replaces [Compass's](http://compass-style.org/reference/compass/css3/inline_block/)
+/// mixin by the same name with a more accessible implementation.
+/// See for valid property values: [http://www.w3schools.com/cssref/pr_pos_vertical-align.asp](http://www.w3schools.com/cssref/pr_pos_vertical-align.asp)
+///
+/// @since 0.1
+///
+/// @example
+///  @include inline-block(baseline);
+///
+/// @param {String} $vertical-alignment (baseline) - Set $inline-block-alignment to none or false to disable the output of a vertical-align property in the inline-block mixin. Or set it to a legal value for vertical-align to change the default.
+///
+
+@mixin inline-block($vertical-alignment: baseline) {
+  $vertical-alignment: unquote($vertical-alignment);
+
+  @include old-mozilla() {
+    display: -moz-inline-stack;
+  }
+
+  display: inline-block;
+  @if to-bool($vertical-alignment) {
+    vertical-align: #{$vertical-alignment};
+  }
+
+  @include old-ie() {
+    zoom: 1;
+    display: inline;
+    vertical-align: #{$vertical-alignment};
+  }
+}
+
+
+///
+///  Mixin to clear floats
+///
+/// @since 1.0
+///
+
+@mixin clearfix {
+  @include pseudo-element("before""after") {
+    content: " ";
+    display: table;
+  }
+  @include pseudo-element("after") {
+    clear: both;
+  }
+ /**
+  * For IE 6/7 only
+  */
+  // scss-lint:disable UnnecessaryParentReference PropertySpelling PseudoElement
+  @include old-ie() {
+    & {
+      // styleguide:ignore:start
+      *zoom: 1;
+      // styleguide:ignore:end
+    }
+  }
+  // scss-lint:enable UnnecessaryParentReference PropertySpelling PseudoElement
+}
+
+
+///
+/// Accessible hide mixin
+///
+/// @since 1.0
+///
+
+@mixin hide() {
+  position: absolute;
+  left: -9999em;
+}
+
+
+///
+/// Old IE does not process the double colon standard for pseudo-elements.
+/// This mixin adds a single-colon fallback when ``$legacy-support-for-ie` is true.
+///
+/// @since 1.0
+///
+/// @todo Check if selector is a valid placement and handle accordingly
+///
+/// @param {String} $selector (&) - The selector to append the pseudo-element to
+/// @param {List | String} $placement (before) - The pseudo-element(s)
+///
+
+@mixin pseudo-element($placements: "before", $selectors: "&") {
+
+  $_placements: ("before", "after", "first-line", "first-letter");
+
+  // Create the selector
+  $_selectors: ();
+  @each $selector in $selectors {
+    @each $placement in $placements {
+      $_selectors: append($_selectors, "#{$selector}::#{$placement}");
+    }
+  }
+  #{implode($_selectors, ", ")} {
+    @content;
+  }
+  @include old-ie() {
+    // Create the selector
+    $_selectors: ();
+    @each $selector in $selectors {
+      @each $placement in $placements {
+        $_selectors: append($_selectors, "#{$selector}:#{$placement}");
+      }
+    }
+    // scss-lint:disable PseudoElement
+    #{implode($_selectors, ", ")} {
+      @content;
+    }
+    // scss-lint:enable PseudoElement
+  }
+}

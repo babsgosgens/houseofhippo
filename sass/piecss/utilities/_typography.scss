@@ -1,0 +1,200 @@
+// Copyright (C) 2014 Babs Gösgens. Licensed under MIT; see LICENSE.txt
+
+
+// Content
+// 1. functions:
+//    get-font-style
+//    get-font-variant
+//    get-font-weight
+//    get-font-family
+//    font-size
+//    line-height
+//    weight-number-to-string
+// 2. mixins:
+//    font
+
+
+// 1. FUNCTIONS
+
+
+///
+/// Extract the style property from a type array
+///
+/// @since 0.1
+///
+/// @todo $type should either be a space separated list, or property map
+///
+/// @param {List} $type: a valid type list ($style, $variant, $weight, $family)
+///
+/// @return {String} - font-type property
+///
+
+@function get-font-style($type) {
+  @return nth($type, 1);
+}
+
+
+///
+/// Extract the variant property from a type array
+///
+/// @since 0.1
+///
+/// @todo $type should either be a space separated list, or property map
+///
+/// @param {List} $type: a valid type list ($style, $variant, $weight, $family)
+///
+/// @return {String} - font-variant property
+///
+
+@function get-font-variant($type) {
+  @return nth($type, 2);
+}
+
+
+///
+/// Extract the weight property from a type array
+///
+/// @since 0.1
+///
+/// @todo $type should either be a space separated list, or property map
+///
+/// @param {List} $type: a valid type list ($style, $variant, $weight, $family)
+///
+/// @return {String} - font-weight property
+///
+
+@function get-font-weight($type) {
+  @return nth($type, 3);
+}
+
+
+///
+/// Extract the family property from a type array
+///
+/// @since 0.1
+///
+/// @todo $type should either be a space separated list, or property map
+///
+/// @param {List} $type: a valid type list ($style, $variant, $weight, $family)
+///
+/// @return {String} - font-family property
+///
+
+@function get-font-family($type) {
+  @return nth($type, 4);
+}
+
+
+///
+/// Calculate the optimal line-height
+///
+/// @since 0.1
+///
+/// @param {Number} $font-size - The font-size in px
+/// @param {Number} $min-ratio (Float) - The minimum line-height ratio to maintain
+///
+/// @return {Number} - line-height in px
+///
+
+@function line-height($font-size, $min-ratio: 1.5) {
+  @if  unit($font-size) != "px" {
+    @error "The line-height function expects a font-size in px. If you want the line-height in a different unit, calculate the line-height in px first, and then convert it using to-unit()";
+  }
+  @if $min-ratio == 0 {
+    $min-ratio: 1;
+  }
+
+  @return ceil($font-size * $min-ratio / $rhythm) * $rhythm;
+}
+
+
+///
+/// Returns the correct typographic weight corresponding to the weight number
+///
+/// @since 0.1
+///
+/// @throws Not a valid weight
+///
+/// @param {Number} $weight (400) - a valid weight number: 100 | ... | 900
+///
+/// @return {String} - weight, defaults to 'regular'
+///
+
+@function weight-number-to-string($weight: regular) {
+
+  @if $weight == 100 { @return "ultra-light"; }
+  @if $weight == 200 { @return "light"; }
+  @if $weight == 300 { @return "book"; }
+  @if $weight == 400 { @return "regular"; }
+  @if $weight == 500 { @return "medium"; }
+  @if $weight == 600 { @return "semi-bold"; }
+  @if $weight == 700 { @return "bold"; }
+  @if $weight == 800 { @return "extra-bold"; }
+  @if $weight == 900 { @return "heavy"; }
+
+  @warn "Not a valid weight";
+  @return false;
+}
+
+
+// 2. MIXINS
+
+
+///
+/// Mixes in the shorthand font tag. This is the only mixin that takes the font-size and line-height in their final unit of output.
+/// More info: [$font-size](./#variable-default-font-size), [$default-line-height](./#variable-default-line-height)
+///
+/// @since 0.1
+///
+/// @todo Accept properties in the same way as the default CSS font implementation
+///
+/// @param {List | Bool} $type - a valid type array ($style, $variant, $weight, $family) or false to only output font-size and line-height
+/// @param {Number} $font-size ($font-size) - font-size in the final unit of output
+/// @param {Number} $line-height ($line-height) - line-height in the final unit of output
+///
+
+@mixin font($arguments...) {
+
+  $type: null;
+  $font-size: null;
+  $line-height: null;
+
+  @each $argument in $arguments {
+
+    @if type-of($argument) == list {
+      $type: $argument;
+    }
+    @else {
+      @if not($font-size) {
+        $font-size: $argument;
+      }
+      @else if not($line-height) {
+        $line-height: $argument;
+      }
+    }
+  }
+
+  @if not(not($type)) {
+
+    $font-style: get-font-style($type);
+    $font-variant: get-font-variant($type);
+    $font-weight: get-font-weight($type);
+    $font-family: get-font-family($type);
+
+    @if $font-size and unit($unit) == rem {
+      font-size: to-unit($font-size, 1px)
+    }
+
+    // Build font arguments
+    $font: #{$font-style} #{$font-variant} #{$font-weight};
+    @if $font-size and $line-height {
+      $font: append($font, #{$font-size}/#{$line-height});
+    }
+    @else if $font-size {
+      $font: append($font, #{$font-size});
+    }
+    $font: append($font, #{$font-family});
+
+    font: #{$font};
+  }
+}

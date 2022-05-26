@@ -1,0 +1,355 @@
+// Copyright (C) 2014 Babs Gösgens. Licensed under MIT; see LICENSE.txt
+
+
+// Content
+//
+// 1. Functions
+//    fraction-to-text
+//    gutter
+//    get-grid
+//    get-grid-property
+//    get-grid-columns
+//    get-grid-gutter-width
+//    get-grid-rhythm
+//    get-grid-debug-color
+
+// 2. Mixins
+//    2a. Layout
+//        root
+//        bleed
+//    2b. Source Ordering
+//        move
+//        pull
+//        push
+
+
+// 1. FUNCTIONS
+
+
+///
+/// Convert a fraction to a word.
+/// Used to build style rules based on column widths.
+/// For values up to #/16.
+///
+/// @example scss
+///  .#{fraction-to-text(1/2)} {
+///      // Column properties }
+///  // Output:
+///  .half {
+///     // Column properties }
+///
+/// @since 0.1
+///
+/// @param {Number} $fraction - A fraction, e.g. 1/2
+///
+/// @return {String}
+///
+
+@function fraction-to-text($fraction) {
+
+  @if $fraction ==  1/1 { @return "full"; }
+  @if $fraction ==  1/2 { @return "half"; }
+  @if $fraction ==  1/3 { @return "third"; }
+  @if $fraction ==  1/4 { @return "fourth"; }
+  @if $fraction ==  1/5 { @return "fifth"; }
+  @if $fraction ==  1/6 { @return "sixth"; }
+  @if $fraction ==  1/7 { @return "seventh"; }
+  @if $fraction ==  1/8 { @return "eighth"; }
+  @if $fraction ==  1/9 { @return "ninth"; }
+  @if $fraction ==  1/10 { @return "tenth"; }
+  @if $fraction ==  1/11 { @return "eleventh"; }
+  @if $fraction ==  1/12 { @return "twelfth"; }
+  @if $fraction ==  1/13 { @return "thirteenth"; }
+  @if $fraction ==  1/14 { @return "fourteenth"; }
+  @if $fraction ==  1/15 { @return "fifteenth"; }
+  @if $fraction ==  1/16 { @return "sixteenth"; }
+  @if $fraction ==  2/3 { @return "two-third"; }
+  @if $fraction ==  3/4 { @return "three-fourth"; }
+  @if $fraction ==  2/5 { @return "two-fifth"; }
+  @if $fraction ==  3/5 { @return "three-fifth"; }
+  @if $fraction ==  4/5 { @return "four-fifth"; }
+  @if $fraction ==  5/6 { @return "five-sixth"; }
+  @if $fraction ==  2/7 { @return "two-seventh"; }
+  @if $fraction ==  3/7 { @return "three-seventh"; }
+  @if $fraction ==  4/7 { @return "four-seventh"; }
+  @if $fraction ==  5/7 { @return "five-seventh"; }
+  @if $fraction ==  6/7 { @return "six-seventh"; }
+  @if $fraction ==  3/8 { @return "three-eighth"; }
+  @if $fraction ==  5/8 { @return "five-eighth"; }
+  @if $fraction ==  7/8 { @return "seven-eighth"; }
+  @if $fraction ==  2/9 { @return "two-ninth"; }
+  @if $fraction ==  4/9 { @return "four-ninth"; }
+  @if $fraction ==  5/9 { @return "five-ninth"; }
+  @if $fraction ==  7/9 { @return "seven-ninth"; }
+  @if $fraction ==  8/9 { @return "eight-ninth"; }
+  @if $fraction ==  3/10 { @return "three-tenth"; }
+  @if $fraction ==  7/10 { @return "seven-tenth"; }
+  @if $fraction ==  9/10 { @return "nine-tenth"; }
+  @if $fraction ==  2/11 { @return "two-eleventh"; }
+  @if $fraction ==  3/11 { @return "three-eleventh"; }
+  @if $fraction ==  4/11 { @return "four-eleventh"; }
+  @if $fraction ==  5/11 { @return "five-eleventh"; }
+  @if $fraction ==  6/11 { @return "six-eleventh"; }
+  @if $fraction ==  7/11 { @return "seven-eleventh"; }
+  @if $fraction ==  8/11 { @return "eight-eleventh"; }
+  @if $fraction ==  9/11 { @return "nine-eleventh"; }
+  @if $fraction == 10/11 { @return "ten-eleventh"; }
+  @if $fraction ==  5/12 { @return "five-twelfth"; }
+  @if $fraction ==  7/12 { @return "seven-twelfth"; }
+  @if $fraction ==  9/12 { @return "nine-twelfth"; }
+  @if $fraction == 11/12 { @return "eleven-twelfth"; }
+  @if $fraction ==  2/13 { @return "two-thirteenth"; }
+  @if $fraction ==  3/13 { @return "three-thirteenth"; }
+  @if $fraction ==  4/13 { @return "four-thirteenth"; }
+  @if $fraction ==  5/13 { @return "five-thirteenth"; }
+  @if $fraction ==  6/13 { @return "six-thirteenth"; }
+  @if $fraction ==  7/13 { @return "seven-thirteenth"; }
+  @if $fraction ==  8/13 { @return "eight-thirteenth"; }
+  @if $fraction ==  9/13 { @return "nine-thirteenth"; }
+  @if $fraction == 10/13 { @return "ten-thirteenth"; }
+  @if $fraction == 11/13 { @return "twelve-thirteenth"; }
+  @if $fraction == 12/13 { @return "thirteen-thirteenth"; }
+  @if $fraction ==  3/14 { @return "three-fourteenth"; }
+  @if $fraction ==  5/14 { @return "five-fourteenth"; }
+  @if $fraction ==  9/14 { @return "nine-fourteenth"; }
+  @if $fraction == 11/14 { @return "eleven-fourteenth"; }
+  @if $fraction == 13/14 { @return "thirteen-fourteenth"; }
+  @if $fraction ==  2/15 { @return "two-fifteenth"; }
+  @if $fraction ==  4/15 { @return "four-fifteenth"; }
+  @if $fraction ==  7/15 { @return "seven-fifteenth"; }
+  @if $fraction ==  8/15 { @return "eight-fifteenth"; }
+  @if $fraction == 11/15 { @return "eleven-fifteenth"; }
+  @if $fraction == 13/15 { @return "thirteen-fifteenth"; }
+  @if $fraction == 14/15 { @return "fourteen-fifteenth"; }
+  @if $fraction ==  3/16 { @return "three-sixteenth"; }
+  @if $fraction ==  5/16 { @return "five-sixteenth"; }
+  @if $fraction ==  7/16 { @return "seven-sixteenth"; }
+  @if $fraction ==  9/16 { @return "nine-sixteenth"; }
+  @if $fraction == 11/16 { @return "eleven-sixteenth"; }
+  @if $fraction == 13/16 { @return "thirteen-sixteenth"; }
+  @if $fraction == 15/16 { @return "sixteen-sixteenth"; }
+
+  @return "full";
+}
+
+///
+/// Return a value based on the gutter-width.
+/// If no breakpoint is set, the function will return the default gutter-width.
+/// If a breakpoint is set, the function will return a gutter-width from the
+/// grids map.
+///
+/// @param {Arglist} $args - An argument list, may contain 2 values (a fraction and/or a valid breakpoint)
+///
+/// @return {Number} - The resulting value in px
+///
+
+@function gutter($args...) {
+
+  $_fraction: 1/2;
+  $_breakpoint: false;
+
+  // Process arguments
+  @if length($args) {
+    @each $var in $args {
+      @if type-of($var) == number {
+        $_fraction: $var;
+      }
+      @if type-of($var) == list {
+        $_breakpoint: $var;
+      }
+    }
+  }
+
+  // Retrieve the gutter-width from the settings, but check if one is set in grids and take that in stead
+  $_gutter-width: $gutter-width;
+  @if $_breakpoint {
+    $_gutter-width: if(get-grid-gutter-width(get-grid($_breakpoint)), get-grid-gutter-width(get-grid($_breakpoint)), $_gutter-width);
+  }
+
+  @return $_fraction * $gutter-width;
+}
+
+///
+/// Get grid settings from a grid map
+///
+///
+/// @param {String} $breakpoints - A valid breakpoint
+/// @param {Map} $grids ($grids) - A grid map
+///
+/// @return {Map} - A breakpoint global grid, or a breakpoint nested page grid from [$grids map](./#variable-grids)
+///
+
+@function get-grid($breakpoint, $grids: $grids) {
+
+  @if not( map-has-key($grids, $breakpoint) ) {
+    @error "Unknown breakpoint: #{$breakpoint}";
+  }
+
+  @return map-get($grids, $breakpoint);
+}
+
+///
+/// Retrieves a property setting for a specific breakpoint
+///
+/// @since 1.0
+///
+/// @example
+/// $columns: get-grid-property($columns, $grid);
+///
+/// @param {String} $property - The grid-map property to retrieve
+/// @param {Map} $grids ($grids) - A grid map
+///
+/// @return {*}
+///
+
+@function get-grid-property($property, $grid) {
+
+  $_value: null;
+
+  @if map-has-key($grid, $property) {
+    $_value: map-get($grid, $property);
+  }
+  @else {
+    @error "Unknown grid property: #{$property}";
+  }
+
+  @return $_value;
+}
+
+///
+/// Retrieves the column setting for a specific breakpoint
+///
+/// @since 1.0
+///
+/// @example
+/// $columns: get-grid-columns();
+///
+/// @param {Map} $grids ($grid) - A grid map
+///
+/// @since 1.0
+///
+
+@function get-grid-columns($grid) {
+  @return get-grid-property("columns", $grid);
+}
+
+///
+/// Retrieves the gutter-width setting for a specific breakpoint
+///
+/// @since 1.0
+///
+/// @example
+/// $gutter-width: get-grid-gutter-width();
+///
+/// @param {Map} $grids ($grid) - A grid map
+///
+/// @since 1.0
+///
+
+@function get-grid-gutter-width($grid) {
+  @return get-grid-property("gutter-width", $grid);
+}
+
+
+///
+/// Retrieves the rhythm settings for a specific breakpoint
+///
+/// @since 1.0
+///
+/// @example
+/// $rhythm: get-grid-rhythm();
+///
+/// @param {Map} $grids ($grid) - A grid map
+///
+/// @since 1.0
+///
+
+@function get-grid-rhythm($grid) {
+  @return get-grid-property("rhythm", $grid);
+}
+
+
+///
+/// Retrieves the debug colour settings for a specific breakpoint
+///
+/// @since 1.0
+///
+/// @example
+/// $debug-color: get-grid-debug-color();
+///
+/// @param {Map} $grids ($grid) - A grid map
+///
+/// @since 1.0
+///
+
+@function get-grid-debug-color($grid) {
+  @return get-grid-property("debug-color", $grid);
+}
+
+
+
+// 2. MIXINS
+
+
+///
+/// Fixes content width and aligns in viewport. [$root-position](./#variable-root-position) is defind in grid settings. Centers content inside the viewport by default.
+///
+/// @since 0.1
+///
+/// @param {Number} $root-max-width (72em) - The maximum width of your content
+///
+
+@mixin root($root-max-width: $root-max-width, $set-display: false) {
+
+  @if $root-position == center {
+    margin: 0 auto;
+  }
+
+  max-width: $root-max-width;
+}
+
+
+///
+/// Mixin to reverse padding on a container.
+/// Use it to remove padded column spacing on columns, helpful when nesting columns and when applying backgrounds.
+///
+/// @since 0.1
+///
+/// @param {Number} $fraction (1/2) - A fraction, e.g. 1/2
+///
+
+@mixin bleed($fraction: -1/2) {
+  margin-left: gutter($fraction, true);
+  margin-right: gutter($fraction, true);
+}
+
+
+///
+/// Mixin for soure ordering
+///
+/// @since 0.1
+///
+/// @param {Number} $fraction (1/2) - A fraction, e.g. 1/2
+///
+
+@mixin move($fraction) {
+  left: percentage($fraction);
+}
+
+
+///
+/// @alias move
+///
+
+@mixin push($fraction) {
+  @include move($fraction);
+}
+
+
+///
+/// @alias move
+///
+
+@mixin pull($fraction) {
+  @include move(-1 * $fraction);
+}

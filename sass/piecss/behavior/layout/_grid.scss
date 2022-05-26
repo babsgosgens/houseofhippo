@@ -1,0 +1,15 @@
+/*
+Grid
+
+Styleguide 3.97.7
+*/
+
+.grid {
+  @include breakpoint($gt-medium-handheld) {
+    column-count: 2;
+    column-gap: 0;
+  }
+  @include breakpoint($gt-small-desktop) {
+    column-count: 4;
+  }
+}

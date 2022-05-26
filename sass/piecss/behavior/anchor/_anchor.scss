@@ -1,0 +1,15 @@
+// Copyright (C) 2014 Babs Gösgens. Licensed under MIT; see LICENSE.txt
+
+// -----------------------------------------------------------------------------
+// Element (Atom): Anchor
+// -----------------------------------------------------------------------------
+
+%anchor {
+  &--hush {
+    &,
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
