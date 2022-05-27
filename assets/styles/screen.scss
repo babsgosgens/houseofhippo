@@ -76,6 +76,14 @@ $body: $columns - (2 * $wings);
     line-height: rhythm(2);
     text-align: center;
 }
+.slick-arrow {
+    @extend .btn-shortcut;
+}
+.slick-prev {
+    .hero-project & {
+        display: none !important;
+    }
+}
 
 
 .txt-personal {
@@ -133,10 +141,14 @@ $body: $columns - (2 * $wings);
         padding: 0 rhythm(2);
         font-size: to-unit(14px);
     }
-    &__next {
+    &__next,
+    .slick-next {
         position: absolute;
         top: rhythm(15);
         right: 0;
+    }
+    .slick-list {
+        width: rhythm(22);
     }
 }
 
@@ -256,9 +268,13 @@ $rhythm: get-grid-property("rhythm", $grid);
             margin-top: rhythm(-1); /* 1 */
             font-size: to-unit(16px);
         }
-        &__next {
+        &__next,
+        .slick-next {
             top: rhythm(13);
             right: rhythm(-2);
+        }
+        .slick-list {
+            width: rhythm(21);
         }
     }
 
