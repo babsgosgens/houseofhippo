@@ -1,0 +1,70 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?5xav4q');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?5xav4q#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?5xav4q') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?5xav4q') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?5xav4q##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icn {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icn-controller-fast-forward {
+  &:before {
+    content: $icn-controller-fast-forward; 
+  }
+}
+.icn-chevron-down {
+  &:before {
+    content: $icn-chevron-down; 
+  }
+}
+.icn-chevron-right {
+  &:before {
+    content: $icn-chevron-right; 
+  }
+}
+.icn-chevron-thin-down {
+  &:before {
+    content: $icn-chevron-thin-down; 
+  }
+}
+.icn-chevron-thin-right {
+  &:before {
+    content: $icn-chevron-thin-right; 
+  }
+}
+.icn-mail {
+  &:before {
+    content: $icn-mail; 
+  }
+}
+.icn-instagram {
+  &:before {
+    content: $icn-instagram; 
+  }
+}
+.icn-pinterest {
+  &:before {
+    content: $icn-pinterest; 
+  }
+}
+

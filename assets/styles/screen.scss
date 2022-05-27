@@ -30,6 +30,7 @@ $body: $columns - (2 * $wings);
 
 /* ––––––––––––––––––– */
 
+@import "icons/style";
 
 
 .page-wrapper {
@@ -153,8 +154,9 @@ $body: $columns - (2 * $wings);
     }
     .slick-next {
         &::after {
+            @extend .icn !optional;
             pointer-events: inherit;
-            content: ">>";
+            content: $icn-chevron-thin-right;
             position: absolute;
             display: block;
             top: 0;
@@ -162,6 +164,7 @@ $body: $columns - (2 * $wings);
             bottom: 0;
             left: 0;
             background-color: $color-accent;
+            line-height: rhythm(2);
         }
     }
     .slick-list {
