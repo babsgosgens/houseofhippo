@@ -241,7 +241,7 @@ $rhythm: get-grid-property("rhythm", $grid);
             &::after {
                 width: rhythm(6);
                 right: rhythm(-3);
-                border-top: rhythm(1) solid $color-box-shadow;
+                border-top: rhythm(1) solid $color-accent;
                 box-shadow: none;
             }
         }
