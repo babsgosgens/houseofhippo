@@ -1,4 +1,5 @@
-$(document).ready(function(){
+(function ($) {
+
     $('.hero-project').slick({
         dots: false,
         infinite: true,
@@ -8,4 +9,7 @@ $(document).ready(function(){
         fade: true,
         cssEase: 'linear'
     });
-});
+
+    $('.lazy').Lazy();
+
+})(jQuery);
