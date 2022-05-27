@@ -186,10 +186,12 @@ $rhythm: get-grid-property("rhythm", $grid);
     }
 
     .masthead {
-        padding: rhythm(2) 0;
+        padding: rhythm(1) 0;
         &__title,
         &__payoff {
             margin-left: 0;
+            height: rhythm(3);
+            line-height: rhythm(3);
         }
         &__title {
             width: rhythm(16);
@@ -203,7 +205,7 @@ $rhythm: get-grid-property("rhythm", $grid);
         }
         &__action {
             left: rhythm(15);
-            top: rhythm(5);
+            top: rhythm(4);
             &::before,
             &::after {
                 content: "";
@@ -211,7 +213,7 @@ $rhythm: get-grid-property("rhythm", $grid);
                 bottom: 100%;
                 display: block;
                 width: rhythm(1);
-                height: rhythm(5);
+                height: rhythm(4);
             }
             &::before {
                 border-right: 2px solid $color-accent;
