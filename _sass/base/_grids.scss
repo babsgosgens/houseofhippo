@@ -1,0 +1,97 @@
+// Copyright (C) 2014 Babs Gösgens. Licensed under MIT; see LICENSE.txt
+
+//
+// Mobile-first settings
+//
+
+$debug-color: $red;
+$gutter-width: 1 / 12 * 100vw;
+$columns: 12;
+$rhythm: 1 / 12 * 100vw;
+$wings: 1;
+$gutter-width: 1 / 12 * 100vw;
+
+//
+// Breakpoint settings
+//
+
+$grids: (
+    $portrait: (
+        debug-color: $red,
+        columns: 12,
+        rhythm: 1 / 12 * 100vw,
+        wings: 1,
+        gutter-width: 1 / 12 * 100vw
+    ),
+    /* 0,5 */
+    $lt-handheld-portrait-narrow: (
+        debug-color: $orange,
+        columns: 12,
+        rhythm: 1 / 12 * 100vw,
+        wings: 1,
+        gutter-width: 1 / 12 * 100vw
+    ),
+    /* 0,563380281690141 */
+    $gt-handheld-portrait: (
+        debug-color: $gold,
+        columns: 12,
+        rhythm: 1 / 12 * 100vw,
+        wings: 1,
+        gutter-width: 1 / 12 * 100vw
+    ),
+    /* 0,625 */
+    $gt-tablet-portrait-narrow: (
+        debug-color: $green,
+        columns: 24,
+        rhythm: 1 / 24 * 100vw,
+        wings: 2,
+        gutter-width: 1 / 24 * 100vw
+    ),
+    /* 0,75 */
+    $gt-tablet-portrait-wide: (
+        debug-color: $teal,
+        columns: 24,
+        rhythm: 1 / 24 * 100vw,
+        wings: 2,
+        gutter-width: 1 / 24 * 100vw
+    ),
+    $landscape: (
+        debug-color: $purple,
+        columns: 24,
+        rhythm: 1 / 24 * 100vw,
+        wings: 9,
+        gutter-width: 1 / 24 * 100vw
+    ),
+    /* 1,333 */
+    $gt-tablet-landscape-narrow: (
+        debug-color: $blueviolet,
+        columns: 24,
+        rhythm: 1 / 24 * 100vw,
+        wings: 9,
+        gutter-width: 1 / 24 * 100vw
+    ),
+    /* 1,6 */
+    $gt-tablet-landscape-wide: (
+        debug-color: $blue,
+        columns: 24,
+        rhythm: 1 / 24 * 100vw,
+        wings: 9,
+        gutter-width: 1 / 24 * 100vw
+    ),
+    /* 1,775 */
+    $gt-handheld-landscape: (
+        debug-color: $indigo,
+        columns: 36,
+        rhythm: 1 / 36 * 100vw,
+        wings: 12,
+        gutter-width: 1 / 36 * 100vw
+    ),
+    /* 2 */
+    $gt-handheld-landscape-narrow: (
+        debug-color: $cyan,
+        columns: 36,
+        rhythm: 1 / 36 * 100vw,
+        wings: 12,
+        gutter-width: 1 / 36 * 100vw
+    )
+);

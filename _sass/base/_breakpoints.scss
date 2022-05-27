@@ -1,0 +1,70 @@
+/*
+Breakpoint settings
+*/
+
+$lt-handheld-small: "(max-width: #{to-unit(319px, $unit, $default-font-size)})";
+$gt-handheld-small: "(min-width: #{to-unit(320px, $unit, $default-font-size)})";
+
+$lt-handheld-medium: "(max-width: #{to-unit(479px, $unit, $default-font-size)})";
+$gt-handheld-medium: "(min-width: #{to-unit(480px, $unit, $default-font-size)})";
+
+$lt-handheld-large: "(max-width: #{to-unit(767px, $unit, $default-font-size)})";
+$gt-handheld-large: "(min-width: #{to-unit(768px, $unit, $default-font-size)})";
+
+$lt-desktop-small: "(max-width: #{to-unit(1023px, $unit, $default-font-size)})";
+$gt-desktop-small: "(min-width: #{to-unit(1024px, $unit, $default-font-size)})";
+
+$lt-desktop-medium: "(max-width: #{to-unit(1279px, $unit, $default-font-size)})";
+$gt-desktop-medium: "(min-width: #{to-unit(1280px, $unit, $default-font-size)})";
+
+$lt-desktop-large: "(max-width: #{to-unit(1559px, $unit, $default-font-size)})";
+$gt-desktop-large: "(min-width: #{to-unit(1560px, $unit, $default-font-size)})";
+
+// Fallback for original PieCSS var names in case they are used in any mixins or something
+$lt-small-handheld: $lt-handheld-small;
+$gt-small-handheld: $gt-handheld-small;
+$lt-medium-handheld: $lt-handheld-medium;
+$gt-medium-handheld: $gt-handheld-medium;
+$lt-large-handheld: $lt-handheld-large;
+$gt-large-handheld: $gt-handheld-large;
+$lt-small-desktop: $lt-desktop-small;
+$gt-small-desktop: $gt-desktop-small;
+$lt-medium-desktop: $lt-desktop-medium;
+$gt-medium-desktop: $gt-desktop-medium;
+$lt-large-desktop: $lt-desktop-large;
+$gt-large-desktop: $gt-desktop-large;
+
+
+
+$lt-handheld-portrait-narrow: "(max-aspect-ratio: 1/2)";    /* 0,5 – very narrow portrait */
+$gt-handheld-portrait-narrow: "(min-aspect-ratio: 1/2)";    /* 0,5 – very narrow portrait */
+
+$lt-handheld-portrait: "(max-aspect-ratio: 40/71)";         /* 0,563380281690141, older smartphone */
+$gt-handheld-portrait: "(min-aspect-ratio: 40/71)";         /* 0,563380281690141, older smartphone */
+
+$lt-tablet-portrait-narrow: "(max-aspect-ratio: 51/80)";    /* 0,625, narrow tablet */
+$gt-tablet-portrait-narrow: "(min-aspect-ratio: 51/80)";    /* 0,625, narrow tablet */
+
+$lt-tablet-portrait-wide: "(max-aspect-ratio: 27/36)";      /* 0,75, tablets */
+$gt-tablet-portrait-wide: "(min-aspect-ratio: 27/36)";      /* 0,75, tablets */
+
+$portrait: "(max-aspect-ratio: 1/1)";                       /* 1 */
+$landscape: "(min-aspect-ratio: 1/1)";                      /* 1 */
+
+$lt-tablet-landscape-narrow: "(max-aspect-ratio: 36/27)";   /* 1,333, tablets */
+$gt-tablet-landscape-narrow: "(min-aspect-ratio: 36/27)";   /* 1,333, tablets */
+
+$lt-tablet-landscape-wide: "(max-aspect-ratio: 80/51)";      /* 1,6, narrow tablet */
+$gt-tablet-landscape-wide: "(min-aspect-ratio: 80/51)";     /* 1,6, narrow tablet */
+
+$lt-handheld-landscape: "(max-aspect-ratio: 71/40)";        /* 1,775, older smartphone */
+$gt-handheld-landscape: "(min-aspect-ratio: 71/40)";        /* 1,775, older smartphone */
+
+$lt-handheld-landscape-narrow: "(max-aspect-ratio: 2/1)";   /* 2 – very narrow landscape */
+$gt-handheld-landscape-narrow: "(min-aspect-ratio: 2/1)";   /* 2 – very narrow landscape */
+
+
+
+// your average tablet or desktop
+// $gt-tablet-portrait: "#{$portrait} and (min-aspect-ratio: 170/256)"; /* 0,6640625 */
+// $gt-tablet-landscape: "#{$landscape} and (min-aspect-ratio: 256/170)"; /* 1,505882352941176 */

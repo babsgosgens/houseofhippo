@@ -1,0 +1,18 @@
+/*
+Typography
+
+If `$use-brand-type: true` type is set in Merriwheather and Futura.
+If `$use-brand-type: false` type is set in Times and Open Sans.
+
+Styleguide 1.3.2
+*/
+
+$use-brand-type: false;
+
+$font-family:  $bitter-family;
+$font-variant: normal;
+$font-style: normal;
+$font-weight: 400;
+$font-size: 16px;
+
+$default-line-height: line-height($font-size, 1.3); /* 21px */

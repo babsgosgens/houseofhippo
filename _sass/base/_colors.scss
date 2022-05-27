@@ -1,0 +1,55 @@
+/*
+Colour
+*/
+
+$color-orange: #EB895D;
+$color-yellow: #EBD05D;
+$color-pink: #EB5D78;
+$color-brown-black: #342629;
+$color-neutral-lightest-grey: #EAEAEA;
+$color-neutral-darkest-grey: #484848;
+$color-green: #78EB5D;
+$color-blue: #D05DEB;
+$color-purple: #D05DEB;
+
+
+/*
+Social media colours
+*/
+
+$color-twitter: #55acee;
+$color-facebook: #3b5998;
+$color-instagram: #0077b5;
+$color-medium: #b31217;
+
+
+/*
+Applied colours
+*/
+
+$color-background: $color-neutral-lightest-grey;
+$color-impact: $color-blue;
+$color-body: $color-brown-black;
+$color-theme: $color-orange;
+$color-primary: $color-orange;
+$color-secondary: $color-yellow;
+$color-accent: $color-orange;
+$color-box-shadow: $color-neutral-darkest-grey;
+$color-error: $color-pink;
+
+
+
+/* Mixing colours */
+$color-highlight: $white;
+$color-shadow: $black;
+
+
+/* Button colours */
+$color-button: $color-theme;
+
+
+/* Link colours */
+$color-anchor: $color-body;
+$color-anchor--hover: $color-secondary;
+$color-anchor--active: $color-theme;
+$color-anchor--visited: $color-neutral-darkest-grey;
