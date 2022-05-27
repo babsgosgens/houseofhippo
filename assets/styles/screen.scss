@@ -164,6 +164,7 @@ $body: $columns - (2 * $wings);
             bottom: 0;
             left: 0;
             background-color: $color-accent;
+            font-size: to-unit(20px);
             line-height: rhythm(2);
         }
     }
@@ -292,6 +293,12 @@ $rhythm: get-grid-property("rhythm", $grid);
         .slick-next {
             top: rhythm(13);
             right: rhythm(-2);
+        }
+
+        .slick-next {
+            &::after {
+                line-height: rhythm(2);
+            }
         }
         .slick-list {
             width: rhythm(21);
