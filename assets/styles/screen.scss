@@ -297,6 +297,7 @@ $rhythm: get-grid-property("rhythm", $grid);
 
         .slick-next {
             &::after {
+                font-size: to-unit(24px);
                 line-height: rhythm(2);
             }
         }
