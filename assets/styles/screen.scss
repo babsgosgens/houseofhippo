@@ -141,11 +141,28 @@ $body: $columns - (2 * $wings);
         padding: 0 rhythm(2);
         font-size: to-unit(14px);
     }
+    &__next {
+        pointer-events: none;
+        z-index: 2 !important;
+    }
     &__next,
     .slick-next {
         position: absolute;
         top: rhythm(15);
         right: 0;
+    }
+    .slick-next {
+        &::after {
+            pointer-events: inherit;
+            content: ">>";
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: $color-accent;
+        }
     }
     .slick-list {
         width: rhythm(22);
