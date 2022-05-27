@@ -96,6 +96,7 @@ $body: $columns - (2 * $wings);
         */
         img {
             min-width: 100%;
+            min-height: 100%;
             object-fit: cover;
         }
 
@@ -121,7 +122,12 @@ $body: $columns - (2 * $wings);
             box-shadow: inset 0 0 20px $color-shadow;
         }
     }
+    /*
+        1. Make sure it sits above the image mask
+     */
     &__description {
+        position: relative; /* 1 */
+        z-index: 1; /* 1 */
         width: rhythm(20);
         padding: 0 rhythm(2);
         font-size: to-unit(14px);
@@ -135,7 +141,80 @@ $body: $columns - (2 * $wings);
 
 
 @include breakpoint($gt-medium-handheld) {
-    .page-wrapper {
-        background-color: $white;
+    .masthead {
+        &__title,
+        &__payoff {
+            display: inline-block;
+            width: auto;
+            margin-left: rhythm(1);
+        }
+        &__title {
+            font-size: to-unit(24px);
+        }
+        &__payoff {
+            font-size: to-unit(18px);
+        }
     }
+    .hero-project {
+        &__description {
+            padding-left: rhythm(3);
+        }
+    }
+}
+
+$breakpoint: $gt-small-desktop;
+$grid: get-grid($breakpoint, $grids);
+$columns: get-grid-property("columns", $grid);
+$rhythm: get-grid-property("rhythm", $grid);
+@include breakpoint($breakpoint) {
+    .page-wrapper {
+        position: relative;
+        margin: auto;
+        width: rhythm(30);
+
+        &::after {
+            pointer-events: none;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            box-shadow: 0 0 20px $color-shadow;
+        }
+    }
+
+    .hero-project {
+        margin-left: rhythm(12);
+        &__image {
+            width: rhythm(21);
+            height: rhythm(15);
+            &::before {
+                width: rhythm(18);
+                height: rhythm(2);
+            }
+            &::after {
+                width: rhythm(6);
+                right: rhythm(-3);
+                border-top: rhythm(1) solid $color-background;
+                box-shadow: none;
+            }
+        }
+        /*
+            1. Pull the description up a bit and let adjacent elements respond accordingly
+         */
+        &__description {
+            width: rhythm(18);
+            padding: 0 rhythm(2) 0 rhythm(1);
+            margin-top: rhythm(-1); /* 1 */
+            font-size: to-unit(16px);
+        }
+        &__next {
+            width: rhythm(2);
+            height: rhythm(2);
+            top: rhythm(13);
+            right: rhythm(-2);
+        }
+    }
+
 }

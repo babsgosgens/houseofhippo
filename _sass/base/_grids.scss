@@ -23,71 +23,21 @@ $grids: (
         wings: 1,
         gutter-width: 1 / 24 * 100vw
     ),
-    /* 0,5 */
-    $lt-handheld-portrait-narrow: (
-        debug-color: $orange,
-        columns: 24,
-        rhythm: 1 / 24 * 100vw,
-        wings: 1,
-        gutter-width: 1 / 24 * 100vw
-    ),
-    /* 0,563380281690141 */
-    $gt-handheld-portrait: (
-        debug-color: $gold,
-        columns: 24,
-        rhythm: 1 / 24 * 100vw,
-        wings: 1,
-        gutter-width: 1 / 24 * 100vw
-    ),
-    /* 0,625 */
-    $gt-tablet-portrait-narrow: (
-        debug-color: $green,
-        columns: 24,
-        rhythm: 1 / 24 * 100vw,
-        wings: 2,
-        gutter-width: 1 / 24 * 100vw
-    ),
-    /* 0,75 */
-    $gt-tablet-portrait-wide: (
-        debug-color: $teal,
-        columns: 24,
-        rhythm: 1 / 24 * 100vw,
-        wings: 2,
-        gutter-width: 1 / 24 * 100vw
-    ),
-    $landscape: (
+    $gt-medium-handheld: (
         debug-color: $purple,
         columns: 24,
         rhythm: 1 / 24 * 100vw,
-        wings: 9,
+        wings: 1,
         gutter-width: 1 / 24 * 100vw
     ),
-    /* 1,333 */
-    $gt-tablet-landscape-narrow: (
-        debug-color: $blueviolet,
-        columns: 24,
-        rhythm: 1 / 24 * 100vw,
-        wings: 9,
-        gutter-width: 1 / 24 * 100vw
-    ),
-    /* 1,6 */
-    $gt-tablet-landscape-wide: (
-        debug-color: $blue,
-        columns: 24,
-        rhythm: 1 / 24 * 100vw,
-        wings: 9,
-        gutter-width: 1 / 24 * 100vw
-    ),
-    /* 1,775 */
-    $gt-handheld-landscape: (
+    $gt-small-desktop: (
         debug-color: $indigo,
         columns: 36,
         rhythm: 1 / 36 * 100vw,
         wings: 12,
         gutter-width: 1 / 36 * 100vw
     ),
-    /* 2 */
-    $gt-handheld-landscape-narrow: (
+    $gt-large-desktop: (
         debug-color: $cyan,
         columns: 36,
         rhythm: 1 / 36 * 100vw,
