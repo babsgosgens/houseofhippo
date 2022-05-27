@@ -172,7 +172,6 @@ $rhythm: get-grid-property("rhythm", $grid);
         position: relative;
         margin: rhythm(2) auto;
         width: rhythm(30);
-
         &::after {
             pointer-events: none;
             content: "";
@@ -187,6 +186,7 @@ $rhythm: get-grid-property("rhythm", $grid);
 
     .masthead {
         padding: rhythm(1) 0;
+        height: rhythm(5);
         &__title,
         &__payoff {
             margin-left: 0;
