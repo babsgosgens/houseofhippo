@@ -34,7 +34,7 @@ github_username:  babsgosgens
 theme: minima
 sass:
     sass_dir: _sass
-    style: compact # possible values: nested expanded compact compressed
+    style: compressed # possible values: nested expanded compact compressed
 plugins:
   - jekyll-feed
 
