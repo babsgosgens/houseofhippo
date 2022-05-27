@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl" class="no-js fx debug">
+<html lang="nl" class="no-js fx debug-grid">
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -27,21 +27,42 @@
         </div>
         <div class="page-wrapper">
             <div class="masthead">
-                <h1 class="masthead__title">
-                    House of Hippos
-                    <p class="masthead__payoff">
-                        Interieur ontwerp &amp; advies
-                    </p>
-                </h1>
-                <nav class="masthead__menu menu">
-                    <span class="menu__item">
-                        <a href="" class="anchor__cloaked">Over mij</a>
-                        <a href="" class="anchor__cloaked">Blog</a>
-                        <a href="" class="anchor__cloaked">Contact</a>
+                <h1>
+                    <span class="masthead__title" id="masthead-title">
+                        {{ site.title }}
                     </span>
-
+                    <span class="masthead__payoff txt-personal">
+                        Interieur ontwerp &amp; advies
+                    </span>
+                </h1>
+                <nav class="masthead__menu">
+                    <span class="menu">
+                        <a href="" class="menu__itemanchor__cloaked">Over mij</a>
+                        <a href="" class="menu__itemanchor__cloaked">Blog</a>
+                        <a href="" class="menu__itemanchor__cloaked">Contact</a>
+                    </span>
+                    <span class="masthead__action" id="mail-trigger">
+                        <a href="#form" class="btn-shortcut">@</a>
+                    </span>
                 </nav>
             </div>
+
+            <div class="hero-project">
+                <div>
+                    <div class="hero-project__image">
+                        <a href="">
+                            <img class="" src="/assets/images/project-hero__image.jpg" alt="" />
+                        </a>
+                    </div>
+                    <div class="hero-project__description">
+                        <p class="txt-personal">
+                            Dit gerieflijke kantoor-aan-huis voor een gastvrije single is perfect voor een dagje thuis werken…
+                        </p>
+                    </div>
+                    <button class="hero-project__next btn-shortcut">></button>
+                </div>
+            </div>
+
             <div class="layout layout-split">
                 <div class="introduction layout-split__main">
 
@@ -50,7 +71,7 @@
 
                 </div>
             </div>
-            <div class="footer">
+            <div class="page-footer">
                 <div class="footer-copy">
                     © {{ 'now' | date: "%Y" }} - Babs Gösgens
                 </div>
