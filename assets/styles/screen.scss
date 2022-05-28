@@ -426,10 +426,12 @@ $rhythm: get-grid-property("rhythm", $grid);
             width: rhythm(21);
             height: rhythm(15);
             &::before {
+                bottom: 0;
                 width: rhythm(18);
                 height: rhythm(2);
             }
             &::after {
+                top: 0;
                 width: rhythm(6);
                 right: rhythm(-3);
                 border-top: rhythm(1) solid $color-accent;
