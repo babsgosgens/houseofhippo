@@ -105,7 +105,7 @@ $body: $columns - (2 * $wings);
     background-color: $color-accent;
     line-height: rhythm(2);
     text-align: center;
-    font-size: to-unit(24px);
+    font-size: to-unit(16px);
     &,
     &:visited {
         color: $color-neutral-lightest-grey;
@@ -271,6 +271,10 @@ $body: $columns - (2 * $wings);
 }
 
 @include breakpoint($gt-medium-handheld) {
+
+    .btn-shortcut {
+        font-size: to-unit(20px);
+    }
 
     .page-footer {
         padding-top: rhythm(3);
@@ -511,6 +515,10 @@ $rhythm: get-grid-property("rhythm", $grid);
 }
 
 @include breakpoint($gt-large-desktop) {
+
+    .btn-shortcut {
+        font-size: to-unit(24px);
+    }
 
     .masthead {
         &__title {
