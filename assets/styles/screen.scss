@@ -162,6 +162,7 @@ $body: $columns - (2 * $wings);
             left: 0;
             bottom: 0;
             background-color: $white;
+            border-bottom: 1px solid $white;
         }
         &::after {
             width: rhythm(4);
