@@ -355,6 +355,7 @@ $rhythm: get-grid-property("rhythm", $grid);
             right: rhythm(-3);
             left: rhythm(-3);
             height: rhythm(10);
+            background-color: $color-accent;
         }
 
         &::after {
