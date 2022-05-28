@@ -67,7 +67,6 @@ $body: $columns - (2 * $wings);
     display: none; /* tmp */
 }
 
-
 .btn-shortcut {
     display: block;
     width: rhythm(2);
@@ -77,15 +76,16 @@ $body: $columns - (2 * $wings);
     line-height: rhythm(2);
     text-align: center;
 }
+
 .slick-arrow {
     @extend .btn-shortcut;
 }
+
 .slick-prev {
     .hero-project & {
         display: none !important;
     }
 }
-
 
 .txt-personal {
     font-family: $overtherainbow-family;
@@ -135,7 +135,7 @@ $body: $columns - (2 * $wings);
     /*
         1. Make sure it sits above the image mask
      */
-    &__description {
+    &__text {
         position: relative; /* 1 */
         z-index: 1; /* 1 */
         width: rhythm(20);
@@ -173,6 +173,31 @@ $body: $columns - (2 * $wings);
     }
 }
 
+.author-about {
+    position: relative;
+    bottom: rhythm(-5);
+    margin-left: rhythm(9);
+    margin-top: rhythm(-5);
+    &__content {
+        padding: rhythm(1) rhythm(1) rhythm(1) rhythm(3);
+        background-color: white;
+    }
+    &__image {
+        position: absolute;
+        left: rhythm(-7);
+        top: rhythm(-1);
+        width: rhythm(9);
+        height: rhythm(9);
+    }
+    &__name {
+        display: block;
+        margin-top: 1em;
+    }
+}
+
+.page-footer {
+    padding-top: rhythm(7);
+}
 
 @include breakpoint($gt-medium-handheld) {
     .masthead {
@@ -190,9 +215,36 @@ $body: $columns - (2 * $wings);
         }
     }
     .hero-project {
-        &__description {
+        &__text {
             padding-left: rhythm(3);
         }
+    }
+
+    .author-about {
+        bottom: rhythm(-1);
+        margin-top: rhythm(1);
+        margin-right: rhythm(7);
+        margin-left: rhythm(4);
+        &__content {
+            padding: rhythm(1);
+        }
+        &__text {
+            font-size: to-unit(18px);
+        }
+        &__name {
+            margin-top: rhythm(1);
+        }
+        &__image {
+            left: rhythm(12);
+            top: auto;
+            bottom: rhythm(-2);
+            width: rhythm(6);
+            height: rhythm(6);
+        }
+    }
+
+    .page-footer {
+        padding-top: rhythm(7);
     }
 }
 
@@ -283,7 +335,7 @@ $rhythm: get-grid-property("rhythm", $grid);
         /*
             1. Pull the description up a bit and let adjacent elements respond accordingly
          */
-        &__description {
+        &__text {
             width: rhythm(18);
             padding: 0 rhythm(2) 0 rhythm(1);
             margin-top: rhythm(-1); /* 1 */
@@ -319,5 +371,41 @@ $rhythm: get-grid-property("rhythm", $grid);
         top: rhythm(-3);
         left:  rhythm(3);
         line-height: rhythm(2);
+    }
+
+    .author-about {
+        position: absolute;
+        top: rhythm(5);
+        bottom: auto;
+        margin: 0;
+        width: rhythm(12);
+        &__content {
+            padding: rhythm(1);
+            margin-top: rhythm(6);
+        }
+        &__text {
+            font-size: to-unit(18px);
+        }
+        &__name {
+            margin-top: rhythm(1);
+        }
+        &__image {
+            left: 0;
+            top: 0;
+            bottom: auto;
+            width: rhythm(6);
+            height: rhythm(6);
+        }
+    }
+}
+
+@include breakpoint($gt-large-desktop) {
+    .author-about {
+        &__content {
+            padding: rhythm(1) rhythm(2);
+        }
+        &__text {
+            font-size: to-unit(24px);
+        }
     }
 }
