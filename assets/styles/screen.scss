@@ -158,19 +158,17 @@ $body: $columns - (2 * $wings);
         }
         &::before {
             width: rhythm(20);
-            height: rhythm(1);
-            left: 0;
-            bottom: 0;
+            height: rhythm(2);
+            bottom: rhythm(-1);
             background-color: $white;
-            border-bottom: 1px solid $white;
         }
         &::after {
             width: rhythm(4);
-            top: 0;
+            top: rhythm(-1);
             right: rhythm(-2);
             bottom: 0;
             background-color: rgba(0,0,0,.3);
-            border-top: rhythm(2) solid $white;
+            border-top: rhythm(3) solid $white;
             box-shadow: inset 0 0 20px $color-box-shadow;
         }
     }
