@@ -38,8 +38,38 @@ $body: $columns - (2 * $wings);
 }
 
 .page-footer {
-    background-color: $color-accent;
-    display: none;
+    padding-top: rhythm(9);
+    background-color: $color-body;
+    color: $color-neutral-lightest-grey;
+    transition: color 100ms ease-in-out;
+    &:hover,
+    &:focus {
+        color: $white;
+    }
+    &__quote,
+    &__intro,
+    &__legal {
+        text-align: center;
+    }
+    &__quote {
+        font-size: to-unit(20px);
+        margin: 0 rhythm(2);
+    }
+    &__intro {
+        font-size: to-unit(14px);
+        margin: 2em rhythm(2) 4em;
+    }
+    &__legal {
+        font-size: to-unit(11px);
+        padding: 2em 0;
+    }
+    dt {
+        margin-top: 2em;
+        font-size: to-unit(11px);
+    }
+    dd {
+        font-weight: 400;
+    }
 }
 
 .masthead {
@@ -219,6 +249,7 @@ $body: $columns - (2 * $wings);
     bottom: rhythm(-5);
     margin-left: rhythm(9);
     margin-top: rhythm(-5);
+    margin-right: rhythm(1);
     &__content {
         padding: rhythm(1) rhythm(1) rhythm(1) rhythm(3);
         background-color: white;
@@ -229,7 +260,7 @@ $body: $columns - (2 * $wings);
     &__image {
         position: absolute;
         left: rhythm(-7);
-        top: rhythm(-1);
+        bottom: rhythm(3);
         width: rhythm(9);
         height: rhythm(9);
     }
@@ -239,11 +270,25 @@ $body: $columns - (2 * $wings);
     }
 }
 
-.page-footer {
-    padding-top: rhythm(7);
-}
-
 @include breakpoint($gt-medium-handheld) {
+
+    .page-footer {
+        padding-top: rhythm(3);
+        &__quote {
+            font-size: to-unit(28px);
+            margin: 0 rhythm(4);
+        }
+        &__intro {
+            font-size: to-unit(16px);
+            margin: 2em rhythm(4) 4em;
+        }
+        &__legal {
+            font-size: to-unit(13px);
+        }
+        dt {
+            font-size: to-unit(13px);
+        }
+    }
     .masthead {
         &__title,
         &__payoff {
@@ -265,8 +310,8 @@ $body: $columns - (2 * $wings);
     }
 
     .author-about {
-        bottom: rhythm(-1);
-        margin-top: rhythm(1);
+        bottom: rhythm(-2);
+        margin-top: rhythm(2);
         margin-right: rhythm(7);
         margin-left: rhythm(4);
         &__content {
@@ -299,7 +344,7 @@ $rhythm: get-grid-property("rhythm", $grid);
 @include breakpoint($breakpoint) {
     .page-wrapper {
         position: relative;
-        margin: rhythm(2) auto;
+        margin: rhythm(2) auto rhythm(-2);
         width: rhythm(30);
         &::before {
             z-index: -1;
@@ -310,7 +355,6 @@ $rhythm: get-grid-property("rhythm", $grid);
             right: rhythm(-3);
             left: rhythm(-3);
             height: rhythm(10);
-            background-color: $color-accent;
         }
 
         &::after {
@@ -428,18 +472,15 @@ $rhythm: get-grid-property("rhythm", $grid);
     }
 
     .page-footer {
-        z-index: -1;
-        position: absolute;
-        top: rhythm(3);
-        right: 0;
-        left: 0;
-        height: rhythm(10);
-    }
-    .footer-copy {
-        position: absolute;
-        top: rhythm(-3);
-        left:  rhythm(3);
-        line-height: rhythm(2);
+        padding-top: rhythm(4);
+        &__quote {
+            font-size: to-unit(30px);
+            margin: 0 rhythm(8);
+        }
+        &__intro {
+            font-size: to-unit(18px);
+            margin: 2em rhythm(8) 4em;
+        }
     }
 
     .author-about {
@@ -476,6 +517,24 @@ $rhythm: get-grid-property("rhythm", $grid);
         }
         &__payoff {
             font-size: to-unit(36px);
+        }
+    }
+
+    .page-footer {
+        padding-top: rhythm(4);
+        &__content {
+            margin: 0;
+        }
+        &__quote {
+            margin: 0 rhythm(8);
+            font-size: to-unit(48px);
+        }
+        &__intro {
+            margin: rhythm(1) rhythm(10) rhythm(2);
+            font-size: to-unit(18px);
+        }
+        dt {
+            font-size: to-unit(14px);
         }
     }
 
