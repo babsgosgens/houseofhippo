@@ -12,13 +12,30 @@
 
     $('.lazy').Lazy();
 
-    $('.hero-project').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        var $color = $('.hero-project .slick-active')
-            .find('.hero-project__next')
-            .first()
-            .data('theme');
-            $('.fx-theme').delay('800').css('background-color', $color);
-            $('.fx-color').delay('800').css('color', $color);
+    var setTheme = function(color){
+        $('.fx-theme').css('background-color', color);
+        $('.fx-color').css('color', color);
+    };
+
+    // $('.hero-project__next').on('click', function(){
+    //     $('.hero-project').trigger('slickNext');
+    // });
+    $('.hero-project').on('setTheme', function(event){
+
+        var slide = $('.hero-project').find('.slick-slide').first(),
+            color = $(slide).data('theme');
+
+        setTheme( color );
+
+    }).trigger('setTheme');
+
+    $(document).on('beforeChange', '.hero-project', function(event, slick, currentSlide, nextSlide){
+
+        var slide = $('.hero-project').find('.slick-slide').eq(nextSlide),
+            color = $(slide).data('theme');
+
+            setTheme( color );
+
     });
 
 })(jQuery);

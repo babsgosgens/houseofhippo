@@ -35,6 +35,9 @@ $body: $columns - (2 * $wings);
 .fx-theme {
     transition: background-color 200ms linear;
 }
+.fx-color {
+    transition: color 200ms linear;
+}
 .page-wrapper {
     background-color: $white;
 }
