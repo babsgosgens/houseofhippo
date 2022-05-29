@@ -32,9 +32,35 @@ $body: $columns - (2 * $wings);
 
 @import "icons/style";
 
-
+.fx-theme {
+    transition: background-color 200ms linear;
+}
 .page-wrapper {
     background-color: $white;
+}
+
+.page-theme {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: $color-accent;
+    // transition: background-color 300ms ease-out, color 300ms ease-out;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: inherit;
+    }
+    &::before {
+    }
+    &::after {
+        top: rhythm(7);
+        right:0;
+        width: rhythm(2);
+        height: rhythm(2);
+        background-color: $white;
+    }
 }
 
 .page-footer {
@@ -121,12 +147,6 @@ $body: $columns - (2 * $wings);
     @extend .btn-shortcut;
 }
 
-.slick-prev {
-    .hero-project & {
-        display: none !important;
-    }
-}
-
 .txt-personal {
     font-family: $overtherainbow-family;
 }
@@ -138,7 +158,7 @@ $body: $columns - (2 * $wings);
         position: relative;
         width: rhythm(22);
         height: rhythm(15);
-        background: $color-accent;
+        background-color: $white;
         /*
         background: url('/assets/images/project-hero__image.jpg') no-repeat center;
         background-size: cover;
@@ -157,18 +177,17 @@ $body: $columns - (2 * $wings);
             position: absolute;
         }
         &::before {
-            width: rhythm(20);
+            left: rhythm(-1);
+            width: rhythm(22);
             height: rhythm(2);
             bottom: rhythm(-1);
-            background-color: $white;
+            background-color: inherit;
         }
         &::after {
             width: rhythm(4);
-            top: rhythm(-1);
-            right: rhythm(-2);
+            top: rhythm(0);
+            left: rhythm(20);
             bottom: 0;
-            background-color: rgba(0,0,0,.3);
-            border-top: rhythm(3) solid $white;
             box-shadow: inset 0 0 20px $color-box-shadow;
         }
     }
@@ -210,30 +229,16 @@ $body: $columns - (2 * $wings);
         font-size: to-unit(14px);
     }
     &__next {
-        pointer-events: none;
-        z-index: 2 !important;
+        position: absolute;
+        top: rhythm(14);
+        left: rhythm(20);
     }
-    &__next,
+    .slick-prev,
     .slick-next {
         position: absolute;
-        top: rhythm(15);
-        right: 0;
-    }
-    .slick-next {
-        &::after {
-            @extend .icn !optional;
-            pointer-events: inherit;
-            content: $icn-chevron-right;
-            position: absolute;
-            display: block;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: $color-accent;
-            font-size: to-unit(20px);
-            line-height: rhythm(2);
-        }
+        width: 0;
+        height: 0;
+        overflow: hidden;
     }
     .slick-list {
         width: rhythm(22);
@@ -275,8 +280,18 @@ $body: $columns - (2 * $wings);
         font-size: to-unit(20px);
     }
 
+    .page-theme {
+        &::after {
+            top: rhythm(5);
+            right:0;
+            width: rhythm(2);
+            height: rhythm(2);
+            background-color: $white;
+        }
+    }
+
     .page-footer {
-        padding-top: rhythm(3);
+        padding-top: rhythm(7);
         &__quote {
             font-size: to-unit(28px);
             margin: 0 rhythm(4);
@@ -292,6 +307,7 @@ $body: $columns - (2 * $wings);
             font-size: to-unit(13px);
         }
     }
+
     .masthead {
         &__title,
         &__payoff {
@@ -334,10 +350,6 @@ $body: $columns - (2 * $wings);
             height: rhythm(6);
         }
     }
-
-    .page-footer {
-        padding-top: rhythm(7);
-    }
 }
 
 $breakpoint: $gt-small-desktop;
@@ -349,18 +361,6 @@ $rhythm: get-grid-property("rhythm", $grid);
         position: relative;
         margin: rhythm(2) auto rhythm(-2);
         width: rhythm(30);
-        &::before {
-            z-index: -1;
-            pointer-events: none;
-            content: "";
-            position: absolute;
-            top: rhythm(1);
-            right: rhythm(-3);
-            left: rhythm(-3);
-            height: rhythm(10);
-            background-color: $color-accent;
-        }
-
         &::after {
             pointer-events: none;
             content: "";
@@ -370,6 +370,24 @@ $rhythm: get-grid-property("rhythm", $grid);
             bottom: 0;
             left: 0;
             box-shadow: 0 0 20px $color-box-shadow;
+        }
+    }
+
+    .page-theme {
+        &::before,
+        &::after {
+            width: rhythm(3);
+            background-color: inherit;
+        }
+        &::before {
+            top: rhythm(1);
+            right: 100%;
+            height: rhythm(10);
+        }
+        &::after {
+            top: rhythm(1);
+            left: 100%;
+            height: rhythm(5);
         }
     }
 
@@ -395,21 +413,22 @@ $rhythm: get-grid-property("rhythm", $grid);
         &__action {
             left: rhythm(15);
             top: rhythm(4);
+            background-color: $color-accent;
             &::before,
             &::after {
                 content: "";
                 position: absolute;
                 bottom: 100%;
                 display: block;
-                width: rhythm(1);
+                width: 1px;
                 height: rhythm(4);
+                background-color: inherit;
             }
             &::before {
-                border-right: 2px solid $color-accent;
+                right: rhythm(1);
             }
             &::after {
-                right: 0;
-                border-left: 2px solid $color-accent;
+                left: rhythm(1);
             }
         }
     }
@@ -426,15 +445,16 @@ $rhythm: get-grid-property("rhythm", $grid);
             width: rhythm(21);
             height: rhythm(15);
             &::before {
-                bottom: 0;
-                width: rhythm(18);
-                height: rhythm(2);
+                bottom: rhythm(-1);
+                left: rhythm(-1);
+                width: rhythm(19);
+                height: rhythm(3);
             }
             &::after {
-                top: 0;
+                top: rhythm(0);
                 width: rhythm(6);
-                right: rhythm(-3);
-                border-top: rhythm(1) solid $color-accent;
+                left: rhythm(18);
+                background-color: rgba(0,0,0,.2);
                 box-shadow: none;
             }
         }
@@ -457,17 +477,10 @@ $rhythm: get-grid-property("rhythm", $grid);
         }
         &__text {
         }
-        &__next,
-        .slick-next {
+        &__next {
             top: rhythm(13);
-            right: rhythm(-2);
-        }
-
-        .slick-next {
-            &::after {
-                font-size: to-unit(24px);
-                line-height: rhythm(2);
-            }
+            left: rhythm(18);
+            font-size: to-unit(24px);
         }
         .slick-list {
             width: rhythm(21);

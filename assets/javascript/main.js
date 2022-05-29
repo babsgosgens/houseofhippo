@@ -12,4 +12,13 @@
 
     $('.lazy').Lazy();
 
+    $('.hero-project').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        var $color = $('.hero-project .slick-active')
+            .find('.hero-project__next')
+            .first()
+            .data('theme');
+            $('.fx-theme').delay('800').css('background-color', $color);
+            $('.fx-color').delay('800').css('color', $color);
+    });
+
 })(jQuery);
