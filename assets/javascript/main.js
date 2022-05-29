@@ -17,9 +17,6 @@
         $('.fx-color').css('color', color);
     };
 
-    // $('.hero-project__next').on('click', function(){
-    //     $('.hero-project').trigger('slickNext');
-    // });
     $('.hero-project').on('setTheme', function(event){
 
         var slide = $('.hero-project').find('.slick-slide').first(),
@@ -35,6 +32,12 @@
             color = $(slide).data('theme');
 
             setTheme( color );
+
+    });
+
+    $(document).on('click', '.hero-project__next', function(event, slick, currentSlide, nextSlide){
+
+        $('.hero-project').slick('slickNext');
 
     });
 
