@@ -349,3 +349,39 @@
         margin-top: 1em;
     }
 }
+
+/*
+ * 1. Assuming this is an inline tag
+ */
+.fx-scale-image {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    &,
+    img {
+        display: block; /* 1 */
+    }
+    img {
+        transition: min-width 400ms ease-out, min-height 400ms ease-out;
+        min-width: 102%;
+        min-height: 102%;
+    }
+    &:hover img {
+        min-width: 100%;
+        min-height: 100%;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: background-color 400ms ease-out;
+        background-color: rgba(0,0,0,0);
+    }
+    &:hover::after {
+        background-color: rgba(255,255,255,.1);
+    }
+}
