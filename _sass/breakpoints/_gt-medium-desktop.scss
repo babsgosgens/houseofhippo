@@ -1,4 +1,59 @@
 @include breakpoint($gt-medium-desktop) {
+    .page-wrapper {
+        width: rhythm(28);
+    }
+
+    .page-theme {
+        &::before,
+        &::after {
+            width: rhythm(4);
+        }
+    }
+
+    .hero-project {
+        margin-left: rhythm(12);
+        &__image {
+            width: rhythm(20);
+            height: rhythm(16);
+            &::before {
+                width: rhythm(17);
+            }
+            &::after {
+                width: rhythm(8);
+                left: rhythm(16);
+            }
+        }
+        /*
+            1. Pull the description up a bit and let adjacent elements respond accordingly
+         */
+        &__text {
+            width: rhythm(18);
+            padding: 0 rhythm(2) 0 rhythm(1);
+            margin-top: rhythm(-1); /* 1 */
+            font-size: to-unit(16px);
+        }
+        &__action {
+            width: rhythm(21);
+            height: rhythm(16);
+            &::after {
+                right: rhythm(3);
+                bottom: rhythm(2);
+            }
+        }
+        &__text {
+        }
+        &__next {
+            top: rhythm(14);
+            left: rhythm(16);
+        }
+        .slick-list {
+            width: rhythm(21);
+        }
+        .slick-slide {
+            min-height: rhythm(15);
+        }
+    }
+
 
     .txt-title {
         font-size: to-unit(36px);
