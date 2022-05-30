@@ -1,1 +1,67 @@
+@include breakpoint($gt-medium-desktop) {
 
+    .txt-title {
+        font-size: to-unit(36px);
+    }
+    .txt-personal {
+        font-size: to-unit(20px);
+    }
+    .section-title {
+        &__text {
+            font-size: to-unit(28px);
+            padding: 0 0 0 rhythm(1);
+        }
+    }
+    .post-list {
+        &__title {
+            padding: 0;
+            .txt-title {
+                padding: 0;
+                margin: rhythm(.5) rhythm(8) rhythm(1) 0;
+            }
+        }
+        &__read-more {
+            font-size: to-unit(20px);
+        }
+    }
+
+    .btn-shortcut {
+        font-size: to-unit(24px);
+    }
+
+    .masthead {
+        &__title {
+            font-size: to-unit(48px);
+        }
+        &__payoff {
+            font-size: to-unit(36px);
+        }
+    }
+
+    .page-footer {
+        padding-top: rhythm(4);
+        &__content {
+            margin: 0;
+        }
+        &__quote {
+            margin: 0 rhythm(8);
+            font-size: to-unit(48px);
+        }
+        &__intro {
+            margin: rhythm(1) rhythm(10) rhythm(2);
+            font-size: to-unit(18px);
+        }
+        dt {
+            font-size: to-unit(14px);
+        }
+    }
+
+    .author-about {
+        &__content {
+            padding: rhythm(1) rhythm(2);
+        }
+        &__text {
+            font-size: to-unit(24px);
+        }
+    }
+}

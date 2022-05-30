@@ -14,7 +14,7 @@ $rhythm: get-grid-property("rhythm", $grid);
         left: rhythm(-5);
         &__text {
             font-size: to-unit(28px);
-            padding: 0 0 0 rhythm(2);
+            padding: 0 0 0 rhythm(1);
         }
         .txt-title {
             line-height: rhythm(2);
