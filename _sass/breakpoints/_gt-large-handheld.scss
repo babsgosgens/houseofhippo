@@ -1,0 +1,104 @@
+@include breakpoint($gt-large-handheld) {
+
+    .txt-meta {
+        font-size: to-unit(16px);
+    }
+
+    .txt-title {
+        font-size: to-unit(24px);
+        // line-height: 1.5;
+    }
+
+    .post-list {
+        &__image,
+        &__title {
+            flex: 0 0 rhythm(12);
+            width: rhythm(12);
+        }
+        &__item {
+            margin: 0 0 rhythm(2);
+        }
+        &__title {
+            .txt__title {
+                position: static;
+                left: 0;
+            }
+        }
+    }
+
+    .btn-shortcut {
+        font-size: to-unit(20px);
+    }
+
+    .page-theme {
+        &::after {
+            top: rhythm(5);
+            right:0;
+            width: rhythm(2);
+            height: rhythm(2);
+            background-color: $white;
+        }
+    }
+
+    .page-footer {
+        padding-top: rhythm(7);
+        &__quote {
+            font-size: to-unit(28px);
+            margin: 0 rhythm(4);
+        }
+        &__intro {
+            font-size: to-unit(16px);
+            margin: 2em rhythm(4) 4em;
+        }
+        &__legal {
+            font-size: to-unit(13px);
+        }
+        dt {
+            font-size: to-unit(13px);
+        }
+    }
+
+    .masthead {
+        &__title,
+        &__payoff {
+            display: inline-block;
+            width: auto;
+            margin-left: rhythm(1);
+        }
+        &__title {
+            font-size: to-unit(36px);
+        }
+        &__payoff {
+            font-size: to-unit(28px);
+        }
+    }
+    .hero-project {
+        &__text {
+            font-size: to-unit(16px);
+            padding-left: rhythm(1);
+        }
+    }
+
+    .author-about {
+        bottom: rhythm(-2);
+        margin-top: rhythm(2);
+        margin-right: rhythm(7);
+        margin-left: rhythm(4);
+        &__content {
+            padding: rhythm(1);
+        }
+        &__text {
+            font-size: to-unit(18px);
+        }
+        &__name {
+            margin-top: rhythm(1);
+        }
+        &__image {
+            left: rhythm(12);
+            top: auto;
+            bottom: rhythm(-2);
+            width: rhythm(6);
+            height: rhythm(6);
+        }
+    }
+}

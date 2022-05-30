@@ -1,0 +1,5 @@
+@include breakpoint($gt-medium-handheld) {
+    .txt-title {
+        font-size: to-unit(20px);
+    }
+}

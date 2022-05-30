@@ -48,7 +48,7 @@
                 <figure data-theme="#B0713C">
                     <div class="hero-project__image">
                         <a class="hero-project__action" href="">
-                            {% include project-hero.html %}
+                            {% include image-sets/hero-project.html %}
                         </a>
                     </div>
                     <figcaption class="hero-project__text">
@@ -58,42 +58,45 @@
                     </figcaption>
                     <button class="hero-project__next btn-shortcut fx-theme"><i class="icn icn-chevron-right"></i></button>
                 </figure>
-                <figure data-theme="#866555">
-                    <div class="hero-project__image">
-                        <a class="hero-project__action" href="">
-                            <img class="lazy" src="assets/images/project-hero__image2.jpg" alt="" />
-                        </a>
-                    </div>
-                    <figcaption class="hero-project__text">
-                        <p class="txt-personal">
-                            Lorem ipsum dolor sit amet
-                        </p>
-                    </figcaption>
-                    <button class="hero-project__next btn-shortcut fx-theme"><i class="icn icn-chevron-right"></i></button>
-                </figure>
-                <figure data-theme="#6C8964">
-                    <div class="hero-project__image">
-                        <a class="hero-project__action" href="">
-                            <img class="lazy" src="assets/images/project-hero__image3-medium.jpg" alt="" />
-                        </a>
-                    </div>
-                    <figcaption class="hero-project__text">
-                        <p class="txt-personal">
-                            Lorem ipsum dolor sit amet
-                        </p>
-                    </figcaption>
-                    <button class="hero-project__next btn-shortcut fx-theme"><i class="icn icn-chevron-right"></i></button>
-                </figure>
+                {% include slides/hero-project.html %}
             </div>
 
-            <div class="layout layout-split">
-                <div class="introduction layout-split__main">
 
+            <section class="root">
+                <div class="section-title section-title--inset">
+                    <h1 class="section-title__text txt-title txt-ellipsis">Recent in blog</h1>
+                    <i class="section-title__link btn-shortcut btn-shortcut--no-theme icn icn-chevron-right"></i>
                 </div>
-                <div class="introduction layout-split__aside">
-
-                </div>
-            </div>
+                <ol class="post-list li li-reset">
+                    <li>
+                        {% include posts/post-list-item.html %}
+                        <article class="post-list__item">
+                            <figure class="post-list__image">
+                                <img class="img--cover" src="assets/images/post-list-image.jpg" alt="" />
+                            </figure>
+                            <div class="post-list__title">
+                                <p class="post-list__date fx-color"><small class="txt-meta fx-color">Juli</small></p>
+                                <h1 class="txt-title">
+                                    Van webdesign naar interieurontwerp
+                                </h1>
+                                <a href="" class="post-list__read-more fx-color"><small class="txt-personal">Lees verder</small></a>
+                            </div>
+                        </article>
+                        <article class="post-list__item">
+                            <figure class="post-list__image">
+                                <img class="img--cover" src="assets/images/post-list-image.jpg" alt="" />
+                            </figure>
+                            <div class="post-list__title">
+                                <p class="post-list__date fx-color"><small class="txt-meta fx-color">Juli</small></p>
+                                <h1 class="txt-title">
+                                    Van webdesign naar interieurontwerp
+                                </h1>
+                                <a href="" class="post-list__read-more fx-color"><small class="txt-personal">Lees verder</small></a>
+                            </div>
+                        </article>
+                    </li>
+                </ol>
+            </section>
 
             <div style="height: 20em;">&nbsp;</div>
 

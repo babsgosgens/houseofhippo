@@ -1,0 +1,214 @@
+$breakpoint: $gt-small-desktop;
+$grid: get-grid($breakpoint, $grids);
+$columns: get-grid-property("columns", $grid);
+$rhythm: get-grid-property("rhythm", $grid);
+@include breakpoint($breakpoint) {
+    .txt-title {
+        font-size: to-unit(36px);
+    }
+    .txt-meta {
+        font-size: to-unit(16px);
+    }
+    .section-title {
+        position: relative;
+        left: rhythm(-5);
+        &__text {
+            font-size: to-unit(28px);
+            padding: 0 0 0 rhythm(2);
+        }
+        .txt-title {
+            line-height: rhythm(2);
+        }
+    }
+    .post-list {
+        &__item {
+            margin: 0 0 rhythm(2);
+        }
+        &__image {
+            flex-basis: rhythm(12);
+            height: rhythm(9);
+            position: relative;
+            left: rhythm(-2);
+        }
+        &__title {
+            padding: 0;
+            .txt-title {
+                padding: 0;
+                margin: rhythm(1) 0;
+            }
+        }
+        &__read-more {
+            font-size: to-unit(24px);
+        }
+    }
+    .page-wrapper {
+        position: relative;
+        margin: rhythm(2) auto rhythm(-2);
+        width: rhythm(30);
+        &::after {
+            pointer-events: none;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            box-shadow: 0 0 20px $color-box-shadow;
+        }
+    }
+
+    .page-theme {
+        &::before,
+        &::after {
+            width: rhythm(3);
+            background-color: inherit;
+        }
+        &::before {
+            top: rhythm(1);
+            right: 100%;
+            height: rhythm(10);
+        }
+        &::after {
+            top: rhythm(1);
+            left: 100%;
+            height: rhythm(5);
+        }
+    }
+
+    .masthead {
+        padding: rhythm(1) 0;
+        height: rhythm(5);
+        &__title,
+        &__payoff {
+            margin-left: 0;
+            height: rhythm(3);
+            line-height: rhythm(3);
+        }
+        &__title {
+            width: rhythm(16);
+            padding-right: rhythm(1);
+            font-size: to-unit(32px);
+            text-align: right;
+        }
+        &__payoff {
+            padding-left: rhythm(1);
+            font-size: to-unit(20px);
+        }
+        &__action {
+            left: rhythm(15);
+            top: rhythm(4);
+            background-color: $color-accent;
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 100%;
+                display: block;
+                width: 1px;
+                height: rhythm(4);
+                background-color: inherit;
+            }
+            &::before {
+                right: rhythm(1);
+            }
+            &::after {
+                left: rhythm(1);
+            }
+        }
+    }
+
+    .btn-shortcut {
+        width: rhythm(2);
+        height: rhythm(2);
+        line-height: rhythm(2);
+    }
+
+    .hero-project {
+        margin-left: rhythm(12);
+        margin-bottom: rhythm(1);
+        &__image {
+            width: rhythm(21);
+            height: rhythm(15);
+            &::before {
+                bottom: rhythm(-1);
+                left: rhythm(-1);
+                width: rhythm(19);
+                height: rhythm(3);
+            }
+            &::after {
+                top: rhythm(0);
+                width: rhythm(6);
+                left: rhythm(18);
+                background-color: rgba(0,0,0,.2);
+                box-shadow: none;
+            }
+        }
+        /*
+            1. Pull the description up a bit and let adjacent elements respond accordingly
+         */
+        &__text {
+            width: rhythm(18);
+            padding: 0 rhythm(2) 0 rhythm(1);
+            margin-top: rhythm(-1); /* 1 */
+            font-size: to-unit(16px);
+        }
+        &__action {
+            width: rhythm(21);
+            height: rhythm(15);
+            &::after {
+                right: rhythm(3);
+                bottom: rhythm(2);
+            }
+        }
+        &__text {
+        }
+        &__next {
+            top: rhythm(13);
+            left: rhythm(18);
+            font-size: to-unit(24px);
+        }
+        .slick-list {
+            width: rhythm(21);
+        }
+        .slick-slide {
+            min-height: rhythm(15);
+        }
+    }
+
+    .page-footer {
+        padding-top: rhythm(4);
+        &__quote {
+            font-size: to-unit(30px);
+            margin: 0 rhythm(8);
+        }
+        &__intro {
+            font-size: to-unit(18px);
+            margin: 2em rhythm(8) 4em;
+        }
+    }
+
+    .author-about {
+        position: absolute;
+        top: rhythm(5);
+        bottom: auto;
+        margin: 0;
+        width: rhythm(12);
+        &__content {
+            padding: rhythm(1);
+            margin-top: rhythm(6);
+        }
+        &__text {
+            font-size: to-unit(18px);
+        }
+        &__name {
+            margin-top: rhythm(1);
+        }
+        &__image {
+            left: 0;
+            top: 0;
+            bottom: auto;
+            width: rhythm(6);
+            height: rhythm(6);
+        }
+    }
+}

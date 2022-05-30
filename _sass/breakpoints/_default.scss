@@ -1,0 +1,351 @@
+
+.li-reset {
+    list-style: none;
+    padding: 0;
+}
+
+.img--cover {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.root {
+    position: relative;
+}
+.section-title {
+    // position: absolute;
+    // bottom: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: row-reverse;
+    // align-items: center;
+    margin-left: rhythm(2);
+    background-color: $white;
+    &--inset {
+        // left: rhythm(2);
+    }
+    &__text {
+        // display: inline-block;
+        flex-grow: 1;
+        // align-content: center;
+        // height: rhythm(2);
+        padding: 0 rhythm(1);
+        // font-weight: 200;
+    }
+    .txt-title {
+        line-height: rhythm(2);
+    }
+}
+
+.post-list {
+    &,
+    &__image,
+    &__title {
+        // position: relative;
+    }
+    &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        margin-bottom: rhythm(1);
+    }
+    &__image {
+        flex: 0 0 rhythm(9);
+        width: rhythm(9);
+        height: rhythm(9);
+        overflow: hidden;
+    }
+    &__title {
+        flex: 1 0 rhythm(15);
+        padding: rhythm(1) 0 rhythm(1) rhythm(1);
+        .txt-title {
+            margin-left: rhythm(-3);
+            padding: rhythm(1);
+            background: $white;
+        }
+    }
+    &__read-more {
+        font-family: $overtherainbow-family;
+    }
+}
+
+.fx-theme {
+    background-color: $color-accent;
+    transition: background-color 200ms linear;
+}
+.fx-color {
+    color: $color-accent;
+    transition: color 200ms linear;
+}
+.page-wrapper {
+    background-color: $white;
+}
+
+.page-theme {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: $color-accent;
+    // transition: background-color 300ms ease-out, color 300ms ease-out;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: inherit;
+    }
+    &::before {
+    }
+    &::after {
+        top: rhythm(7);
+        right:0;
+        width: rhythm(2);
+        height: rhythm(2);
+        background-color: $white;
+    }
+}
+
+.page-footer {
+    padding-top: rhythm(9);
+    background-color: $color-body;
+    color: $color-neutral-lightest-grey;
+    transition: color 100ms ease-in-out;
+    &:hover,
+    &:focus {
+        color: $white;
+    }
+    &__quote,
+    &__intro,
+    &__legal {
+        text-align: center;
+    }
+    &__quote {
+        font-size: to-unit(20px);
+        margin: 0 rhythm(2);
+    }
+    &__intro {
+        font-size: to-unit(14px);
+        margin: 2em rhythm(2) 4em;
+    }
+    &__legal {
+        font-size: to-unit(11px);
+        padding: 2em 0;
+    }
+    dt {
+        margin-top: 2em;
+        font-size: to-unit(11px);
+    }
+    dd {
+        font-weight: 400;
+    }
+}
+
+.masthead {
+    position: relative;
+    padding: rhythm(2) 0;
+    &__title,
+    &__payoff {
+        display: inline-block;
+        width: rhythm(18);
+        margin-left: rhythm(2);
+    }
+    &__title {
+        font-size: rhythm(2);
+    }
+    &__payoff {
+        font-size: rhythm(1.5);
+    }
+    &__action {
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+}
+
+.menu {
+    display: none; /* tmp */
+}
+
+.btn-shortcut {
+    display: block;
+    width: rhythm(2);
+    height: rhythm(2);
+    background-color: $color-accent;
+    line-height: rhythm(2);
+    text-align: center;
+    font-size: to-unit(16px);
+    &,
+    &:visited {
+        color: $color-neutral-lightest-grey;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        color: $white;
+    }
+
+    &--no-theme {
+        background-color: $color-body;
+    }
+}
+
+.slick-arrow {
+    @extend .btn-shortcut;
+}
+
+.txt-personal {
+    font-family: $overtherainbow-family;
+}
+
+.txt-meta {
+    font-size: to-unit(12px);
+    font-weight: 400;
+    color: $color-accent;
+}
+.txt-title {
+    font-size: to-unit(16px);
+    line-height: 1.2;
+}
+
+.txt-go {
+    &::after {
+        content: " \2014 \003E";
+    }
+}
+.txt-ellipsis {
+    &::after {
+        content: " \2026";
+    }
+}
+.txt-colon {
+    &::after {
+        content: "\003A";
+    }
+}
+
+.hero-project {
+    position: relative;
+    margin-left: rhythm(2);
+    margin-bottom: rhythm(3);
+    &__image {
+        position: relative;
+        width: rhythm(22);
+        height: rhythm(15);
+        background-color: $white;
+        /*
+        background: url('/assets/images/project-hero__image.jpg') no-repeat center;
+        background-size: cover;
+        object-fit: cover;
+        */
+        img {
+            min-width: 101%;
+            min-height: 101%;
+            object-fit: cover;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+        }
+        &::before {
+            left: rhythm(-1);
+            width: rhythm(22);
+            height: rhythm(2);
+            bottom: rhythm(-1);
+            background-color: inherit;
+        }
+        &::after {
+            width: rhythm(4);
+            top: rhythm(0);
+            left: rhythm(20);
+            bottom: 0;
+            box-shadow: inset 0 0 20px $color-box-shadow;
+        }
+    }
+    &__action {
+        display: block;
+        overflow: hidden;
+        width: rhythm(22);
+        height: rhythm(15);
+        img {
+            transition: min-width 400ms ease-out, min-height 400ms ease-out;
+        }
+        &:hover img {
+            min-width: 100%;
+            min-height: 100%;
+        }
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: rhythm(2);
+            bottom: rhythm(1);
+            left: 0;
+            transition: background-color 400ms ease-out;
+            background-color: rgba(0,0,0,0);
+        }
+        &:hover::after {
+            background-color: rgba(255,255,255,.1);
+        }
+    }
+    /*
+        1. Make sure it sits above the image mask
+     */
+    &__text {
+        position: relative; /* 1 */
+        z-index: 1; /* 1 */
+        width: rhythm(20);
+        padding: 0 rhythm(2);
+        font-size: to-unit(14px);
+    }
+    &__next {
+        position: absolute;
+        top: rhythm(14);
+        left: rhythm(20);
+    }
+    .slick-prev,
+    .slick-next {
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+    .slick-list {
+        width: rhythm(22);
+    }
+    .slick-slide {
+        min-height: rhythm(15);
+    }
+}
+
+.author-about {
+    position: relative;
+    bottom: rhythm(-5);
+    margin-left: rhythm(9);
+    margin-top: rhythm(-5);
+    margin-right: rhythm(1);
+    &__content {
+        padding: rhythm(1) rhythm(1) rhythm(1) rhythm(3);
+        background-color: white;
+    }
+    &__text {
+        line-height: 1.7;
+    }
+    &__image {
+        position: absolute;
+        left: rhythm(-7);
+        bottom: rhythm(3);
+        width: rhythm(9);
+        height: rhythm(9);
+    }
+    &__name {
+        display: block;
+        margin-top: 1em;
+    }
+}
