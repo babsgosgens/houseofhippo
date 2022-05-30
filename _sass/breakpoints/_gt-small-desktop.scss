@@ -25,10 +25,20 @@ $rhythm: get-grid-property("rhythm", $grid);
             margin: 0 0 rhythm(2);
         }
         &__image {
-            flex-basis: rhythm(12);
-            height: rhythm(9);
             position: relative;
             left: rhythm(-2);
+            flex-basis: rhythm(12);
+            height: rhythm(9);
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: rhythm(2);
+                background-color: rgba(0,0,0,.2);
+            }
         }
         &__title {
             padding: 0;

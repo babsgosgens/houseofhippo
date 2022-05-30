@@ -57,7 +57,11 @@
         height: rhythm(9);
         overflow: hidden;
     }
+    /*
+     * Needs this to lay on top of the animated post image
+     */
     &__title {
+        position: relative; /* 1 */
         flex: 1 0 rhythm(15);
         padding: rhythm(1) 0 rhythm(1) rhythm(1);
         .txt-title {
@@ -354,9 +358,11 @@
  * 1. Assuming this is an inline tag
  */
 .fx-scale-image {
-    position: relative;
-    width: inherit;
-    height: inherit;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     &,
     img {
         display: block; /* 1 */
@@ -383,5 +389,17 @@
     }
     &:hover::after {
         background-color: rgba(255,255,255,.1);
+    }
+}
+
+.anchor {
+    &--inherit {
+        &,
+        &:visited {
+            color: $color-neutral-darkest-grey;
+        }
+        &:hover {
+            color: $color-body;
+        }
     }
 }

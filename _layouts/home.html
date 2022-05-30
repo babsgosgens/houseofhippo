@@ -47,7 +47,7 @@
             <div class="hero-project">
                 <figure data-theme="#B0713C">
                     <div class="hero-project__image">
-                        <a class="hero-project__action" href="">
+                        <a class="hero-project__action" href="#">
                             {% include image-sets/hero-project.html %}
                         </a>
                     </div>
@@ -71,31 +71,38 @@
                     <li>
                         {% include posts/post-list-item.html %}
                         <article class="post-list__item">
-                            <figure class="post-list__image">
-                                <a class="fx-scale-image">
+                            <figure class="post-list__image root">
+                                <a class="fx-scale-image" href="#">
                                     <img class="img--cover" src="assets/images/post-list-image.jpg" alt="" />
                                 </a>
                             </figure>
                             <div class="post-list__title">
                                 <p class="post-list__date fx-color"><small class="txt-meta fx-color">Juli</small></p>
                                 <h1 class="txt-title">
-                                    Van webdesign naar interieurontwerp
+                                    <a class="anchor--inherit" href="#">
+                                        Van webdesign naar interieurontwerp
+                                    </a>
                                 </h1>
-                                <a href="" class="post-list__read-more fx-color"><small class="txt-personal">Lees verder</small></a>
+                                <a class="post-list__read-more fx-color" href="#"><small class="txt-personal">Lees verder</small></a>
                             </div>
                         </article>
+                    </li>
+                    <li>
+                        {% include posts/post-list-item.html %}
                         <article class="post-list__item">
-                            <figure class="post-list__image">
-                                <a class="fx-scale-image">
+                            <figure class="post-list__image root">
+                                <a class="fx-scale-image" href="#">
                                     <img class="img--cover" src="assets/images/post-list-image.jpg" alt="" />
                                 </a>
                             </figure>
                             <div class="post-list__title">
                                 <p class="post-list__date fx-color"><small class="txt-meta fx-color">Juli</small></p>
                                 <h1 class="txt-title">
-                                    Van webdesign naar interieurontwerp
+                                    <a class="anchor--inherit" href="#">
+                                        Van webdesign naar interieurontwerp
+                                    </a>
                                 </h1>
-                                <a href="" class="post-list__read-more fx-color"><small class="txt-personal">Lees verder</small></a>
+                                <a class="post-list__read-more fx-color" href="#"><small class="txt-personal">Lees verder</small></a>
                             </div>
                         </article>
                     </li>
