@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl" class="no-js fx{% if site.debug-grid %} debug-grid{% endif %}">
+<html lang="nl" class="no-js fx{% if site.debug-grid %} -debug-grid{% endif %}">
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -24,23 +24,18 @@
 
     <body class="page">
         <div class="page-wrapper" data-theme="#00f">
-            <div class="masthead">
-                <h1>
+            <div class="masthead u-root">
+                <h1 class="masthead__header">
                     <span class="masthead__title" id="masthead-title">
-                        {{ site.title }}
-                    </span><span class="masthead__payoff txt-personal">
-                        Interieurontwerp
+                        <span class="u-stretch">House of</span> <span>Hippo</span>
+                    </span>&nbsp;<span class="masthead__payoff">
+                        {{ site.meta.author }}, interieurontwerper
                     </span>
                 </h1>
-                <nav class="masthead__menu">
-                    <span class="menu">
-                        <a href="" class="menu__itemanchor__cloaked">Over mij</a>
-                        <a href="" class="menu__itemanchor__cloaked">Blog</a>
-                        <a href="" class="menu__itemanchor__cloaked">Contact</a>
-                    </span>
-                    <span class="masthead__action fx-theme" id="mail-trigger">
-                        <a href="#form" class="btn-shortcut fx-theme"><i class="icn icn-mail"></i></a>
-                    </span>
+                <nav class="masthead__menu menu">
+                    <a href="" class="menu__item anchor__cloaked">Over mij</a>
+                    <a href="" class="menu__item anchor__cloaked">Blog</a>
+                    <a href="" class="menu__item anchor__cloaked">Contact</a>
                 </nav>
             </div>
 
@@ -62,7 +57,7 @@
             </div>
 
 
-            <section class="root">
+            <section class="u-root">
                 <div class="section-title section-title--inset">
                     <h1 class="section-title__text txt-title txt-ellipsis">Recent in blog</h1>
                     <i class="section-title__link btn-shortcut btn-shortcut--no-theme icn icn-chevron-right"></i>
@@ -71,7 +66,7 @@
                     <li>
                         {% include posts/post-list-item.html %}
                         <article class="post-list__item">
-                            <figure class="post-list__image root">
+                            <figure class="post-list__image u-root">
                                 <a class="fx-scale-image" href="#">
                                     <img class="img--cover" src="assets/images/post-list-image.jpg" alt="" />
                                 </a>
@@ -90,7 +85,7 @@
                     <li>
                         {% include posts/post-list-item.html %}
                         <article class="post-list__item">
-                            <figure class="post-list__image root">
+                            <figure class="post-list__image u-root">
                                 <a class="fx-scale-image" href="#">
                                     <img class="img--cover" src="assets/images/post-list-image.jpg" alt="" />
                                 </a>

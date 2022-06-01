@@ -10,7 +10,7 @@
     object-fit: cover;
 }
 
-.root {
+.u-root {
     position: relative;
 }
 .section-title {
@@ -103,9 +103,9 @@
     &::before {
     }
     &::after {
-        top: rhythm(7);
-        right:0;
-        width: rhythm(2);
+        top: rhythm(11);
+        left: rhythm(21);
+        right: 0;
         height: rhythm(2);
         background-color: $white;
     }
@@ -145,33 +145,49 @@
         font-weight: 400;
     }
 }
+.u-stretch {
+    display: block;
+}
 
 .masthead {
-    position: relative;
-    padding: rhythm(2) 0;
+    margin: 0 rhythm(1) 0 rhythm(2);
+    width: rhythm(21);
+    height: rhythm(11);
+    &__header {
+        padding-top: rhythm(4);
+    }
     &__title,
     &__payoff {
-        display: inline-block;
-        width: rhythm(18);
-        margin-left: rhythm(2);
+        line-height: 1;
+        white-space: nowrap;
     }
     &__title {
-        font-size: rhythm(2);
+        font-size: to-unit(34px);
     }
     &__payoff {
-        font-size: rhythm(1.5);
+        font-size: to-unit(11px);
+        position: relative;
+        left: -.5em;
     }
-    &__action {
-        z-index: 1;
+    &__menu {
         position: absolute;
-        left: 0;
-        top: 100%;
+        top: 0;
+        right: 0;
+        text-align: right;
+        font-size: to-unit(11px);
+        line-height: rhythm(2);
     }
 }
 
 .menu {
-    display: none; /* tmp */
+    margin-bottom: rhythm(2);
+    &__item {
+        & + & {
+            padding-left: 1em;
+        }
+    }
 }
+
 
 .btn-shortcut {
     display: block;
@@ -202,6 +218,7 @@
 
 .txt-personal {
     font-family: $overtherainbow-family;
+    line-height: 1.5;
 }
 
 .txt-meta {
@@ -232,13 +249,12 @@
 
 .hero-project {
     position: relative;
-    margin-left: rhythm(2);
-    margin-bottom: rhythm(3);
     &__image {
         position: relative;
-        width: rhythm(22);
-        height: rhythm(15);
+        width: rhythm(24);
+        height: rhythm(29);
         background-color: $white;
+        overflow: hidden;
         /*
         background: url('/assets/images/project-hero__image.jpg') no-repeat center;
         background-size: cover;
@@ -248,8 +264,8 @@
             min-width: 101%;
             min-height: 101%;
             object-fit: cover;
+            display: block;
         }
-
         &::before,
         &::after {
             content: "";
@@ -257,75 +273,78 @@
             position: absolute;
         }
         &::before {
-            left: rhythm(-1);
-            width: rhythm(22);
+            left: 0;
+            width: rhythm(21);
             height: rhythm(2);
-            bottom: rhythm(-1);
+            top: rhythm(27);
             background-color: inherit;
         }
         &::after {
-            width: rhythm(4);
             top: rhythm(0);
-            left: rhythm(20);
-            bottom: 0;
+            left: rhythm(21);
+            width: rhythm(6);
+            height: rhythm(29);
+            background-color: rgba(0,0,0,.2);
             box-shadow: inset 0 0 20px $color-box-shadow;
         }
     }
-    &__action {
-        display: block;
-        overflow: hidden;
-        width: rhythm(22);
-        height: rhythm(15);
-        img {
-            transition: min-width 400ms ease-out, min-height 400ms ease-out;
-        }
-        &:hover img {
-            min-width: 100%;
-            min-height: 100%;
-        }
-        &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 0;
-            right: rhythm(2);
-            bottom: rhythm(1);
-            left: 0;
-            transition: background-color 400ms ease-out;
-            background-color: rgba(0,0,0,0);
-        }
-        &:hover::after {
-            background-color: rgba(255,255,255,.1);
-        }
+    &__next {
+        position: absolute;
+        top: rhythm(27);
+        left: rhythm(21);
     }
+    // &__action {
+    //     display: block;
+    //     overflow: hidden;
+    //     width: rhythm(22);
+    //     height: rhythm(15);
+    //     img {
+    //         transition: min-width 400ms ease-out, min-height 400ms ease-out;
+    //     }
+    //     &:hover img {
+    //         min-width: 100%;
+    //         min-height: 100%;
+    //     }
+    //     &::after {
+    //         content: "";
+    //         display: block;
+    //         position: absolute;
+    //         top: 0;
+    //         right: rhythm(2);
+    //         bottom: rhythm(1);
+    //         left: 0;
+    //         transition: background-color 400ms ease-out;
+    //         background-color: rgba(0,0,0,0);
+    //     }
+    //     &:hover::after {
+    //         background-color: rgba(255,255,255,.1);
+    //     }
+    // }
     /*
         1. Make sure it sits above the image mask
      */
     &__text {
         position: relative; /* 1 */
         z-index: 1; /* 1 */
-        width: rhythm(20);
-        padding: 0 rhythm(2);
-        font-size: to-unit(14px);
-    }
-    &__next {
-        position: absolute;
-        top: rhythm(14);
-        left: rhythm(20);
+        top: rhythm(-1);
+        width: rhythm(21);
+        padding: 0 rhythm(1) 0 rhythm(2);
+        font-size: to-unit(12px);
     }
     .slick-prev,
     .slick-next {
         position: absolute;
+        right: 100%;
         width: 0;
         height: 0;
         overflow: hidden;
     }
-    .slick-list {
-        width: rhythm(22);
-    }
-    .slick-slide {
-        min-height: rhythm(15);
-    }
+//     .slick-list {
+//         width: rhythm(22);
+//     }
+//     .slick-slide {
+//         min-height: rhythm(15);
+//     }
 }
 
 .author-about {
