@@ -1,193 +1,43 @@
 
-.li-reset {
-    list-style: none;
-    padding: 0;
+/* Component Styling */
+
+.anchor {
+    &--inherit {
+        &,
+        &:visited {
+            color: $color-neutral-darkest-grey;
+        }
+        &:hover {
+            color: $color-body;
+        }
+    }
 }
 
-.img--cover {
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-}
-
-.u-root {
+.about-me {
     position: relative;
-}
-.section-title {
-    // position: absolute;
-    // bottom: 100%;
-    z-index: 1;
-    display: flex;
-    flex-direction: row-reverse;
-    // align-items: center;
-    margin-left: rhythm(2);
-    background-color: $white;
-    &--inset {
-        // left: rhythm(2);
+    bottom: rhythm(-5);
+    margin-left: rhythm(9);
+    margin-top: rhythm(-5);
+    margin-right: rhythm(1);
+    &__content {
+        padding: rhythm(1) rhythm(1) rhythm(1) rhythm(3);
+        background-color: white;
     }
     &__text {
-        // display: inline-block;
-        flex-grow: 1;
-        // align-content: center;
-        // height: rhythm(2);
-        padding: 0 rhythm(1);
-        // font-weight: 200;
-    }
-    .txt-title {
-        line-height: rhythm(2);
-    }
-}
-
-.post-list {
-    &,
-    &__image,
-    &__title {
-        // position: relative;
-    }
-    &__item {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
-        margin-bottom: rhythm(1);
+        line-height: 1.7;
     }
     &__image {
-        flex: 0 0 rhythm(9);
+        position: absolute;
+        left: rhythm(-7);
+        bottom: rhythm(3);
         width: rhythm(9);
         height: rhythm(9);
-        overflow: hidden;
     }
-    /*
-     * Needs this to lay on top of the animated post image
-     */
-    &__title {
-        position: relative; /* 1 */
-        flex: 1 0 rhythm(15);
-        padding: rhythm(1) 0 rhythm(1) rhythm(1);
-        .txt-title {
-            margin-left: rhythm(-3);
-            padding: rhythm(1);
-            background: $white;
-        }
-    }
-    &__read-more {
-        font-family: $overtherainbow-family;
+    &__name {
+        display: block;
+        margin-top: 1em;
     }
 }
-
-.fx-theme {
-    background-color: $color-accent;
-    transition: background-color 200ms linear;
-}
-.fx-color {
-    color: $color-accent;
-    transition: color 200ms linear;
-}
-.page-wrapper {
-    background-color: $white;
-}
-
-.page-theme {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    background-color: $color-accent;
-    // transition: background-color 300ms ease-out, color 300ms ease-out;
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-        background-color: inherit;
-    }
-    &::before {
-    }
-    &::after {
-        top: rhythm(11);
-        left: rhythm(21);
-        right: 0;
-        height: rhythm(2);
-        background-color: $white;
-    }
-}
-
-.page-footer {
-    padding-top: rhythm(9);
-    background-color: $color-body;
-    color: $color-neutral-lightest-grey;
-    transition: color 100ms ease-in-out;
-    &:hover,
-    &:focus {
-        color: $white;
-    }
-    &__quote,
-    &__intro,
-    &__legal {
-        text-align: center;
-    }
-    &__quote {
-        font-size: to-unit(20px);
-        margin: 0 rhythm(2);
-    }
-    &__intro {
-        font-size: to-unit(14px);
-        margin: 2em rhythm(2) 4em;
-    }
-    &__legal {
-        font-size: to-unit(11px);
-        padding: 2em 0;
-    }
-    dt {
-        margin-top: 2em;
-        font-size: to-unit(11px);
-    }
-    dd {
-        font-weight: 400;
-    }
-}
-.u-stretch {
-    display: block;
-}
-
-.masthead {
-    margin: 0 rhythm(1) 0 rhythm(2);
-    width: rhythm(21);
-    height: rhythm(11);
-    &__header {
-        padding-top: rhythm(4);
-    }
-    &__title,
-    &__payoff {
-        line-height: 1;
-        white-space: nowrap;
-    }
-    &__title {
-        font-size: to-unit(34px);
-    }
-    &__payoff {
-        font-size: to-unit(11px);
-        position: relative;
-        left: -.5em;
-    }
-    &__menu {
-        position: absolute;
-        top: 0;
-        right: 0;
-        text-align: right;
-        font-size: to-unit(11px);
-        line-height: rhythm(2);
-    }
-}
-
-.menu {
-    margin-bottom: rhythm(2);
-    &__item {
-        & + & {
-            padding-left: 1em;
-        }
-    }
-}
-
 
 .btn-shortcut {
     display: block;
@@ -212,38 +62,59 @@
     }
 }
 
-.slick-arrow {
-    @extend .btn-shortcut;
-}
+/*
+ * 1. Chrome/Opera/Safari
+ * 2. Firefox 19+
+ * 3. IE 10+
+ * 4. Firefox 18-
+ */
+.input {
+    padding: rhythm(.5) rhythm(1);
+    background-color: #291E20;
+    background-color: rgba(0,0,0,.2);
+    border-bottom: 1px solid;
+    height: rhythm(3);
+    font-size: to-unit(14px);
+    line-height: rhythm(2);
 
-.txt-personal {
-    font-family: $overtherainbow-family;
-    line-height: 1.5;
-}
+    &:-webkit-autofill,
+    &:-webkit-autofill:focus {
+       transition: background-color 600000s 0s, color 600000s 0s;
+     }
 
-.txt-meta {
-    font-size: to-unit(12px);
-    font-weight: 400;
-    color: $color-accent;
-}
-.txt-title {
-    font-size: to-unit(16px);
-    line-height: 1.2;
-}
+    &,
+    &::placeholder,
+    &::-webkit-input-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder,
+    &:-moz-placeholder {
+        color: $color-neutral-lightest-grey;
+    }
 
-.txt-go {
-    &::after {
-        content: " \2014 \003E";
+    &:focus,
+    &:focus-visible {
+        background-color: #241A1C;
+        background-color: rgba(0,0,0,.3);
+        outline-width: 0;
+    }
+
+    &--textarea {
+        transition: height 200ms ease-out;
+        border-width: 0 0 1px 0;
+        &:focus {
+            height: rhythm(10);
+        }
     }
 }
-.txt-ellipsis {
-    &::after {
-        content: " \2026";
-    }
+.label {
 }
-.txt-colon {
-    &::after {
-        content: "\003A";
+
+.form {
+    &__row {
+        margin-top: rhythm(1);
+    }
+    &:first-child {
+        margin-top: 0;
     }
 }
 
@@ -275,7 +146,7 @@
         &::before {
             left: 0;
             width: rhythm(21);
-            height: rhythm(2);
+            height: rhythm(3);
             top: rhythm(27);
             background-color: inherit;
         }
@@ -334,10 +205,8 @@
     .slick-prev,
     .slick-next {
         position: absolute;
-        right: 100%;
-        width: 0;
-        height: 0;
-        overflow: hidden;
+        left: -999em;
+        top: -999em;
     }
 //     .slick-list {
 //         width: rhythm(22);
@@ -347,30 +216,125 @@
 //     }
 }
 
-.author-about {
-    position: relative;
-    bottom: rhythm(-5);
-    margin-left: rhythm(9);
-    margin-top: rhythm(-5);
-    margin-right: rhythm(1);
-    &__content {
-        padding: rhythm(1) rhythm(1) rhythm(1) rhythm(3);
-        background-color: white;
+.masthead {
+    margin: 0 rhythm(1) 0 rhythm(2);
+    width: rhythm(21);
+    height: rhythm(11);
+    &__header {
+        padding-top: rhythm(4);
     }
-    &__text {
-        line-height: 1.7;
+    &__title,
+    &__payoff {
+        line-height: 1;
+        white-space: nowrap;
     }
-    &__image {
+    &__title {
+        font-size: to-unit(34px);
+    }
+    &__payoff {
+        font-size: to-unit(11px);
+        position: relative;
+        left: -.5em;
+    }
+    &__menu {
         position: absolute;
-        left: rhythm(-7);
-        bottom: rhythm(3);
-        width: rhythm(9);
-        height: rhythm(9);
+        top: 0;
+        right: 0;
+        text-align: right;
+        font-size: to-unit(11px);
+        line-height: rhythm(2);
     }
-    &__name {
-        display: block;
-        margin-top: 1em;
+}
+
+.menu {
+    margin-bottom: rhythm(2);
+    &__item {
+        & + & {
+            padding-left: 1em;
+        }
     }
+}
+
+.page-wrapper {
+    background-color: $white;
+}
+
+.page-theme {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: $color-accent;
+    // transition: background-color 300ms ease-out, color 300ms ease-out;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: inherit;
+    }
+    &::before {
+    }
+    &::after {
+        top: rhythm(11);
+        left: rhythm(21);
+        right: 0;
+        height: rhythm(2);
+        background-color: $white;
+    }
+}
+
+.page-footer {
+    padding: rhythm(2);
+    padding-top: rhythm(9);
+    background-color: $color-body;
+    color: $color-neutral-lightest-grey;
+    transition: color 100ms ease-in-out;
+    &:hover,
+    &:focus {
+        color: $white;
+    }
+    &__quote,
+    &__intro,
+    &__legal {
+        text-align: center;
+    }
+    &__quote {
+        font-size: to-unit(20px);
+        margin: 0 rhythm(2);
+    }
+    &__intro {
+        font-size: to-unit(14px);
+        margin: 2em rhythm(2) 4em;
+    }
+    &__legal {
+        font-size: to-unit(11px);
+        padding: 2em 0;
+    }
+    dt {
+        margin-top: 2em;
+        font-size: to-unit(11px);
+    }
+    dd {
+        font-weight: 400;
+    }
+}
+
+
+
+/* Utility Styling */
+
+
+.img {
+    &--cover {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+}
+.is-narrative {
+    position: absolute;
+    left: -999em;
+    top: -999em;
 }
 
 /*
@@ -410,15 +374,56 @@
         background-color: rgba(255,255,255,.1);
     }
 }
+.fx-theme {
+    background-color: $color-accent;
+    transition: background-color 200ms linear;
+}
+.fx-color {
+    color: $color-accent;
+    transition: color 200ms linear;
+}
 
-.anchor {
-    &--inherit {
-        &,
-        &:visited {
-            color: $color-neutral-darkest-grey;
-        }
-        &:hover {
-            color: $color-body;
-        }
+.u-root {
+    position: relative;
+}
+.u-stretch {
+    display: block;
+}
+
+.txt-personal {
+    font-family: $overtherainbow-family;
+    line-height: 1.5;
+}
+.txt-meta {
+    font-size: to-unit(12px);
+    font-weight: 400;
+    color: $color-accent;
+}
+.txt-title {
+    font-size: to-unit(16px);
+    line-height: 1.2;
+}
+.txt-go {
+    &::after {
+        content: " \2014 \003E";
     }
+}
+.txt-ellipsis {
+    &::after {
+        content: " \2026";
+    }
+}
+.txt-colon {
+    &::after {
+        content: "\003A";
+    }
+}
+
+
+
+/* Overrides */
+
+
+.slick-arrow {
+    @extend .btn-shortcut;
 }

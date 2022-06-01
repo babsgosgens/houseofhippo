@@ -57,85 +57,64 @@
             </div>
 
 
-            <section class="u-root">
-                <div class="section-title section-title--inset">
-                    <h1 class="section-title__text txt-title txt-ellipsis">Recent in blog</h1>
-                    <i class="section-title__link btn-shortcut btn-shortcut--no-theme icn icn-chevron-right"></i>
-                </div>
-                <ol class="post-list li li-reset">
-                    <li>
-                        {% include posts/post-list-item.html %}
-                        <article class="post-list__item">
-                            <figure class="post-list__image u-root">
-                                <a class="fx-scale-image" href="#">
-                                    <img class="img--cover" src="assets/images/post-list-image.jpg" alt="" />
-                                </a>
-                            </figure>
-                            <div class="post-list__title">
-                                <p class="post-list__date fx-color"><small class="txt-meta fx-color">Juli</small></p>
-                                <h1 class="txt-title">
-                                    <a class="anchor--inherit" href="#">
-                                        Van webdesign naar interieurontwerp
-                                    </a>
-                                </h1>
-                                <a class="post-list__read-more fx-color" href="#"><small class="txt-personal">Lees verder</small></a>
-                            </div>
-                        </article>
-                    </li>
-                    <li>
-                        {% include posts/post-list-item.html %}
-                        <article class="post-list__item">
-                            <figure class="post-list__image u-root">
-                                <a class="fx-scale-image" href="#">
-                                    <img class="img--cover" src="assets/images/post-list-image.jpg" alt="" />
-                                </a>
-                            </figure>
-                            <div class="post-list__title">
-                                <p class="post-list__date fx-color"><small class="txt-meta fx-color">Juli</small></p>
-                                <h1 class="txt-title">
-                                    <a class="anchor--inherit" href="#">
-                                        Van webdesign naar interieurontwerp
-                                    </a>
-                                </h1>
-                                <a class="post-list__read-more fx-color" href="#"><small class="txt-personal">Lees verder</small></a>
-                            </div>
-                        </article>
-                    </li>
-                </ol>
-            </section>
-
-            <div style="height: 20em;">&nbsp;</div>
-
-            <div class="author-about">
-                <img class="author-about__image lazy" src="assets/images/babsgosgens.jpg" alt="" />
-                <div class="author-about__content">
-                    <p class="author-about__text txt-personal">
+            <div class="qabout-me">
+                <img class="qauthor-about__image lazy" src="assets/images/babsgosgens.jpg" alt="" />
+                <div class="qauthor-about__content">
+                    <p class="qauthor-about__text txt-personal">
                         Elk interieur vertelt een verhaal. Maar een goed ontworpen interieur vertelt een verhaal dat je steeds weer opnieuw wilt horen.
                     </p>
-                    <div class="author-about__name">
+                    <div class="qauthor-about__name">
                         <a class="fx-color txt-meta" href="">Babs Gösgens</a>
                     </div>
                 </div>
             </div>
+
             <i class="page-theme fx-theme"></i>
             <i class="page-frame is-no-pointer"></i>
         </div>
-        <div class="page-footer">
+        <section class="page-footer">
             <div class="page-footer__content">
 
-                <p class="page-footer__quote txt-personal">Ik help je graag om jouw verhaal te vertalen naar jouw interieur.</p>
-                <p class="page-footer__intro">Wat zijn jouw interieurplannen?. Ik ben heel benieuwd en ik kom je graag helpen. Bel of mail, dan kom ik keer bij je langs.</p>
-                <dl class="page-footer__intro">
-                    <dt class="txt-personal">Telefoon</dt>
-                    <dd>+31 (0)6 3104 7984</dd>
-                    <dt class="txt-personal">Email</dt>
-                    <dd>babsgosgens@gmail.com</dd>
+                <h2>Hallo, hoe kan ik je helpen?</h2>
+                <p>Ik ben heel benieuwd naar jouw verhaal en interieurwensen.  Bel of mail, dan kom ik een keer bij je langs voor een kennismaking. Vrijblijvend natuurlijk!</p>
+                <dl>
+                    <dt>Telefoon</dt>
+                    <dd>
+                        <address>
+                            +31 (06) 3104 7984
+                        </address>
+                    </dd>
+                    <dt>Email</dt>
+                    <dd>
+                        <address>
+                            babsgosgens@gmail.com
+                        </address>
+                    </dd>
                 </dl>
+                <form class="form">
+                    <div class="form__row">
+                        <input class="input" type="text" id="name" placeholder="Naam" required="required" />
+                        <label class="label is-narrative" for="name">Naam</label>
+                    </div>
+                    <div class="form__row">
+                        <input class="input" type="text" id="email" placeholder="Email" required="required" />
+                        <label class="label is-narrative" for="email">Email</label>
+                    </div>
+                    <div class="form__row">
+                        <input class="input" type="tel" id="tel" placeholder="Telefoon" />
+                        <label class="label is-narrative" for="tel">Telefoon</label>
+                    </div>
+                    <div class="form__row">
+                        <textarea class="input input--textarea" type="text" id="message" placeholder="Bericht" required="required"></textarea>
+                        <label class="label is-narrative" for="message">Bericht</label>
+                    </div>
+                </form>
+
                 <div class="page-footer__legal">
                     © {{ 'now' | date: "%Y" }} - Babs Gösgens
                 </div>
             </div>
-        </div>
+        </section>
 
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
