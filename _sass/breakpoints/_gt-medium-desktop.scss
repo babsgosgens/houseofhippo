@@ -7,6 +7,13 @@
         &::before,
         &::after {
             width: rhythm(4);
+            top: rhythm(2);
+        }
+        &::before {
+            height: rhythm(9);
+        }
+        &::after {
+            height: rhythm(4);
         }
     }
 
@@ -27,17 +34,14 @@
             1. Pull the description up a bit and let adjacent elements respond accordingly
          */
         &__text {
-            width: rhythm(18);
-            padding: 0 rhythm(2) 0 rhythm(1);
-            margin-top: rhythm(-1); /* 1 */
-            font-size: to-unit(16px);
+            margin-top: rhythm(-1);
+            width: rhythm(15);
         }
         &__action {
             width: rhythm(21);
             height: rhythm(16);
             &::after {
-                right: rhythm(3);
-                bottom: rhythm(2);
+                right: rhythm(4);
             }
         }
         &__text {

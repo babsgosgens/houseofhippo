@@ -70,16 +70,15 @@ $rhythm: get-grid-property("rhythm", $grid);
     .page-theme {
         &::before,
         &::after {
+            top: rhythm(1);
             width: rhythm(3);
             background-color: inherit;
         }
         &::before {
-            top: rhythm(1);
             right: 100%;
             height: rhythm(10);
         }
         &::after {
-            top: rhythm(1);
             left: 100%;
             height: rhythm(5);
         }
