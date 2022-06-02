@@ -4,7 +4,7 @@
         margin: 0 rhythm(1) 0 rhythm(3);
         padding-top: rhythm(2);
         // width: rhythm(21);
-        height: rhythm(8);
+        height: rhythm(7);
         &__payoff {
             font-size: to-unit(16px);
         }
@@ -41,7 +41,7 @@
 
     .page-theme {
         &::after {
-            top: rhythm(5);
+            top: rhythm(6);
         }
     }
 
