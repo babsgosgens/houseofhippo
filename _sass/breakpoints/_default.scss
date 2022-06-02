@@ -359,6 +359,7 @@
 .lt-row {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: stretch;
     &__item {
         flex-grow: 1;
