@@ -285,12 +285,6 @@
     }
 }
 
-.whatsthis {
-    width: 10px;
-    height: 10px;
-    background: green;
-    margin: 1em;
-}
 .project-slider {
 
     .slick-slide {
@@ -304,11 +298,14 @@
     	margin: 0 rhythm(-1) 0 0;
     }
 
-
-
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    position: relative;
+    min-width: rhythm(24);
+    width: auto;
+    height: rhythm(31);
+    overflow-x: auto;
     &--parent,
     &--child {
         display: static;
@@ -316,9 +313,6 @@
     &-wrapper {
         padding-bottom: rhythm(4);
     }
-    position: relative;
-    width: rhythm(24);
-    height: rhythm(31);
     &__item {
         position: relative;
         // flex: 1 0 auto;
