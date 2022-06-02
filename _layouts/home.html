@@ -23,21 +23,24 @@
     </head>
 
     <body class="page">
-        <div class="page-wrapper" data-theme="#00f">
-            <div class="masthead u-root">
-                <h1 class="masthead__header">
-                    <span class="masthead__title" id="masthead-title">
-                        <span class="u-stretch">House of</span> <span>Hippo</span>
-                    </span>&nbsp;<span class="masthead__payoff">
-                        {{ site.meta.author }}, interieurontwerper
-                    </span>
-                </h1>
+        <div class="page-lt-wrapper" data-theme="#00f">
+            <header class="masthead u-root">
+                <div class="lt-wrap">
+                    <h1 class="masthead__title txt-title lt-wrap">
+                        <span class="lt-wrap__tight">House of</span>
+                        <span class="lt-wrap__loose">Hippo</span>
+                    </h1>
+                    <p class="masthead__payoff lt-wrap lt-wrap--end">
+                        <span class="is-gt-sh">{{ site.meta.author }}</span>
+                        <span>Interieurontwerp</span>
+                    </p>
+                </div>
                 <nav class="masthead__menu menu">
                     <a href="" class="menu__item anchor__cloaked">Over mij</a>
                     <a href="" class="menu__item anchor__cloaked">Blog</a>
                     <a href="" class="menu__item anchor__cloaked">Contact</a>
                 </nav>
-            </div>
+            </header>
 
             <div class="hero-project">
                 <figure data-theme="#B0713C">
@@ -75,23 +78,30 @@
         <section class="page-footer">
             <div class="page-footer__content">
 
-                <h2>Hallo, hoe kan ik je helpen?</h2>
-                <p>Ik ben heel benieuwd naar jouw verhaal en interieurwensen.  Bel of mail, dan kom ik een keer bij je langs voor een kennismaking. Vrijblijvend natuurlijk!</p>
+                <div class="lt-wrap">
+                    <h1 class="txt-title lt-wrap">
+                        <span class="lt-wrap__tight">Hallo,</span>
+                        <span class="lt-wrap__tight">hoe kan ik je</span>
+                        <span class="lt-wrap__loose">helpen?</span>
+                    </h1>
+                    <p class="lt-wrap lt-wrap--end txt-intro"><span>Ik ben heel benieuwd naar jouw verhaal en interieurwensen.  Bel of mail, dan kom ik een keer bij je langs voor een kennismaking. Vrijblijvend natuurlijk!<span></p>
+                </div>
+
                 <dl>
-                    <dt>Telefoon</dt>
-                    <dd>
+                    <dt class="txt-meta">Telefoon</dt>
+                    <dd class="">
                         <address>
                             +31 (06) 3104 7984
                         </address>
                     </dd>
-                    <dt>Email</dt>
-                    <dd>
+                    <dt class="txt-meta">Email</dt>
+                    <dd class="">
                         <address>
                             babsgosgens@gmail.com
                         </address>
                     </dd>
                 </dl>
-                <form class="form">
+                <form class="form" action="https://getform.io/f/928bfeff-6b05-4e7c-a369-3b383a28d44c" method="post">
                     <div class="form__row">
                         <input class="input" type="text" id="name" placeholder="Naam" required="required" />
                         <label class="label is-narrative" for="name">Naam</label>
@@ -101,18 +111,32 @@
                         <label class="label is-narrative" for="email">Email</label>
                     </div>
                     <div class="form__row">
-                        <input class="input" type="tel" id="tel" placeholder="Telefoon" />
+                        <input class="input" type="tel" id="tel" placeholder="Telefoon" required="required" />
                         <label class="label is-narrative" for="tel">Telefoon</label>
                     </div>
                     <div class="form__row">
                         <textarea class="input input--textarea" type="text" id="message" placeholder="Bericht" required="required"></textarea>
                         <label class="label is-narrative" for="message">Bericht</label>
                     </div>
+                    <div class="contact-submit-holder">
+                        <input type="submit" value="Verzenden">
+                    </div>
                 </form>
 
-                <div class="page-footer__legal">
-                    © {{ 'now' | date: "%Y" }} - Babs Gösgens
+                <div class="page-footer__details lt-row">
+                    <p class="lt-row__item">
+                        <small>© {{ 'now' | date: "%Y" }} - Babs Gösgens</small>
+                    </p>
+                    <ul class="lt-row__item lt-list lt-list--reset lt-row">
+                        <li class="lt-row__item">
+                            <a href="">Instagram</a>
+                        </li>
+                        <li class="lt-row__item">
+                            <a href="">Pinterest</a>
+                        </li>
+                    </ul>
                 </div>
+
             </div>
         </section>
 

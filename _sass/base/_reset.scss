@@ -178,7 +178,8 @@ $base-collection: add-properties(
   $base-collection,
   'input',
   (
-    border: 1px solid $color-body
+    border: none,
+    border-radius: $border-radius
   )
 );
 
@@ -192,7 +193,10 @@ $base-collection: add-properties(
   )
 );
 
-
-.list--reset,ol.reset,ul.reset {
-    list-style: none
-}
+$base-collection: add-properties(
+  $base-collection,
+  "address",
+  (
+    font-style: normal
+  )
+);
