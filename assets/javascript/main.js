@@ -1,6 +1,6 @@
 (function ($) {
 
-    $('.hero-project').slick({
+    $('.project-slider-parent').slick({
         dots: false,
         infinite: true,
         autoplay: true,
@@ -10,6 +10,41 @@
         cssEase: 'linear'
     });
 
+    $('.project-slider--child').slick({
+        respondTo: 'slider',
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        cssEase: 'ease-out',
+        easing: 'swing',
+        slidesToShow: 1,
+        centerMode: false,
+        variableWidth: true,
+        customPaging: '<span>',
+        zIndex: 1001,
+        prevArrow: '<div class="project-slider__prev"><button><i class="icn icn-slider icn-chevron-right"></i><span class="is-narrative">Vorige</span></button></div>',
+        nextArrow: '<div class="project-slider__next"><button><i class="icn icn-slider icn-chevron-right"></i><span class="is-narrative">Volgende</span></button></div>'
+    });
+
+    $('.project-slider').slick({
+        dots: true,
+        arrows: false,
+        draggable: false,
+        swipe: false,
+        swipeToSlide: false,
+        infinite: true,
+        autoplay: false,
+        cssEase: 'ease-out',
+        easing: 'swing',
+        slidesToShow: 1,
+        centerMode: false,
+        variableWidth: true,
+        customPaging: function(slider, i) {
+            return $('<button class="whatsthis" type="button" />').text(i + 1);
+        }
+    });
+
     $('.lazy').Lazy();
 
     var setTheme = function(color){
@@ -17,27 +52,27 @@
         $('.fx-color').css('color', color);
     };
 
-    $('.hero-project').on('setTheme', function(event){
+    $('.project-hero').on('setTheme', function(event){
 
-        var slide = $('.hero-project').find('.slick-slide').first(),
+        var slide = $('.project-hero').find('.slick-slide').first(),
             color = $(slide).data('theme');
 
         setTheme( color );
 
     }).trigger('setTheme');
 
-    $(document).on('beforeChange', '.hero-project', function(event, slick, currentSlide, nextSlide){
+    $(document).on('beforeChange', '.project-hero', function(event, slick, currentSlide, nextSlide){
 
-        var slide = $('.hero-project').find('.slick-slide').eq(nextSlide),
+        var slide = $('.project-hero').find('.slick-slide').eq(nextSlide),
             color = $(slide).data('theme');
 
             setTheme( color );
 
     });
 
-    $(document).on('click', '.hero-project__next', function(event, slick, currentSlide, nextSlide){
+    $(document).on('click', '.project-hero__next', function(event, slick, currentSlide, nextSlide){
 
-        $('.hero-project').slick('slickNext');
+        $('.project-hero').slick('slickNext');
 
     });
 
