@@ -39,6 +39,26 @@
     }
 }
 
+.btn {
+    padding: rhythm(.5) rhythm(4);
+    background: none;
+    border: 1px solid;
+    color: $color-neutral-lightest-grey;
+    line-height: rhythm(1);
+    &__label {
+        color: $color-accent;
+    }
+    &--stretch {
+        width: 100%;
+    }
+    &--sleak {
+        transition: padding 600ms ease-out, border-color 600ms ease-out;
+        padding: rhythm(.5) rhythm(1);
+        border: 0;
+        border-bottom: 1px solid;
+    }
+}
+
 .btn-shortcut {
     display: block;
     width: rhythm(2);
@@ -72,10 +92,11 @@
     padding: rhythm(.5) rhythm(1);
     background-color: #291E20;
     background-color: rgba(0,0,0,.2);
-    border-bottom: 1px solid;
+    border-bottom: 1px solid rgba($color-neutral-lightest-grey, .6);
     height: rhythm(3);
     font-size: to-unit(14px);
     line-height: rhythm(2);
+    transition: color 600ms ease-out, border-color 600ms ease-out;
 
     &:-webkit-autofill,
     &:-webkit-autofill:focus {
@@ -87,11 +108,13 @@
         color: $color-neutral-lightest-grey;
     }
 
+    &:hover,
     &:focus,
     &:focus-visible {
         background-color: #241A1C;
         background-color: rgba(0,0,0,.3);
         outline-width: 0;
+        border-color: $color-neutral-lightest-grey;
     }
 
     &--textarea {
@@ -160,33 +183,7 @@
         top: rhythm(27);
         left: rhythm(21);
     }
-    // &__action {
-    //     display: block;
-    //     overflow: hidden;
-    //     width: rhythm(22);
-    //     height: rhythm(15);
-    //     img {
-    //         transition: min-width 400ms ease-out, min-height 400ms ease-out;
-    //     }
-    //     &:hover img {
-    //         min-width: 100%;
-    //         min-height: 100%;
-    //     }
-    //     &::after {
-    //         content: "";
-    //         display: block;
-    //         position: absolute;
-    //         top: 0;
-    //         right: rhythm(2);
-    //         bottom: rhythm(1);
-    //         left: 0;
-    //         transition: background-color 400ms ease-out;
-    //         background-color: rgba(0,0,0,0);
-    //     }
-    //     &:hover::after {
-    //         background-color: rgba(255,255,255,.1);
-    //     }
-    // }
+
     /*
         1. Make sure it sits above the image mask
      */
@@ -204,12 +201,6 @@
         left: -999em;
         top: -999em;
     }
-//     .slick-list {
-//         width: rhythm(22);
-//     }
-//     .slick-slide {
-//         min-height: rhythm(15);
-//     }
 }
 
 .masthead {
@@ -279,6 +270,15 @@
     }
     dd {
         font-weight: 400;
+    }
+    .btn--sleak {
+        transition: padding 600ms ease-out, border-color 600ms ease-out;
+        border-color: rgba($color-neutral-lightest-grey, .6);
+        &:hover,
+        &:focus {
+            padding: rhythm(.5) rhythm(2);
+            border-color: $color-neutral-lightest-grey;
+        }
     }
 }
 
@@ -428,7 +428,9 @@
         content: "\003A";
     }
 }
-
+.txt-center {
+    text-align: center;
+}
 
 
 
