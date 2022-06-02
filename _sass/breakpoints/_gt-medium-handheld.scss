@@ -4,12 +4,38 @@
         margin: 0 rhythm(1) 0 rhythm(3);
         padding-top: rhythm(2);
         // width: rhythm(21);
-        height: rhythm(6);
+        height: rhythm(8);
         &__payoff {
             font-size: to-unit(16px);
         }
         &__menu {
             font-size: to-unit(12px);
+        }
+    }
+
+    .page-intro {
+        position: relative;
+        padding: 0;
+        margin: rhythm(1) rhythm(4) rhythm(2) rhythm(7);
+        &__image {
+            position: absolute;
+            top: rhythm(0);
+            left: rhythm(-4);
+            width: rhythm(3);
+            height: rhythm(3);
+            margin: 0;
+        }
+        &__content {
+            padding-bottom: 1em;
+        }
+        &__text {
+            font-size: to-unit(17px);
+        }
+        &__link {
+            position: relative;
+            .icn {
+                top: .5em;
+            }
         }
     }
 

@@ -39,19 +39,34 @@ $rhythm: get-grid-property("rhythm", $grid);
         }
     }
 
-    .page-wrapper {
-        position: relative;
-        margin: rhythm(2) auto rhythm(-2);
-        width: rhythm(30);
-        &::after {
-            pointer-events: none;
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            box-shadow: 0 0 20px $color-box-shadow;
+    .page-intro {
+        position: absolute;
+        top: rhythm(8);
+        left: rhythm(1);
+        width: rhythm(10);
+        padding: 0;
+        margin: 0;
+        &__image {
+            position: relative;
+            left: rhythm(-1);
+            width: rhythm(3);
+            height: rhythm(3);
+        }
+        &__content {
+            padding-bottom: 1em;
+        }
+        &__text {
+            font-size: to-unit(18px);
+            font-family: $overtherainbow-family;
+            &:after {
+                content: "\003A\0029"
+            }
+        }
+        &__link {
+            position: relative;
+            .icn {
+                width: rhythm(1);
+            }
         }
     }
 
@@ -71,6 +86,22 @@ $rhythm: get-grid-property("rhythm", $grid);
             left: 100%;
             height: rhythm(3);
             background-color: $color-background;
+        }
+    }
+
+    .page-wrapper {
+        position: relative;
+        margin: rhythm(2) auto rhythm(-2);
+        width: rhythm(30);
+        &::after {
+            pointer-events: none;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            box-shadow: 0 0 20px $color-box-shadow;
         }
     }
 

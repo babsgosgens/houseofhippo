@@ -1,3 +1,8 @@
 @include breakpoint($gt-large-handheld) {
-
+    .page-intro {
+        margin: rhythm(1) rhythm(6) rhythm(2) rhythm(7);
+        &__text {
+            font-size: to-unit(20px);
+        }
+    }
 }

@@ -3,7 +3,6 @@
     .masthead {
         margin: 0 rhythm(1) 0 rhythm(1);
         padding-top: 0;
-        // width: rhythm(21);
         height: rhythm(2);
         &__header {
             position: absolute;
@@ -20,10 +19,20 @@
         }
     }
 
-    .page-wrapper {
-        position: relative;
-        margin: rhythm(2) auto rhythm(-2);
-        width: rhythm(28);
+    .page-intro {
+        position: absolute;
+        left: rhythm(3);
+        width: rhythm(7);
+        &__image {
+            position: absolute;
+            left: rhythm(-5);
+            width: rhythm(4);
+            height: rhythm(4);
+            z-index: 1;
+        }
+        &__text {
+            font-size: to-unit(20px);
+        }
     }
 
     .page-theme {
@@ -45,6 +54,12 @@
         }
     }
 
+    .page-wrapper {
+        position: relative;
+        margin: rhythm(2) auto rhythm(-2);
+        width: rhythm(28);
+    }
+
     .project-hero {
         margin-left: rhythm(12);
         &__image {
@@ -63,7 +78,7 @@
         }
         &__text {
             top: rhythm(-1.5);
-            width: rhythm(18);
+            width: rhythm(16);
             padding: 0 rhythm(1) 0 rhythm(1);
             font-size: to-unit(16px);
         }
