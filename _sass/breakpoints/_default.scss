@@ -13,32 +13,6 @@
     }
 }
 
-.about-me {
-    position: relative;
-    bottom: rhythm(-5);
-    margin-left: rhythm(9);
-    margin-top: rhythm(-5);
-    margin-right: rhythm(1);
-    &__content {
-        padding: rhythm(1) rhythm(1) rhythm(1) rhythm(3);
-        background-color: white;
-    }
-    &__text {
-        line-height: 1.7;
-    }
-    &__image {
-        position: absolute;
-        left: rhythm(-7);
-        bottom: rhythm(3);
-        width: rhythm(9);
-        height: rhythm(9);
-    }
-    &__name {
-        display: block;
-        margin-top: 1em;
-    }
-}
-
 .btn {
     padding: rhythm(.5) rhythm(4);
     background: none;
@@ -230,8 +204,55 @@
     }
 }
 
-.page-lt-wrapper {
-    background-color: $white;
+.page-intro {
+    position: relative;
+    padding: rhythm(4) rhythm(2) rhythm(2);
+    &__image {
+        position: relative;
+        top: rhythm(-2);
+        left: rhythm(-2);
+        float: left;
+        width: rhythm(5);
+        height: rhythm(5);
+        margin-right: rhythm(-1);
+        margin-bottom: rhythm(-2);
+    }
+    &__content {
+        padding-bottom: rhythm(1);
+    }
+    &__link {
+        position: relative;
+        .icn {
+            position: absolute;
+            top: .65em;
+            right: 100%;
+            width: rhythm(2);
+            text-align: center;
+        }
+    }
+}
+.page-footer {
+    padding: rhythm(9) rhythm(2) rhythm(1);
+    background-color: $color-body;
+    color: $color-neutral-lightest-grey;
+    &__details {
+        margin-top: rhythm(2);
+    }
+    dt {
+        margin-top: 2em;
+    }
+    dd {
+        font-weight: 400;
+    }
+    .btn--sleak {
+        transition: padding 600ms ease-out, border-color 600ms ease-out;
+        border-color: rgba($color-neutral-lightest-grey, .6);
+        &:hover,
+        &:focus {
+            padding: rhythm(.5) rhythm(2);
+            border-color: $color-neutral-lightest-grey;
+        }
+    }
 }
 
 .page-theme {
@@ -258,28 +279,8 @@
     }
 }
 
-.page-footer {
-    padding: rhythm(9) rhythm(2) rhythm(1);
-    background-color: $color-body;
-    color: $color-neutral-lightest-grey;
-    &__details {
-        margin-top: rhythm(2);
-    }
-    dt {
-        margin-top: 2em;
-    }
-    dd {
-        font-weight: 400;
-    }
-    .btn--sleak {
-        transition: padding 600ms ease-out, border-color 600ms ease-out;
-        border-color: rgba($color-neutral-lightest-grey, .6);
-        &:hover,
-        &:focus {
-            padding: rhythm(.5) rhythm(2);
-            border-color: $color-neutral-lightest-grey;
-        }
-    }
+.page-wrapper {
+    background-color: $white;
 }
 
 
