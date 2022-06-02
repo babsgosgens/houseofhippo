@@ -206,10 +206,10 @@
     &::before {
     }
     &::after {
-        top: rhythm(11);
+        top: rhythm(10);
         left: rhythm(21);
         right: 0;
-        height: rhythm(2);
+        height: rhythm(3);
         background-color: $white;
     }
 }
@@ -220,7 +220,7 @@
 
 .project-hero {
     position: relative;
-    margin-top: rhythm(1);
+    // margin-top: rhythm(1);
     &__image {
         position: relative;
         width: rhythm(24);
@@ -285,16 +285,6 @@
     }
 }
 
-.slick-slide {
-	margin: 0 rhythm(1) 0 0;
-    &:last-child {
-        margin: 0;
-    }
-}
-/* the parent */
-.slick-list {
-	margin: 0 rhythm(-1) 0 0;
-}
 .whatsthis {
     width: 10px;
     height: 10px;
@@ -302,6 +292,20 @@
     margin: 1em;
 }
 .project-slider {
+
+    .slick-slide {
+    	margin: 0 rhythm(1) 0 0;
+        &:last-child {
+            margin: 0;
+        }
+    }
+    /* the parent */
+    .slick-list {
+    	margin: 0 rhythm(-1) 0 0;
+    }
+
+
+
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
