@@ -143,13 +143,13 @@
     padding: rhythm(4) rhythm(2) rhythm(2);
     &__image {
         position: relative;
-        top: rhythm(-2);
+        top: rhythm(-2.5);
         left: rhythm(-2);
         float: left;
         width: rhythm(5);
         height: rhythm(5);
         margin-right: rhythm(-1);
-        margin-bottom: rhythm(-2);
+        margin-bottom: rhythm(-2.5);
     }
     &__content {
         padding-bottom: rhythm(1);
@@ -284,6 +284,7 @@
         top: -999em;
     }
 }
+
 .slick-slide {
 	margin: 0 rhythm(1) 0 0;
     &:last-child {
@@ -307,6 +308,9 @@
     &--parent,
     &--child {
         display: static;
+    }
+    &-wrapper {
+        padding-bottom: rhythm(4);
     }
     position: relative;
     width: rhythm(24);

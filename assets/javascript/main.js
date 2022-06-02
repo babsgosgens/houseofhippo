@@ -39,10 +39,11 @@
         easing: 'swing',
         slidesToShow: 1,
         centerMode: false,
-        variableWidth: true,
-        customPaging: function(slider, i) {
-            return $('<button class="whatsthis" type="button" />').text(i + 1);
-        }
+        variableWidth: true
+        // ,
+        // customPaging: function(slider, i) {
+        //     return $('<button class="whatsthis" type="button" />').text(i + 1);
+        // }
     });
 
     $('.lazy').Lazy();
