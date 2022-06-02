@@ -1,50 +1,52 @@
 (function ($) {
 
-    $('.project-slider-parent').slick({
-        dots: false,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 3200,
-        speed: 1200,
-        fade: true,
-        cssEase: 'linear'
-    });
+    // $('.project-hero').slick({
+    //     dots: false,
+    //     infinite: true,
+    //     autoplay: true,
+    //     autoplaySpeed: 3200,
+    //     speed: 1200,
+    //     fade: true,
+    //     cssEase: 'linear'
+    // });
 
-    $('.project-slider--child').slick({
-        respondTo: 'slider',
-        dots: false,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        cssEase: 'ease-out',
-        easing: 'swing',
-        slidesToShow: 1,
-        centerMode: false,
-        variableWidth: true,
-        customPaging: '<span>',
-        zIndex: 1001,
-        prevArrow: '<div class="project-slider__prev"><button><i class="icn icn-slider icn-chevron-right"></i><span class="is-narrative">Vorige</span></button></div>',
-        nextArrow: '<div class="project-slider__next"><button><i class="icn icn-slider icn-chevron-right"></i><span class="is-narrative">Volgende</span></button></div>'
-    });
 
-    $('.project-slider').slick({
-        dots: true,
-        arrows: false,
-        draggable: false,
-        swipe: false,
-        swipeToSlide: false,
-        infinite: true,
-        autoplay: false,
-        cssEase: 'ease-out',
-        easing: 'swing',
-        slidesToShow: 1,
-        centerMode: false,
-        variableWidth: true
-        // ,
-        // customPaging: function(slider, i) {
-        //     return $('<button class="whatsthis" type="button" />').text(i + 1);
-        // }
-    });
+    // $('.project-slider--child').slick({
+    //     respondTo: 'slider',
+    //     dots: false,
+    //     infinite: true,
+    //     autoplay: false,
+    //     autoplaySpeed: 4000,
+    //     cssEase: 'ease-out',
+    //     easing: 'swing',
+    //     slidesToShow: 1,
+    //     centerMode: false,
+    //     variableWidth: true,
+    //     customPaging: '<span>',
+    //     zIndex: 1001,
+    //     prevArrow: '<div class="project-slider__prev"><button><i class="icn icn-slider icn-chevron-right"></i><span class="is-narrative">Vorige</span></button></div>',
+    //     nextArrow: '<div class="project-slider__next"><button><i class="icn icn-slider icn-chevron-right"></i><span class="is-narrative">Volgende</span></button></div>'
+    // });
+    //
+    // $('.project-slider').slick({
+    //     dots: true,
+    //     arrows: false,
+    //     draggable: false,
+    //     swipe: false,
+    //     swipeToSlide: false,
+    //     infinite: true,
+    //     autoplay: false,
+    //     cssEase: 'ease-out',
+    //     easing: 'swing',
+    //     slidesToShow: 1,
+    //     centerMode: false,
+    //     variableWidth: true
+    //     // ,
+    //     // customPaging: function(slider, i) {
+    //     //     return $('<button class="whatsthis" type="button" />').text(i + 1);
+    //     // }
+    // });
+
 
     $('.lazy').Lazy();
 
