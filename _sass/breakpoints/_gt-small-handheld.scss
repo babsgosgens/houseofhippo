@@ -1,0 +1,12 @@
+@include breakpoint($gt-small-handheld) {
+
+    .masthead {
+        margin: 0 rhythm(1) 0 rhythm(2);
+    }
+
+    /* Utility Styling */
+
+    .is-gt-sh {
+        display: initial;
+    }
+}

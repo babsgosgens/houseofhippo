@@ -1,5 +1,57 @@
 @include breakpoint($gt-medium-handheld) {
+
+    .masthead {
+        margin: 0 rhythm(1) 0 rhythm(3);
+        padding-top: rhythm(2);
+        // width: rhythm(21);
+        height: rhythm(6);
+        &__payoff {
+            font-size: to-unit(16px);
+        }
+        &__menu {
+            font-size: to-unit(12px);
+        }
+    }
+
+    .page-theme {
+        &::after {
+            top: rhythm(5);
+        }
+    }
+
+    .project-hero {
+        &__image {
+            height: rhythm(18);
+            &::before {
+                top: rhythm(16);
+            }
+            &::after {
+                height: rhythm(17);
+            }
+        }
+        &__text {
+            top: rhythm(-1.5);
+            padding: 0 rhythm(1) 0 rhythm(3);
+            font-size: to-unit(16px);
+        }
+        &__next {
+            position: absolute;
+            top: rhythm(16);
+        }
+    }
+
+
+
+
+    /* Utility Styling */
+
+    .txt-meta {
+        font-size: to-unit(14px);
+    }
     .txt-title {
-        font-size: to-unit(20px);
+        font-size: to-unit(48px);
+    }
+    .txt-header {
+        font-size: to-unit(18px);
     }
 }
