@@ -291,22 +291,9 @@
 }
 
 .project-slider {
-
-    .slick-slide {
-    	margin: 0 rhythm(1) 0 0;
-        &:last-child {
-            margin: 0;
-        }
-    }
-    /* the parent */
-    .slick-list {
-    	margin: 0 rhythm(-1) 0 0;
-    }
-
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    position: relative;
     min-width: rhythm(24);
     width: auto;
     height: rhythm(31);
@@ -316,7 +303,7 @@
         display: static;
     }
     &-wrapper {
-        padding-bottom: rhythm(4);
+        position: relative;
     }
     &__item {
         position: relative;
@@ -353,7 +340,7 @@
     }
     &__prev,
     &__next {
-    z-index: 1;
+        z-index: 1;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -375,15 +362,26 @@
     &__prev {
         left: 0;
         .icn-slider {
-            background: linear-gradient(to right, $white, transparent);
+            background: none;
         }
     }
     &__next {
         right: 0;
         .icn-slider {
-            background: linear-gradient(to right, transparent, $white);
+            background: none;
         }
     }
+
+    .slick-slide {
+    	margin: 0 rhythm(1) 0 0;
+        &:last-child {
+            margin: 0;
+        }
+    }
+    .slick-list {
+    	margin: 0 rhythm(-1) 0 0;
+    }
+
 }
 
 

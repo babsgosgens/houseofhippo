@@ -134,6 +134,43 @@ $rhythm: get-grid-property("rhythm", $grid);
         }
     }
 
+    .project-slider {
+        min-width: rhythm(30);
+        height: rhythm(16);
+        &-wrapper {
+        }
+        &__item {
+            height: rhythm(16);
+        }
+        &__card {
+            width: rhythm(11);
+            padding: rhythm(1) 0 rhythm(1) rhythm(2);
+        }
+        &__image {
+            height: rhythm(16);
+        }
+        &__prev,
+        &__next {
+            width: rhythm(2);
+            .icn-slider {
+                width: rhythm(2);
+                height: rhythm(2);
+            }
+        }
+        &__prev {
+            left: rhythm(-2);
+        }
+        &__next {
+            right: rhythm(-2);
+        }
+        .slick-slide {
+        	margin: 0 rhythm(1) 0 0;
+        }
+        .slick-list {
+        	margin: 0 rhythm(-1) 0 0;
+        }
+    }
+
 
 
 

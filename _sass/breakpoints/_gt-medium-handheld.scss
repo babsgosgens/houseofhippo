@@ -67,6 +67,28 @@
     }
 
 
+    .project-slider {
+        height: rhythm(17);
+        &__item {
+            height: rhythm(17);
+        }
+        &__card {
+            width: rhythm(11);
+        }
+        &__image {
+            height: rhythm(17);
+        }
+        &__prev,
+        &__next {
+            width: rhythm(2);
+            .icn-slider {
+                width: rhythm(2);
+                height: rhythm(2);
+            }
+        }
+    }
+
+
 
 
     /* Utility Styling */
