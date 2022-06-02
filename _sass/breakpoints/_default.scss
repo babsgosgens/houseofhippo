@@ -67,6 +67,7 @@
     background-color: #291E20;
     background-color: rgba(0,0,0,.2);
     border-bottom: 1px solid rgba($color-neutral-lightest-grey, .6);
+    border-radius: $border-radius;
     height: rhythm(3);
     font-size: to-unit(14px);
     line-height: rhythm(2);
@@ -118,13 +119,14 @@
     height: rhythm(11);
     &__payoff {
         font-size: to-unit(14px);
+        font-family: $overtherainbow-family;
     }
     &__menu {
         position: absolute;
         top: 0;
         right: 0;
         text-align: right;
-        font-size: to-unit(11px);
+        font-size: to-unit(14px);
         line-height: rhythm(2);
     }
 }
@@ -143,7 +145,7 @@
     padding: rhythm(4) rhythm(2) rhythm(2);
     &__image {
         position: relative;
-        top: rhythm(-2.5);
+        top: rhythm(-2);
         left: rhythm(-2);
         float: left;
         width: rhythm(5);
