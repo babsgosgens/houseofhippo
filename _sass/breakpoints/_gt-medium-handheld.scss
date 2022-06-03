@@ -1,10 +1,29 @@
 @include breakpoint($gt-medium-handheld) {
 
+
+    /* Utility Styling */
+
+    .txt-meta {
+        font-size: to-unit(14px);
+    }
+    .txt-title {
+        font-size: to-unit(48px);
+    }
+    .txt-header {
+        font-size: to-unit(18px);
+    }
+
+
+    /* Component styling */
+
     .masthead {
         margin: 0 rhythm(1) 0 rhythm(3);
         padding-top: rhythm(2);
         // width: rhythm(21);
         height: rhythm(7);
+        &--section {
+            margin-left: rhythm(1);
+        }
         &__payoff {
             font-size: to-unit(16px);
         }
@@ -45,6 +64,12 @@
         }
     }
 
+    .post {
+        &__title {
+            font-size: to-unit(24px);
+        }
+    }
+
     .project-hero {
         &__image {
             height: rhythm(18);
@@ -65,7 +90,6 @@
             top: rhythm(16);
         }
     }
-
 
     .project-slider {
         height: rhythm(17);
@@ -89,17 +113,4 @@
     }
 
 
-
-
-    /* Utility Styling */
-
-    .txt-meta {
-        font-size: to-unit(14px);
-    }
-    .txt-title {
-        font-size: to-unit(48px);
-    }
-    .txt-header {
-        font-size: to-unit(18px);
-    }
 }

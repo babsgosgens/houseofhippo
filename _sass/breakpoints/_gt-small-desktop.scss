@@ -4,6 +4,22 @@ $columns: get-grid-property("columns", $grid);
 $rhythm: get-grid-property("rhythm", $grid);
 @include breakpoint($breakpoint) {
 
+
+    /* Utility Styling */
+
+    .txt-meta {
+        font-size: to-unit(14px);
+    }
+    .txt-header {
+        font-size: to-unit(18px);
+    }
+    .txt-title {
+        font-size: to-unit(50px);
+    }
+
+
+    /* Component styling */
+
     .btn {
         padding: rhythm(.5) rhythm(4);
         line-height: rhythm(1);
@@ -164,26 +180,12 @@ $rhythm: get-grid-property("rhythm", $grid);
             right: rhythm(-2);
         }
         .slick-slide {
-        	margin: 0 rhythm(1) 0 0;
+            margin: 0 rhythm(1) 0 0;
         }
         .slick-list {
-        	margin: 0 rhythm(-1) 0 0;
+            margin: 0 rhythm(-1) 0 0;
         }
     }
 
-
-
-
-    /* Utility Styling */
-
-    .txt-meta {
-        font-size: to-unit(14px);
-    }
-    .txt-header {
-        font-size: to-unit(18px);
-    }
-    .txt-title {
-        font-size: to-unit(50px);
-    }
 
 }
