@@ -7,7 +7,7 @@
         <div class="page-wrapper" data-theme="#00f">
             <header class="masthead u-root">
                 <div class="masthead__header lt-wrap">
-                    <h1 class="masthead__title txt-title txt-title--home lt-wrap">
+                    <h1 class="masthead__title txt-title lt-wrap">
                         <span class="lt-wrap__tight">House of</span>
                         <span class="lt-wrap__loose">Hippo</span>
                     </h1>
@@ -17,9 +17,9 @@
                     </p>
                 </div>
                 <nav class="masthead__menu menu">
-                    {% for item in site.data.menu %}
-                        <a href="{{ item.link }}" class="menu__item anchor__cloaked">{{ item.name }}</a>
-                    {% endfor %}
+                    <a href="" class="menu__item anchor__cloaked">Over mij</a>
+                    <a href="" class="menu__item anchor__cloaked">Blog</a>
+                    <a href="" class="menu__item anchor__cloaked">Contact</a>
                 </nav>
             </header>
 
@@ -142,6 +142,7 @@
             <i class="page-theme fx-theme"></i>
             <i class="page-frame is-no-pointer"></i>
         </div>
+        
         {% include base/footer.html %}
 
     </body>

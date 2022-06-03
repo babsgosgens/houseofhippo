@@ -1,0 +1,20 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="theme-color" content="#FFF">
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ page.meta.description | default: site.meta.description }}" />
+    <meta name="keywords" content="{% if page.meta.keywords %}{{ page.meta.keywords | push: site.meta.keywords | join: ", " }}{% else %}{{ site.meta.keywords | join: ", " }}{% endif %}" />
+    <meta name="author" content="{{ page.author | default: site.meta.author | join: ", " }}" />
+    <meta name="robots" content="{{ page.meta.robots | default: site.meta.robots }}">
+
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon-16x16.ico" sizes="16x16">
+    <link rel="canonical" href="{{ site.url }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@200;400&family=Over+the+Rainbow&display=swap" rel="stylesheet">
+    <link href="assets/styles/screen.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>

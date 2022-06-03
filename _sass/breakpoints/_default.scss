@@ -285,7 +285,7 @@
         top: rhythm(-1);
         width: rhythm(21);
         padding: 0 rhythm(1) 0 rhythm(2);
-        font-size: to-unit(12px);
+        font-size: to-unit(13px);
     }
     .slick-prev,
     .slick-next {
@@ -498,6 +498,16 @@
     }
 }
 
+.lt-section-divider {
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: rhythm(1);
+        border-bottom: 1px solid $color-neutral-lightest-grey;
+    }
+}
+
 
 .u-root {
     position: relative;
@@ -516,9 +526,22 @@
     color: $color-accent;
 }
 .txt-title {
-    font-size: to-unit(40px);
+    font-size: to-unit(36px);
     line-height: 1;
     font-weight: 400;
+    &--home {
+        font-size: to-unit(40px);
+    }
+}
+.txt-title-section {
+    position: relative;
+    padding: .1em;
+    font-size: to-unit(46px, $unit, 36px);
+    color: $color-accent;
+    &--drop {
+        position: absolute;
+        background-color: $white;
+    }
 }
 .txt-header {
     font-size: to-unit(18px);
