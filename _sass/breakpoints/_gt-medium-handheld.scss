@@ -3,15 +3,33 @@
 
     /* Utility Styling */
 
+    // .lt-section-divider {
+    //     &::after {
+    //         content: "";
+    //         display: block;
+    //         width: 100%;
+    //         height: rhythm(1);
+    //         border-bottom: 1px solid $color-neutral-lightest-grey;
+    //     }
+    // }
+
     .txt-meta {
         font-size: to-unit(14px);
     }
     .txt-title {
         font-size: to-unit(48px);
+        &--home {
+            // font-size: to-unit(48px);
+        }
     }
-    .txt-header {
-        font-size: to-unit(18px);
+    .txt-title-section {
+        &--drop {
+            padding-top: .3em;
+        }
     }
+    // .txt-heading {
+    //     font-size: to-unit(18px);
+    // }
 
 
     /* Component styling */
@@ -24,11 +42,15 @@
         &--section {
             margin-left: rhythm(1);
         }
+        &--section &__menu {
+            position: relative;
+            top: rhythm(-2);
+        }
         &__payoff {
             font-size: to-unit(16px);
         }
         &__menu {
-            font-size: to-unit(12px);
+            font-size: to-unit(16px);
         }
     }
 
@@ -65,8 +87,69 @@
     }
 
     .post {
+        img {
+            display: block;
+        }
+        p {
+            margin-top: .5em;
+        }
         &__title {
-            font-size: to-unit(24px);
+            margin: rhythm(1) rhythm(3);
+            font-size: to-unit(36px);
+        }
+        &__main {
+            padding: 0 rhythm(3);
+            font-weight: 400;
+        }
+        &__heading,
+        &__subheading {
+            margin-top: 1.5em;
+        }
+        &__content {}
+        &__intro {
+            font-weight: 200;
+            margin-bottom: 1em;
+        }
+        &__aside {}
+        &__grid {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: baseline;
+            margin: rhythm(1) 0;
+            .post__image {
+                display: flex;
+                flex: 0 0 auto;
+                border-right: 1px solid $white;
+                border-left: 1px solid $white;
+                border-bottom: 2px solid $white;
+                &:nth-child(even) {
+                    border-right: 0;
+                }
+                &:nth-child(odd) {
+                    border-left: 0;
+                }
+            }
+        }
+        .img {
+            max-width: rhythm(20)
+        }
+        .img-s,
+        .img-p {
+            max-width: rhythm(7);
+        }
+        .img-s,
+        .img-l {
+            max-height: rhythm(7);
+        }
+        .img-banner {
+            position: relative;
+            img {
+                display: block;
+                margin: rhythm(1) rhythm(-2) 0;
+                max-width: rhythm(24);
+            }
         }
     }
 
