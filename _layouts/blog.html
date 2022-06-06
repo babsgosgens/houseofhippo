@@ -5,144 +5,98 @@
 
     <body class="page">
         <div class="page-wrapper" data-theme="#00f">
-            <header class="masthead u-root">
+            <header class="masthead masthead--section u-root">
                 <div class="masthead__header lt-wrap">
-                    <h1 class="masthead__title txt-title lt-wrap">
+                    <h1 class="masthead__title txt-title lt-section-divider lt-wrap">
                         <span class="lt-wrap__tight">House of</span>
                         <span class="lt-wrap__loose">Hippo</span>
+                        <span class="lt-wrap__end txt-title-section txt-title-section--drop txt-personal">Blog</span>
                     </h1>
-                    <p class="masthead__payoff lt-wrap lt-wrap--end">
-                        <span class="is-gt-sh">{{ site.meta.author }}</span>
-                        <span>Interieurontwerp</span>
-                    </p>
                 </div>
                 <nav class="masthead__menu menu">
-                    <a href="" class="menu__item anchor__cloaked">Over mij</a>
-                    <a href="" class="menu__item anchor__cloaked">Blog</a>
-                    <a href="" class="menu__item anchor__cloaked">Contact</a>
+                    {% for item in site.data.menu %}
+                        <a href="{{ item.link }}" class="menu__item anchor__cloaked">{{ item.name }}</a>
+                    {% endfor %}
                 </nav>
             </header>
 
-
-            <div class="project-hero hero">
-                <figure data-theme="#B0713C">
-                    <div class="project-hero__image">
-                        <a class="project-hero__action" href="#">
-                            {% include image-sets/project-hero.html %}
-                        </a>
-                    </div>
-                    <figcaption class="project-hero__text">
-                        <p class="txt-personal">
-                            Dit gerieflijke kantoor-aan-huis voor een gastvrije single is perfect voor een dagje thuis werken…
-                        </p>
-                    </figcaption>
-                    <button class="project-hero__next btn-shortcut fx-theme"><i class="icn icn-chevron-right"></i></button>
-                </figure>
-                {% comment %}
-                {% include slides/project-hero.html %}
-                {% endcomment %}
-            </div>
-
-
-
-            <blockquote class="page-intro" cite="/over-house-of-hipp.html">
-                <p class="page-intro__content">
-                    <span class="page-intro__image">
-                        <img class="lazy" src="assets/images/babsgosgens.jpg" alt="" />
-                    </span>
-                    <span class="page-intro__text txt-intro">
-                        Elk interieur vertelt een verhaal. Maar een goed ontworpen interieur vertelt een verhaal dat je steeds weer opnieuw wilt horen.
-                    </span>
-                </p>
-                <p class="page-intro__link">
-                    <a class="txt-meta" href="">
-                        Babs Gösgens
-                        <span class="icn icn-chevron-right"></span>
-                    </a>
-                </p>
-            </blockquote>
-
-
-            <div class="project-slider-wrapper">
-                <div class="project-slider project-slider--parent">
-                    {% comment %}
-                    {% endcomment %}
-                    <div class="project-slider__prev">
-                        <button>
-                            <i class="icn icn-slider icn-chevron-right"></i>
-                            <span class="is-narrative">Vorige</span>
-                        </button>
-                    </div>
-                    <div class="project-slider__next">
-                        <button>
-                            <i class="icn icn-slider icn-chevron-right"></i>
-                            <span class="is-narrative">Vorige</span>
-                        </button>
-                    </div>
-                    <article class="project-slider project-slider--child project-slider__item">
-                        <div>
-                            <header class="project-slider__item project-slider__card lt-stack">
-                                <div class="lt-stack__item">
-                                    <p>Impressie></p>
-                                    <h1>Thuiskantoor met audiohoek en logeerruimte</h1>
-                                    <dl>
-                                        <dt>Jaar</dt>
-                                        <dd>2021</dd>
-                                        <dd>Context</dd>
-                                        <dd>Ontwerp & 3D Visualisatie</dd>
-                                    </dl>
-                                </div>
-                                <div class="lt-stack__item">
-                                    <p>
-                                        <a href="">Apartement vol Afrika voor een diplomatengezin</a>
-                                    </p>
-                                </div>
-                            </header>
-                        </div>
-                        <div>
-                            <div class="project-slider__item">
-                                <figure class="project-slider__image">
-                                    <img class="project-slider__image lazy" src="assets/images/project-hero__image2.jpg" />
-                                </figure>
+            <main>
+                <ol class="post-grid">
+                    <li class="post-grid">
+                        <article class="post-fragment post-fragment--featured">
+                            <figure class="post-fragment__image">
+                                <img class="img" src="assets/images/project-hero__image2.jpg">
+                            </figure>
+                            <div class="post-fragment__body">
+                                <time class="post-fragment__date txt-meta">30 Juni 2022</time>
+                                <h1 class="post-fragment__title txt-title">Eén entree, drie ontwerpen</h1>
+                                <p class="post-fragment__standfirst txt-intro">Inspiratie opdoen voor ons interieur is nooit verkeerd, toch?! Maar waar haal je die inspiratie vandaan.. Welk interieur is jouw favoriet?</p>
                             </div>
-                        </div>
-                    </article>
-                    <article class="project-slider project-slider--child project-slider__item">
-                        <div>
-                            <header class="project-slider__item project-slider__card lt-stack">
-                                <div class="lt-stack__item">
-                                    <p>Impressie></p>
-                                    <h1>Iets anders</h1>
-                                    <dl>
-                                        <dt>Jaar</dt>
-                                        <dd>2021</dd>
-                                        <dd>Context</dd>
-                                        <dd>Ontwerp & 3D Visualisatie</dd>
-                                    </dl>
-                                </div>
-                                <div class="lt-stack__item">
-                                    <p>
-                                        <a href="">Apartement vol Afrika voor een diplomatengezin</a>
-                                    </p>
-                                </div>
-                            </header>
-                        </div>
-                        <div>
-                            <div class="project-slider__item">
-                                <figure class="project-slider__image">
-                                    <img class="project-slider__image lazy" src="assets/images/project-hero__image3-medium.jpg" />
-                                </figure>
+                            <div class="post-fragment__meta">
+                                <ul class="tag-cloud">
+                                    <li><span class="txt-meta">#interieurontwerp</span></li>
+                                    <li><span class="txt-meta">#interieurblogs</span></li>
+                                    <li><span class="txt-meta">#styling</span></li>
+                                </ul>
                             </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
+                        </article>
+                    </li>
+                    <li class="post-grid">
+                        <article class="post-fragment">
+                            <figure class="post-fragment__image">
+                                <img class="img" src="assets/images/project-hero__image2.jpg">
+                            </figure>
+                            <div class="post-fragment__body">
+                                <time class="post-fragment__date txt-meta">30 Juni 2022</time>
+                                <h1 class="post-fragment__title txt-title">Eén entree, drie ontwerpen</h1>
+                                <ul class="tag-cloud">
+                                    <li class="tag-cloud__item"><span class="txt-meta">#interieurontwerp</span></li>
+                                    <li class="tag-cloud__item"><span class="txt-meta">#interieurblogs</span></li>
+                                    <li class="tag-cloud__item"><span class="txt-meta">#styling</span></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="post-grid">
+                        <article class="post-fragment">
+                            <figure class="post-fragment__image">
+                                <img class="img" src="assets/images/project-hero__image2.jpg">
+                            </figure>
+                            <div class="post-fragment__body">
+                                <time class="post-fragment__date txt-meta">30 Juni 2022</time>
+                                <h1 class="post-fragment__title txt-title">Eén entree, drie ontwerpen</h1>
+                                <ul class="tag-cloud">
+                                    <li class="tag-cloud__item"><span class="txt-meta">#interieurontwerp</span></li>
+                                    <li class="tag-cloud__item"><span class="txt-meta">#interieurblogs</span></li>
+                                    <li class="tag-cloud__item"><span class="txt-meta">#styling</span></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="post-grid">
+                        <article class="post-fragment">
+                            <figure class="post-fragment__image">
+                                <img class="img" src="assets/images/project-hero__image2.jpg">
+                            </figure>
+                            <div class="post-fragment__body">
+                                <time class="post-fragment__date txt-meta">30 Juni 2022</time>
+                                <h1 class="post-fragment__title txt-title">Eén entree, drie ontwerpen</h1>
+                                <ul class="tag-cloud">
+                                    <li class="tag-cloud__item"><span class="txt-meta">#interieurontwerp</span></li>
+                                    <li class="tag-cloud__item"><span class="txt-meta">#interieurblogs</span></li>
+                                    <li class="tag-cloud__item"><span class="txt-meta">#styling</span></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </li>
+                </ol>
+            </main>
 
 
-            <i class="page-theme fx-theme"></i>
+
             <i class="page-frame is-no-pointer"></i>
         </div>
-        
+
         {% include base/footer.html %}
 
     </body>

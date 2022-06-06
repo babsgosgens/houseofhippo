@@ -112,7 +112,7 @@
         content: "";
         display: block;
         width: 100%;
-        height: rhythm(1);
+        height: .5em;
         border-bottom: 1px solid $color-neutral-lightest-grey;
     }
 }
@@ -159,11 +159,12 @@
 }
 .txt-title-section {
     position: relative;
-    padding: .1em;
-    font-size: to-unit(46px, $unit, 36px);
+    padding: 0 .1em;
+    font-size: 1.5em;
     color: $color-accent;
     &--drop {
         position: absolute;
+        padding-top: .2em;
         background-color: $white;
     }
 }
@@ -496,10 +497,76 @@
         max-height: rhythm(7);
     }
     .img-banner {
-        display: block;
-        margin: rhythm(1) rhythm(-2);
-        max-width: rhythm(24);
+        position: relative;
+        img {
+            display: block;
+            margin: rhythm(1) rhythm(-2);
+            max-width: rhythm(24);
+        }
     }
+}
+
+.post-fragment {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: rhythm(1);
+
+    &__image {
+        flex: 0 0 rhythm(8);
+        padding-left: rhythm(2);
+    }
+    &__body {
+        flex: 0 0 rhythm(16);
+        padding: 0 rhythm(1);
+    }
+    &__title {
+        font-size: to-unit(20px);
+    }
+    &__date {
+        position: absolute;
+        top: -999em;
+        left: -999em;
+    }
+    &__meta {
+        flex: 0 0 rhythm(8);
+        order: 2;
+        text-align: right;
+        line-height: 1.2;
+    }
+    &--featured & {
+
+        /*
+         * Careful: html is slightly different, tag cloud sits in a separate element.
+         */
+        &__image {
+            flex: 1 0 100%;
+            order: 1;
+            padding: 0;
+        }
+        &__body {
+            position: relative;
+            top: rhythm(-3);
+            flex: 0 0 rhythm(15);
+            order: 3;
+            padding: rhythm(1) rhythm(1) rhythm(1) rhythm(1);
+            background-color: $white;
+        }
+        &__standfirst {
+            margin: 1em auto rhythm(-3);
+            font-size: to-unit(14px);
+        }
+    }
+}
+
+.post-grid {
+    /*
+     * 1. Will likely be a list, so reset it…
+     */
+    list-style: none; /* 1 */
+    margin: 0;
+    padding: 0;
+
 }
 
 .project-hero {
@@ -661,6 +728,20 @@
     }
     .slick-list {
     	margin: 0 rhythm(-1) 0 0;
+    }
+
+}
+
+.tag-cloud {
+    /*
+     * 1. Will likely be a list, so reset it…
+     */
+    list-style: none; /* 1 */
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    &__item {
+        display: inline;
     }
 
 }
