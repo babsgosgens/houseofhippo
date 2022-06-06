@@ -27,9 +27,6 @@
             padding-top: .3em;
         }
     }
-    // .txt-heading {
-    //     font-size: to-unit(18px);
-    // }
 
 
     /* Component styling */
@@ -194,6 +191,83 @@
             }
         }
     }
+
+    .post-fragment {
+
+        width: rhythm(6);
+        flex-direction: column;
+
+        &__image {
+            width: rhythm(6);
+            flex: 0 0 auto;
+            padding: 0;
+        }
+        &__body {
+            flex: 0 0 rhythm(6);
+            padding: 0;
+        }
+        &__title {
+            font-size: to-unit(20px);
+            margin-bottom: .5em;
+        }
+        &__date {
+            position: static;
+            display: block;
+            margin: 1em 0;
+        }
+
+        &--featured {
+            width: 100%;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+        &--featured & {
+            &__date {
+                margin-top: 0;
+            }
+            &__image {
+                margin: auto rhythm(-2);
+            }
+            &__body {
+                flex: 0 0 rhythm(13);
+                order: 0;
+            }
+            &__title {
+                font-size: to-unit(30px);
+            }
+            &__standfirst {
+                font-size: to-unit(16px);
+            }
+            &__meta {
+                flex: 0 0 rhythm(7);
+                text-align: left;
+                order: 1;
+                margin-top: 1em;
+            }
+        }
+    }
+
+    .post-grid {
+        /*
+         * 1. Will likely be a list, so reset it…
+         */
+        list-style: none; /* 1 */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: auto rhythm(2);
+
+        &__item {
+            flex: 0 0 rhythm(6);
+        }
+        &__item--stretch {
+            flex: 1 0 100%;
+        }
+
+    }
+
 
 
 }

@@ -158,6 +158,7 @@ $base-collection: add-properties(
   $base-collection,
   'img',
   (
+    display: block,
     max-width: 100%
   )
 );

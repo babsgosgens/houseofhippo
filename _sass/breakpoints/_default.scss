@@ -528,12 +528,6 @@
         top: -999em;
         left: -999em;
     }
-    &__meta {
-        flex: 0 0 rhythm(8);
-        order: 2;
-        text-align: right;
-        line-height: 1.2;
-    }
     &--featured & {
 
         /*
@@ -541,20 +535,24 @@
          */
         &__image {
             flex: 1 0 100%;
-            order: 1;
             padding: 0;
         }
         &__body {
             position: relative;
             top: rhythm(-3);
             flex: 0 0 rhythm(15);
-            order: 3;
+            order: 1;
             padding: rhythm(1) rhythm(1) rhythm(1) rhythm(1);
             background-color: $white;
         }
         &__standfirst {
             margin: 1em auto rhythm(-3);
             font-size: to-unit(14px);
+        }
+        &__meta {
+            flex: 0 0 rhythm(8);
+            text-align: right;
+            line-height: 1.2;
         }
     }
 }
