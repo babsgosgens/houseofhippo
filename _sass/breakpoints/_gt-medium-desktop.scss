@@ -142,7 +142,7 @@
     .post-fragment {
 
         &__title {
-            font-size: to-unit(18px);
+            font-size: to-unit(24px);
         }
         &__standfirst {
             font-size: to-unit(14px);
@@ -159,7 +159,9 @@
             &__body {
                 flex: none;
             }
-
+            &__title {
+                font-size: to-unit(32px);
+            }
             &__image {
                 width: rhythm(15);
                 margin-left: rhythm(-10);
