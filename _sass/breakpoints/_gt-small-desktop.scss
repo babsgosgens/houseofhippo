@@ -157,30 +157,30 @@ $rhythm: get-grid-property("rhythm", $grid);
 
     .post {
         &__title {
-            margin: rhythm(1) rhythm(3);
-            font-size: to-unit(36px);
+            margin: rhythm(1) rhythm(1) rhythm(1) rhythm(10);
+            font-size: to-unit(48px);
         }
         &__body {
-
-            /* Layout */
             display: flex;
             flex-direction: row-reverse;
-            width: rhythm(30);
-
             font-size: to-unit(18px);
         }
         &__main {
             position: relative;
-            flex: 0 0 rhythm(22);
-            margin: 0;
+            flex: 0 0 rhythm(21);
             padding: 0 rhythm(1);
-            font-weight: 400;
         }
         &__sidebar {
-            flex: 0 0 rhythm(8);
+            // flex: 0 0 rhythm(9);
+            // padding-left: rhythm(1);
+
+            /*
+             * Inner layout
+             */
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
+            justify-content: space-between;
+
         }
         &__heading,
         &__subheading {
@@ -254,8 +254,8 @@ $rhythm: get-grid-property("rhythm", $grid);
         .img-banner {
             position: relative;
             display: block;
-            margin: rhythm(1) rhythm(-8) rhythm(1);
-            max-width: rhythm(28);
+            margin: rhythm(1) rhythm(-10) rhythm(1);
+            max-width: rhythm(30);
             img {
                 display: block;
                 margin: 0;
@@ -263,8 +263,10 @@ $rhythm: get-grid-property("rhythm", $grid);
             }
             .txt-caption {
                 position: absolute;
-                width: rhythm(7);
-                margin-top: rhythm(1);
+                bottom: 100%;
+                width: rhythm(9);
+                margin-bottom: rhythm(1);
+                padding: 0 0 0 rhythm(1);
             }
         }
     }
