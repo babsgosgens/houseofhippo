@@ -6,9 +6,6 @@
     .txt-meta {
         font-size: to-unit(14px);
     }
-    // .txt-heading {
-    //     font-size: to-unit(18px);
-    // }
     .txt-title {
         font-size: to-unit(56px);
     }
@@ -18,8 +15,8 @@
 
     .masthead {
         margin: 0 rhythm(1) 0 rhythm(1);
-        padding-top: 0;
-        height: rhythm(2);
+        // padding-top: 0;
+        height: rhythm(6);
         &__header {
             position: absolute;
             top: rhythm(2.2);
@@ -140,5 +137,63 @@
         .slick-list {
         	margin: 0 rhythm(-1) 0 0;
         }
+    }
+
+    .post-fragment {
+
+        &__title {
+            font-size: to-unit(18px);
+        }
+        &__standfirst {
+            font-size: to-unit(14px);
+        }
+        &--featured {
+            display: block;
+            position: relative;
+            width: inherit;
+            left: auto;
+            // right: 0;
+        }
+        &--featured & {
+            &__image,
+            &__body {
+                flex: none;
+            }
+
+            &__image {
+                width: rhythm(15);
+                margin-left: rhythm(-10);
+            }
+            &__body {
+                position: absolute;
+                top: 100%;
+                top: calc(100% - #{rhythm(2)});
+                width: rhythm(8);
+                margin-left: rhythm(-9);
+                align-self: auto;
+                padding: rhythm(1);
+            }
+            &__standfirst {
+                margin: 1em auto;
+                font-size: to-unit(18px);
+            }
+        }
+    }
+
+    .post-grid {
+
+        margin: auto rhythm(1) auto rhythm(10);
+
+        &__item {
+
+            position: relative;
+
+            flex: 0 0 rhythm(5);
+        }
+        // &__item-stretch {
+        //     width: rhythm(5);
+        //     overflow: hidden;
+        //     flex: 0 0 rhythm(5);
+        // }
     }
 }
