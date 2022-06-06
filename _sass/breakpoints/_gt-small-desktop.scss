@@ -275,6 +275,7 @@ $rhythm: get-grid-property("rhythm", $grid);
 
         &__image {
             // max-width: rhythm(8);
+            flex-basis: rhythm(8);
         }
         &__body {
         }

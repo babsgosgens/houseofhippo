@@ -147,6 +147,9 @@
         &__standfirst {
             font-size: to-unit(14px);
         }
+        &__image {
+            flex-basis: rhythm(5);
+        }
         &--featured {
             display: block;
             position: relative;
