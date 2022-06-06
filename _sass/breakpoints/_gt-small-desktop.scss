@@ -269,6 +269,65 @@ $rhythm: get-grid-property("rhythm", $grid);
         }
     }
 
+    .post-fragment {
+
+        &__image {
+            // max-width: rhythm(8);
+        }
+        &__body {
+        }
+        &__title {
+            font-size: to-unit(30px);
+        }
+        &--featured {
+            width: rhythm(28);
+            position: relative;
+            left: rhythm(-2);
+        }
+        &--featured & {
+
+            &__image {
+                flex: 0 0 rhythm(15);
+                padding: 0;
+                margin: 0;
+            }
+            &__body {
+
+                position: static;
+                flex: 0 0 rhythm(13);
+                align-self: flex-end;
+                padding: 0 0 0 rhythm(1);
+
+                .tag-cloud {
+                    visibility: visible;
+                }
+            }
+            &__standfirst {
+                margin: 1em auto;
+                font-size: to-unit(18px);
+            }
+            &__meta {
+                /*
+                 * 1. Otherwise will still occupy space in flex container
+                 */
+                visibility: hidden;
+                display: none; /* 1 */
+            }
+        }
+    }
+
+    .post-grid {
+
+        margin: auto rhythm(2);
+
+        &__item {
+            flex: 0 0 rhythm(8);
+        }
+        &__item-stretch {
+
+        }
+
+    }
 
     .project-hero {
         margin-left: rhythm(12);

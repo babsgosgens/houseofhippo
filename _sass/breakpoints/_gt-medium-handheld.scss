@@ -194,30 +194,23 @@
 
     .post-fragment {
 
-        width: rhythm(6);
         flex-direction: column;
 
         &__image {
-            width: rhythm(6);
             flex: 0 0 auto;
             padding: 0;
         }
         &__body {
-            flex: 0 0 rhythm(6);
+            flex: 0 0 auto;
             padding: 0;
         }
         &__title {
             font-size: to-unit(20px);
             margin-bottom: .5em;
         }
-        &__date {
-            position: static;
-            display: block;
-            margin: 1em 0;
-        }
 
         &--featured {
-            width: 100%;
+            // width: 100%;
             flex-direction: row;
             justify-content: flex-end;
         }
@@ -248,12 +241,7 @@
     }
 
     .post-grid {
-        /*
-         * 1. Will likely be a list, so reset it…
-         */
-        list-style: none; /* 1 */
-        margin: 0;
-        padding: 0;
+
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;

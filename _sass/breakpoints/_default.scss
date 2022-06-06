@@ -14,6 +14,9 @@
     left: -999em;
     top: -999em;
 }
+.is-silent {
+    speak: never;
+}
 .is-gt-sh {
     display: none;
 }
@@ -512,6 +515,10 @@
     flex-wrap: wrap;
     padding-bottom: rhythm(1);
 
+    &__date {
+        display: block;
+        margin: 1em auto;
+    }
     &__image {
         flex: 0 0 rhythm(8);
         padding-left: rhythm(2);
@@ -523,34 +530,35 @@
     &__title {
         font-size: to-unit(20px);
     }
-    &__date {
-        position: absolute;
-        top: -999em;
-        left: -999em;
-    }
     &--featured & {
 
         /*
          * Careful: html is slightly different, tag cloud sits in a separate element.
+         * The tag cloud trick is NASTY woman!!
          */
         &__image {
             flex: 1 0 100%;
             padding: 0;
         }
         &__body {
+
             position: relative;
             top: rhythm(-3);
             flex: 0 0 rhythm(15);
             order: 1;
             padding: rhythm(1) rhythm(1) rhythm(1) rhythm(1);
             background-color: $white;
+
+            .tag-cloud {
+                visibility: hidden;
+            }
         }
         &__standfirst {
             margin: 1em auto rhythm(-3);
             font-size: to-unit(14px);
         }
         &__meta {
-            flex: 0 0 rhythm(8);
+            width: rhythm(8);
             text-align: right;
             line-height: 1.2;
         }
