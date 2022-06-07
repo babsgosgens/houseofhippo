@@ -42,11 +42,37 @@ $rhythm: get-grid-property("rhythm", $grid);
 
     /* Component styling */
 
+    .input {
+
+        /*
+         * 1. Chrome/Opera/Safari
+         * 2. Firefox 19+
+         * 3. IE 10+
+         * 4. Firefox 18-
+         */
+
+        padding: 0 rhythm(1);
+        height: rhythm(1);
+        line-height: rhythm(1);
+
+        &--textarea {
+            &:focus {
+                height: rhythm(10);
+            }
+        }
+    }
+
+    .form {
+        &__row {
+            margin-top: rhythm(1);
+        }
+    }
+
     .btn {
         padding: rhythm(.5) rhythm(4);
         line-height: rhythm(1);
         &--sleak {
-            padding: rhythm(.5) rhythm(1);
+            padding: 0 rhythm(1);
         }
     }
 
@@ -123,11 +149,11 @@ $rhythm: get-grid-property("rhythm", $grid);
     .page-footer {
         padding: rhythm(4) rhythm(5) rhythm(1);
         .txt-title {
-            font-size: 6vw;
+            font-size: 4vw;
         }
         &__body {
             position: relative;
-            top: 3vw;
+            top: 0;
             float: right;
             width: rhythm(14);
         }

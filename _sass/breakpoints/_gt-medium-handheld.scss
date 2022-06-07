@@ -31,6 +31,21 @@
 
     /* Component styling */
 
+
+    .input {
+
+        /*
+         * 1. Chrome/Opera/Safari
+         * 2. Firefox 19+
+         * 3. IE 10+
+         * 4. Firefox 18-
+         */
+
+        padding: 0 rhythm(1);
+        height: rhythm(1);
+        line-height: rhythm(1);
+    }
+
     .masthead {
         margin: 0 rhythm(1) 0 rhythm(3);
         padding-top: rhythm(2);
