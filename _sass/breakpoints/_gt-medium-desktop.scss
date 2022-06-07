@@ -3,6 +3,9 @@
 
     /* Utility Styling */
 
+    .txt-intro {
+        font-size: to-unit(18px);
+    }
     .txt-meta {
         font-size: to-unit(14px);
     }
@@ -46,6 +49,10 @@
         &__text {
             font-size: to-unit(20px);
         }
+    }
+
+    .page-footer {
+
     }
 
     .page-theme {

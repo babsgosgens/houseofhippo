@@ -421,7 +421,7 @@
     background-color: $color-body;
     color: $color-neutral-lightest-grey;
     &__details {
-        margin-top: rhythm(2);
+        padding-top: rhythm(2);
     }
     dt {
         margin-top: 2em;

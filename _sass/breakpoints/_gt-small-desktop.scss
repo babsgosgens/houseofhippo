@@ -7,6 +7,9 @@ $rhythm: get-grid-property("rhythm", $grid);
 
     /* Utility Styling */
 
+    .txt-intro {
+        font-size: to-unit(16px);
+    }
     .txt-meta {
         font-size: to-unit(14px);
     }
@@ -229,6 +232,7 @@ $rhythm: get-grid-property("rhythm", $grid);
             font-size: to-unit(24px, 1em, 18px);
         }
         &__details {
+            padding-top: rhythm(2);
             top: rhythm(1);
         }
         &__content {}
