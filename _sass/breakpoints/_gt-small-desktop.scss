@@ -120,6 +120,19 @@ $rhythm: get-grid-property("rhythm", $grid);
         }
     }
 
+    .page-footer {
+        padding: rhythm(4) rhythm(5) rhythm(1);
+        .txt-title {
+            font-size: 6vw;
+        }
+        &__body {
+            position: relative;
+            top: 3vw;
+            float: right;
+            width: rhythm(14);
+        }
+    }
+
     .page-theme {
         &::before,
         &::after {
