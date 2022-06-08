@@ -318,7 +318,9 @@ $rhythm: get-grid-property("rhythm", $grid);
 
         &__image {
             // max-width: rhythm(8);
-            flex-basis: rhythm(8);
+            width: rhythm(8);
+            height: rhythm(8);
+            // flex-basis: rhythm(8);
         }
         &__body {
         }
@@ -326,30 +328,38 @@ $rhythm: get-grid-property("rhythm", $grid);
             font-size: to-unit(32px);
         }
         &--featured {
-            width: rhythm(28);
-            padding-bottom: rhythm(1);
+            width: rhythm(30);
+            // padding-bottom: rhythm(1);
+            flex-direction: row;
             margin: 0 rhythm(-2);
         }
         &--featured & {
 
+            &__image,
+            &__body {
+                width: rhythm(15);
+                flex: auto;
+            }
+
             &__image {
-                flex: 0 0 rhythm(15);
-                padding: 0;
+                // padding: 0;
                 margin: 0;
             }
             &__body {
+                position: static;
+                // width: rhythm(15);
 
-                top: 0;
-                flex: 0 0 rhythm(13);
-                align-self: flex-end;
-                padding: 0 0 0 rhythm(1);
+                // top: 0;
+                flex: auto;
+                align-self: end;
+                padding: 0 rhythm(1);
 
                 .tag-cloud {
                     visibility: visible;
                 }
             }
             &__standfirst {
-                margin: 1em auto;
+                margin: 1em 0 0;
                 font-size: to-unit(18px);
             }
             &__meta {

@@ -229,46 +229,86 @@
         }
         &__image {
             flex: 0 0 rhythm(6);
-            padding: 0;
+            // padding: 0;
+            margin: 0;
         }
         &__body {
-            // flex: 0 0 auto;
-            padding: 0;
+            flex: 0 0 auto;
+            margin: 0;
         }
         &__title {
             font-size: to-unit(20px);
             margin-bottom: .5em;
         }
-
         &--featured {
-            // width: 100%;
-            flex-direction: row;
-            justify-content: flex-end;
+            margin: 0 rhythm(-2);
+            // width: rhythm(24);
         }
         &--featured & {
-            &__date {
-                margin-top: 0;
-            }
+
             &__image {
-                margin: auto rhythm(-2);
+                margin: 0 rhythm(-2);
             }
             &__body {
-                flex: 0 0 rhythm(14);
-                order: 0;
+
+                top: rhythm(-3);
+                left:  rhythm(1);
+                margin: 0;
+                // flex: 0 0 rhythm(13);
+                width: rhythm(13);
+
+                .tag-cloud {
+                    top: rhythm(3);
+                    left: 100%;
+                    right: auto;
+                    text-align: left;
+                }
             }
             &__title {
-                font-size: to-unit(30px);
+                font-size: to-unit(20px);
             }
             &__standfirst {
-                font-size: to-unit(16px);
+                margin: 1em auto rhythm(-3);
+                font-size: to-unit(14px);
             }
             &__meta {
-                flex: 0 0 rhythm(7);
-                text-align: left;
-                order: 1;
-                margin-top: 1em;
+                padding-top: 1em;
+                width: rhythm(8);
+                text-align: right;
+                line-height: 1.2;
             }
         }
+
+        // &--featured {
+        //     // width: 100%;
+        //     flex-direction: row;
+        //     justify-content: flex-end;
+        // }
+        // &--featured & {
+        //     &__date {
+        //         margin-top: 0;
+        //     }
+        //     &__image {
+        //         margin: auto rhythm(-2);
+        //     }
+        //     &__body {
+        //         flex: 0 0 rhythm(14);
+        //         top: rhythm(-3);
+        //         left: rhythm(1);
+        //     }
+        //     &__title {
+        //         font-size: to-unit(30px);
+        //     }
+        //     &__standfirst {
+        //         font-size: to-unit(16px);
+        //     }
+        //
+        //     .tag-cloud {
+        //         right: auto;
+        //         left: 100%;
+        //         text-align: left;
+        //     }
+        // }
     }
 
     .post-grid {

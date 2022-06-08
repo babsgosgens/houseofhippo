@@ -546,12 +546,14 @@
         margin: 1em auto;
     }
     &__image {
-        flex: 0 0 rhythm(8);
-        padding: 0 rhythm(1);
+        width: rhythm(6);
+        height: rhythm(6);
+        // flex: 0 0 rhythm(8);
+        margin: 0 rhythm(1);
     }
     &__body {
         flex: 0 0 rhythm(14);
-        // padding: 0 rhythm(1);
+        margin-top: rhythm(1);
     }
     &__title {
         font-size: to-unit(16px);
@@ -559,28 +561,32 @@
 
     &--featured {
         margin: 0 rhythm(-1);
+        width: rhythm(24);
     }
     &--featured & {
 
-        /*
-         * Careful: html is slightly different, tag cloud sits in a separate element.
-         * The tag cloud trick is NASTY woman!!
-         */
         &__image {
             flex: 1 0 100%;
-            padding: 0;
+            margin: 0 rhythm(-1);
+            width: auto;
+            height: auto;
         }
         &__body {
-
+            flex: 0 0 auto;
             position: relative;
-            top: rhythm(-3);
-            flex: 0 0 rhythm(15);
-            order: 1;
+            top: rhythm(-4);
+            left: rhythm(8);
+            margin: 0 0 rhythm(-2) 0;
+            width: rhythm(15);
             padding: rhythm(1) rhythm(1) rhythm(1) rhythm(1);
             background-color: $white;
 
             .tag-cloud {
-                visibility: hidden;
+                position: absolute;
+                top: rhythm(4);
+                right: 100%;
+                padding-top: 1em;
+                text-align: right;
             }
         }
         &__title {
