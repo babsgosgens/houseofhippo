@@ -4,4 +4,5 @@
 
 layout: blog
 permalink: /blog/
+section: Blog
 ---
