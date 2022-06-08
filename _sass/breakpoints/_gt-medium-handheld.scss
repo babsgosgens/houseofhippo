@@ -224,12 +224,15 @@
 
         flex-direction: column;
 
+        &__date {
+            display: block;
+        }
         &__image {
             flex: 0 0 rhythm(6);
             padding: 0;
         }
         &__body {
-            flex: 0 0 auto;
+            // flex: 0 0 auto;
             padding: 0;
         }
         &__title {
@@ -250,7 +253,7 @@
                 margin: auto rhythm(-2);
             }
             &__body {
-                flex: 0 0 rhythm(13);
+                flex: 0 0 rhythm(14);
                 order: 0;
             }
             &__title {
@@ -281,7 +284,6 @@
         &__item--stretch {
             flex: 1 0 100%;
         }
-
     }
 
 

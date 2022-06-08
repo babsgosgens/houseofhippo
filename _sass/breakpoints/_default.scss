@@ -542,19 +542,23 @@
     padding-bottom: rhythm(1);
 
     &__date {
-        display: block;
+        display: none;
         margin: 1em auto;
     }
     &__image {
         flex: 0 0 rhythm(8);
-        padding-left: rhythm(2);
-    }
-    &__body {
-        flex: 0 0 rhythm(16);
         padding: 0 rhythm(1);
     }
+    &__body {
+        flex: 0 0 rhythm(14);
+        // padding: 0 rhythm(1);
+    }
     &__title {
-        font-size: to-unit(20px);
+        font-size: to-unit(16px);
+    }
+
+    &--featured {
+        margin: 0 rhythm(-1);
     }
     &--featured & {
 
@@ -579,11 +583,15 @@
                 visibility: hidden;
             }
         }
+        &__title {
+            font-size: to-unit(20px);
+        }
         &__standfirst {
             margin: 1em auto rhythm(-3);
             font-size: to-unit(14px);
         }
         &__meta {
+            padding-top: 1em;
             width: rhythm(8);
             text-align: right;
             line-height: 1.2;
@@ -592,14 +600,35 @@
 }
 
 .post-grid {
+
     /*
      * 1. Will likely be a list, so reset it…
      */
     list-style: none; /* 1 */
-    margin: 0;
+    margin: auto rhythm(1);
     padding: 0;
 
+    &__item--stretch {
+        flex: 1 0 100%;
+    }
 }
+
+
+// .post-grid {
+//
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     margin: auto rhythm(2);
+//
+//     &__item {
+//         flex: 0 0 rhythm(6);
+//     }
+//     &__item--stretch {
+//         flex: 1 0 100%;
+//     }
+//
+// }
 
 .project-hero {
     position: relative;

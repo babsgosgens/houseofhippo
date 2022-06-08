@@ -327,9 +327,8 @@ $rhythm: get-grid-property("rhythm", $grid);
         }
         &--featured {
             width: rhythm(28);
-            position: relative;
-            left: rhythm(-2);
             padding-bottom: rhythm(1);
+            margin: 0 rhythm(-2);
         }
         &--featured & {
 
@@ -369,6 +368,9 @@ $rhythm: get-grid-property("rhythm", $grid);
 
         &__item {
             flex: 0 0 rhythm(8);
+        }
+        &__item--stretch {
+            flex: 1 0 100%;
         }
     }
 
