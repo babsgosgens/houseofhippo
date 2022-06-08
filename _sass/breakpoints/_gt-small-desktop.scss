@@ -329,47 +329,82 @@ $rhythm: get-grid-property("rhythm", $grid);
             font-size: to-unit(24px);
         }
         &--featured {
-            width: rhythm(30);
-            // padding-bottom: rhythm(1);
-            flex-direction: row;
             margin: 0 rhythm(-2);
+            width: rhythm(30);
         }
         &--featured & {
 
-            &__image,
-            &__body {
-                width: rhythm(15);
-                flex: auto;
-            }
-            &__title {
-                font-size: to-unit(36px);
-            }
-
             &__image {
-                // padding: 0;
                 margin: 0;
             }
             &__body {
-                position: static;
-                // width: rhythm(15);
 
-                // top: 0;
-                flex: auto;
-                align-self: end;
-                padding: 0 rhythm(1);
+                top: rhythm(-3);
+                left:  rhythm(1);
+                margin-bottom: 0;
+                // flex: 0 0 rhythm(13);
+                width: rhythm(18);
 
                 .tag-cloud {
-                    position: static;
-                    li {
-                        display: inline;
-                    }
+                    top: rhythm(3);
+                    left: 100%;
+                    right: auto;
+                    text-align: left;
                 }
             }
+            &__title {
+                font-size: to-unit(30px);
+            }
             &__standfirst {
-                margin: 1em 0 0;
-                font-size: to-unit(18px);
+                margin: 1em auto rhythm(-3);
+                font-size: to-unit(14px);
+            }
+            &__date {
+                margin-top: 0;
             }
         }
+        // &--featured {
+        //     width: rhythm(30);
+        //     // padding-bottom: rhythm(1);
+        //     flex-direction: row;
+        //     margin: 0 rhythm(-2);
+        // }
+        // &--featured & {
+        //
+        //     &__image,
+        //     &__body {
+        //         width: rhythm(15);
+        //         flex: auto;
+        //     }
+        //     &__title {
+        //         font-size: to-unit(36px);
+        //     }
+        //
+        //     &__image {
+        //         // padding: 0;
+        //         margin: 0;
+        //     }
+        //     &__body {
+        //         position: static;
+        //         // width: rhythm(15);
+        //
+        //         // top: 0;
+        //         flex: auto;
+        //         align-self: end;
+        //         padding: 0 rhythm(1);
+        //
+        //         .tag-cloud {
+        //             position: static;
+        //             li {
+        //                 display: inline;
+        //             }
+        //         }
+        //     }
+        //     &__standfirst {
+        //         margin: 1em 0 0;
+        //         font-size: to-unit(18px);
+        //     }
+        // }
     }
 
     .post-grid {
@@ -382,7 +417,7 @@ $rhythm: get-grid-property("rhythm", $grid);
         }
         &__item--stretch {
             flex: 1 0 100%;
-            margin-bottom: rhythm(2);
+            margin-bottom: rhythm(1);
         }
     }
 
