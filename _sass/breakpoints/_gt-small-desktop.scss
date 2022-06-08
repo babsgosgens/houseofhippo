@@ -321,11 +321,12 @@ $rhythm: get-grid-property("rhythm", $grid);
             width: rhythm(8);
             height: rhythm(8);
             // flex-basis: rhythm(8);
+            flex-basis: auto;
         }
         &__body {
         }
         &__title {
-            font-size: to-unit(32px);
+            font-size: to-unit(24px);
         }
         &--featured {
             width: rhythm(30);
@@ -339,6 +340,9 @@ $rhythm: get-grid-property("rhythm", $grid);
             &__body {
                 width: rhythm(15);
                 flex: auto;
+            }
+            &__title {
+                font-size: to-unit(36px);
             }
 
             &__image {
@@ -355,19 +359,15 @@ $rhythm: get-grid-property("rhythm", $grid);
                 padding: 0 rhythm(1);
 
                 .tag-cloud {
-                    visibility: visible;
+                    position: static;
+                    li {
+                        display: inline;
+                    }
                 }
             }
             &__standfirst {
                 margin: 1em 0 0;
                 font-size: to-unit(18px);
-            }
-            &__meta {
-                /*
-                 * 1. Otherwise will still occupy space in flex container
-                 */
-                visibility: hidden;
-                display: none; /* 1 */
             }
         }
     }
@@ -378,9 +378,11 @@ $rhythm: get-grid-property("rhythm", $grid);
 
         &__item {
             flex: 0 0 rhythm(8);
+            margin-bottom: rhythm(1);
         }
         &__item--stretch {
             flex: 1 0 100%;
+            margin-bottom: rhythm(2);
         }
     }
 

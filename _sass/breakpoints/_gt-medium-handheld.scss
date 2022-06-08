@@ -253,7 +253,7 @@
 
                 top: rhythm(-3);
                 left:  rhythm(1);
-                margin: 0;
+                margin-bottom: 0;
                 // flex: 0 0 rhythm(13);
                 width: rhythm(13);
 
@@ -265,7 +265,7 @@
                 }
             }
             &__title {
-                font-size: to-unit(20px);
+                font-size: to-unit(30px);
             }
             &__standfirst {
                 margin: 1em auto rhythm(-3);
@@ -320,9 +320,11 @@
 
         &__item {
             flex: 0 0 rhythm(6);
+
         }
         &__item--stretch {
             flex: 1 0 100%;
+            margin-bottom: rhythm(1);
         }
     }
 

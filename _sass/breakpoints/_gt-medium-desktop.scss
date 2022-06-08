@@ -187,11 +187,12 @@
             &__body {
                 position: absolute;
                 top: 100%;
-                top: calc(100% - #{rhythm(2)});
+                // top: calc(100% - #{rhythm(2)});
                 width: rhythm(8);
                 left: rhythm(1);
                 // align-self: auto;
                 padding: rhythm(1);
+                margin-top: rhythm(-2);
             }
             &__standfirst {
                 margin: 1em auto;
@@ -209,8 +210,11 @@
 
             position: relative;
             // flex-basis: rhythm(5);
-
-            flex: 0 1 rhythm(5);
+            width: rhythm(5);
+            flex: 0 1 auto;
+        }
+        &__item--stretch {
+            margin-bottom: rhythm(1);
         }
         // &__item-stretch {
         //     width: rhythm(5);
