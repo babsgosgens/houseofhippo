@@ -92,9 +92,8 @@ $rhythm: get-grid-property("rhythm", $grid);
         // width: rhythm(21);
         height: rhythm(3);
         &--section {
-            height: rhythm(4);
+            height: rhythm(7);
             padding-top: rhythm(1);
-            margin-bottom: rhythm(3);
         }
         &--section &__header {
             position: static;
