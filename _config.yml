@@ -21,14 +21,25 @@
 title: House of Hippo
 email: babsgosgens@gmail.com
 mobile: +31 (0)6 31 04 7984
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+# description: >- # this means to ignore newlines until "baseurl:"
+#   Write an awesome description for your new site here. You can edit this
+#   line in _config.yml. It will appear in your document head meta (for
+#   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: babsgosgens
 github_username:  babsgosgens
+timezone: Europe/Amsterdam
+markdown: kramdown
+meta:
+    robots: noindex
+    author: Babs Gösgens
+    description: Babs Gösgens is interieurontwerper in de regio Den Bosch.
+    keywords:
+        - interieurontwerp
+        - interieuradvies
+        - kleuradvies
+        - Den Bosch
 
 # Build settings
 theme: minima
@@ -38,6 +49,21 @@ sass:
     style: compressed # possible values: nested expanded compact compressed
 plugins:
   - jekyll-feed
+future: false
+
+# content settings
+permalink: /:categories/:title/
+defaults:
+  -
+      scope:
+          path: "assets/images/projects/moodboards" # an empty string here means all files in the project
+      values:
+          moodboard: true
+  -
+      scope:
+          path: "_posts" # an empty string here means all files in the project
+      values:
+          layout: post
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: default
 title: About
+section: Over Babs
 permalink: /about/
 ---
 

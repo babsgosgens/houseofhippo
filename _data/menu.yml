@@ -1,6 +1,8 @@
+- name: Home
+  link: /
 - name: Over mij
-  link: /about.html
+  link: /about/
 - name: Blog
-  link: /post.html
+  link: /blog/
 - name: Contact
-  link: /contact.html
+  link: /contact/
