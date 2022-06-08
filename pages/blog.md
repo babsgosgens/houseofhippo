@@ -1,8 +1,10 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: blog
-permalink: /blog/
+title: Blog
 section: Blog
+permalink: /blog/
+meta:
+    description: Ik schrijf af en toe iets.
+    keywords:
+        - blog
 ---

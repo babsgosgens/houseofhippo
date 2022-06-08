@@ -1,0 +1,14 @@
+<header class="masthead masthead--section u-root">
+    <div class="masthead__header lt-wrap">
+        <h1 class="masthead__title txt-title lt-section-divider lt-wrap">
+            <span class="lt-wrap__tight">House of</span>
+            <span class="lt-wrap__loose">Hippo</span>
+            <span class="lt-wrap__end txt-title-section txt-title-section--drop txt-personal">{{ page.section }}</span>
+        </h1>
+    </div>
+    <nav class="masthead__menu menu">
+        {% for item in site.data.menu %}
+            <a href="{{ item.link }}" class="menu__item anchor__cloaked">{{ item.name }}</a>
+        {% endfor %}
+    </nav>
+</header>

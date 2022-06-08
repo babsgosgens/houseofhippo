@@ -5,24 +5,12 @@
 
     <body class="page">
         <div class="page-wrapper" data-theme="#00f">
-            <header class="masthead masthead--section u-root">
-                <div class="masthead__header lt-wrap">
-                    <h1 class="masthead__title txt-title lt-section-divider lt-wrap">
-                        <span class="lt-wrap__tight">House of</span>
-                        <span class="lt-wrap__loose">Hippo</span>
-                        <span class="lt-wrap__end txt-title-section txt-title-section--drop txt-personal">Blog</span>
-                    </h1>
-                </div>
-                <nav class="masthead__menu menu">
-                    {% for item in site.data.menu %}
-                        <a href="{{ item.link }}" class="menu__item anchor__cloaked">{{ item.name }}</a>
-                    {% endfor %}
-                </nav>
-            </header>
+
+            {% include base/masthead.html %}
 
             <article class="post">
 
-                <h1 class="post__title txt-title">De 10 overeenkomsten tussen webdesign en interieurontwerp (en 1 groot verschil)</h1>
+                <h1 class="post__title txt-title">{{ page.title }}</h1>
                 <figure>
                     <img src="{{ 'assets/images/project-hero__image3-medium.jpg' | relative_url }}" />
                     <figcaption></figcaption>
@@ -36,10 +24,10 @@
                         </div>
                         <dl class="post__drop post__details">
                             <dt class="is-narrative"></dt>
-                            <dd class="txt-meta"><time>Juni 2022</time></dd>
+                            <dd class="txt-meta"><time>{% include elements/formatted_date_nl.html %}</time></dd>
                             <dt class="is-narrative">Tags</dt>
                             <dd class="txt-meta">
-                                #tag #tag2 #tag3
+                                
                             </dd>
                         </dl>
                         <h2 class="post__heading txt-heading">Heading</h2>
