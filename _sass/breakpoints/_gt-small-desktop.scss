@@ -330,6 +330,13 @@ $rhythm: get-grid-property("rhythm", $grid);
         &--featured {
             margin: 0 rhythm(-2);
             width: rhythm(30);
+
+            .tag-cloud {
+                top: rhythm(3);
+                left: 100%;
+                right: auto;
+                text-align: left;
+            }
         }
         &--featured & {
 
@@ -343,13 +350,6 @@ $rhythm: get-grid-property("rhythm", $grid);
                 margin-bottom: 0;
                 // flex: 0 0 rhythm(13);
                 width: rhythm(18);
-
-                .tag-cloud {
-                    top: rhythm(3);
-                    left: 100%;
-                    right: auto;
-                    text-align: left;
-                }
             }
             &__title {
                 font-size: to-unit(30px);

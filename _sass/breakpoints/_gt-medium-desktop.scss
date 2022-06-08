@@ -33,6 +33,9 @@
             font-size: to-unit(14px);
             line-height: rhythm(2);
         }
+        &--section {
+            height: rhythm(6);
+        }
     }
 
     .page-intro {
@@ -166,10 +169,11 @@
             display: block;
             position: relative;
             width: rhythm(15);
-            // left: auto;
-            // right: 0;
             margin-left: rhythm(-10);
-            // margin-right: 100%;
+
+            .tag-cloud {
+                position: static;
+            }
         }
         &--featured & {
             &__image,
@@ -182,15 +186,12 @@
             &__image {
                 width: 100%;
                 height: auto;
-                // margin-left: rhythm(-10);
             }
             &__body {
                 position: absolute;
                 top: 100%;
-                // top: calc(100% - #{rhythm(2)});
                 width: rhythm(8);
                 left: rhythm(1);
-                // align-self: auto;
                 padding: rhythm(1);
                 margin-top: rhythm(-2);
             }
