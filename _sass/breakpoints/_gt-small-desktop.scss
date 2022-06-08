@@ -175,7 +175,7 @@ $rhythm: get-grid-property("rhythm", $grid);
         &::after {
             top: rhythm(2);
             left: 100%;
-            height: rhythm(3);
+            height: rhythm(2);
             background-color: $color-background;
         }
     }
@@ -422,6 +422,7 @@ $rhythm: get-grid-property("rhythm", $grid);
 
     .project-hero {
         margin-left: rhythm(12);
+        width: rhythm(21);
         &__image {
             height: rhythm(15);
             width: rhythm(21);

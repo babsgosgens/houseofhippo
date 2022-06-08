@@ -1,14 +1,16 @@
 (function ($) {
 
-    // $('.project-hero').slick({
-    //     dots: false,
-    //     infinite: true,
-    //     autoplay: true,
-    //     autoplaySpeed: 3200,
-    //     speed: 1200,
-    //     fade: true,
-    //     cssEase: 'linear'
-    // });
+    $('.project-hero').slick({
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 3200,
+        speed: 1200,
+        fade: true,
+        cssEase: 'linear',
+        prevArrow: '',
+        nextArrow: '<button class="project-hero__next btn-shortcut fx-theme"><i class="icn icn-chevron-right"></i></button>'
+    });
 
 
     // $('.project-slider--child').slick({
