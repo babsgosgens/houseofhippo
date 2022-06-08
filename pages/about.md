@@ -1,19 +1,26 @@
 ---
-layout: default
-title: About
-section: Babs
+layout: post
+title: Elk interieur vertelt een verhaal 
+category: Babs
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+<div class="post__intro">
+    <p class="txt-intro">
+        Elk ontwerp is uniek. Voordat ik een interieur ontwerp wil ik dan ook eerst weten waar jij blij van wordt. En hoe je leven eruitziet. Drukke baan, kinderen en huisdieren of vrijgezel – het heeft invloed op de keuzes die we samen maken voor je interieur. Maar het uitgangspunt is altijd hetzelfde: wie ben je, wat past bij je en wanneer voel jij je thuis?
+    </p>
+</div>
+<dl class="post__drop post__details">
+    <dt class="is-narrative"></dt>
+    <dd class="txt-meta"><time>{% include elements/formatted_date_nl.html %}</time></dd>
+    <dt class="is-narrative">Tags</dt>
+    <dd class="txt-meta">
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+    </dd>
+</dl>
+<p>
+    Ik ben interieurontwerper sinds 2020. Daarvoor was ik ruim 25 jaar werkzaam als website-ontwerper. Met heel veel plezier, mag ik wel zeggen. Toch fantaseerde ik stiekem over interieurontwerp. Toen ik een aantal jaar geleden ontdekte dat het merendeel van mijn boekenkast uit interieurboeken bestaat en dat mijn Pinterest vol staat met pins van interieurs, klikte het.
+</p>
+<p>
+    Mijn persoonlijke woonstijl is erg geïnspireerd door Afrika. Ik heb daar mijn man ontmoet en onze zoon is er geboren. Invloeden uit onze tijd in Ghana en Zuin-Afrika zijn overal in huis terug te vinden, wij worden daar heel blij van!
+</p>

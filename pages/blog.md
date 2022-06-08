@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Blog
-section: Blog
+category: Blog
 permalink: /blog/
 meta:
     description: Ik schrijf af en toe iets.
