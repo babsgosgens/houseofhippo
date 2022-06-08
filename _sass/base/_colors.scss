@@ -49,7 +49,7 @@ $color-button: $color-theme;
 
 
 /* Link colours */
-$color-anchor: $color-body;
-$color-anchor--hover: $color-secondary;
-$color-anchor--active: $color-theme;
+$color-anchor: $black;
+$color-anchor--hover: $color-body;
+$color-anchor--active: $color-accent;
 $color-anchor--visited: $color-neutral-darkest-grey;

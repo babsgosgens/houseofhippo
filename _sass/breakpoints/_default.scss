@@ -237,16 +237,43 @@
 
 
 /* Component Styling */
-
+a,
 .anchor {
-    &--inherit {
+    color: $color-anchor;
+    &:hover {
         &,
         &:visited {
-            color: $color-neutral-darkest-grey;
+            color: $color-anchor--hover;
         }
-        &:hover {
-            color: $color-body;
+    }
+    &:active {
+        &,
+        &:visited {
+            color: $color-anchor--active;
         }
+    }
+    &:visited {
+        color: $color-anchor--visited;
+    }
+}
+
+.is-cloaked {
+    color: inherit;
+    &:hover,
+    &:active {
+        &,
+        &:visited {
+            color: inherit;
+        }
+    }
+    &:active {
+        &,
+        &:visited {
+            color: $color-anchor--active;
+        }
+    }
+    &:visited {
+        color: inherit;
     }
 }
 
