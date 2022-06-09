@@ -1,17 +1,8 @@
+// min-width: 480px
 @include breakpoint($gt-medium-handheld) {
 
 
     /* Utility Styling */
-
-    // .lt-section-divider {
-    //     &::after {
-    //         content: "";
-    //         display: block;
-    //         width: 100%;
-    //         height: rhythm(1);
-    //         border-bottom: 1px solid $color-neutral-lightest-grey;
-    //     }
-    // }
 
     .txt-meta {
         font-size: to-unit(14px);
@@ -31,7 +22,6 @@
 
     /* Component styling */
 
-
     .input {
 
         /*
@@ -48,20 +38,19 @@
 
     .masthead {
 
-        margin: 0 rhythm(1) 0 rhythm(3);
+        margin-left: rhythm(3);
         padding-top: rhythm(2);
-        // width: rhythm(21);
         height: rhythm(7);
 
         &__payoff {
-            font-size: to-unit(16px);
+            font-size: to-unit(24px);
         }
         &__menu {
             font-size: to-unit(16px);
         }
         &--section {
             margin-left: rhythm(1);
-            height: rhythm(9);
+            height: rhythm(8);
         }
     }
 

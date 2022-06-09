@@ -9,7 +9,6 @@
         object-fit: cover;
     }
 }
-
 .img {
     display: inline-block;
     width: 100%;
@@ -53,9 +52,9 @@
 .is-silent {
     speak: never;
 }
-.is-gt-sh {
-    display: none;
-}
+// .is-gt-sh {
+//     display: none;
+// }
 
 .fx-scale-image {
     position: absolute;
@@ -109,7 +108,6 @@
         padding: 0;
     }
 }
-
 .lt-stack {
     display: flex;
     flex-direction: column;
@@ -132,7 +130,6 @@
         flex-wrap: nowrap;
     }
 }
-
 .lt-wrap {
     display: inline;
     &__tight {
@@ -145,7 +142,6 @@
         display: inline-block;
     }
 }
-
 .lt-section-divider {
     &::after {
         content: "";
@@ -183,13 +179,14 @@
     font-weight: 400;
     color: $color-accent;
 }
+.txt-title,
+.txt-title-section {
+    transition: font-size 300ms ease-out;
+}
 .txt-title {
     font-size: to-unit(36px);
     line-height: 1;
     font-weight: 400;
-    &--home {
-        font-size: to-unit(40px);
-    }
 }
 .txt-title-section {
     position: relative;
@@ -201,11 +198,6 @@
         padding-top: .2em;
         background-color: $white;
     }
-}
-.txt-heading {
-    font-size: to-unit(18px);
-    line-height: 2;
-    font-weight: 400;
 }
 .txt-heading {
     font-size: to-unit(18px);
@@ -238,7 +230,6 @@
 .txt-center {
     text-align: center;
 }
-
 
 
 /* Component Styling */
@@ -369,7 +360,8 @@ a,
 
 .masthead {
 
-    margin: 0 rhythm(1) rhythm(1) rhythm(2);
+    margin-right: rhythm(1);
+    margin-left: rhythm(2);
     padding-top: rhythm(4);
     height: rhythm(11);
 
@@ -379,7 +371,7 @@ a,
         }
     }
     &__payoff {
-        font-size: to-unit(14px);
+        font-size: to-unit(13px);
         font-family: $overtherainbow-family;
     }
     &__menu {
@@ -387,8 +379,8 @@ a,
         top: 0;
         right: 0;
         text-align: right;
-        font-size: to-unit(14px);
-        line-height: rhythm(2);
+        font-size: to-unit(13px);
+        padding: rhythm(.5);
     }
     &--section {
         height: rhythm(12);

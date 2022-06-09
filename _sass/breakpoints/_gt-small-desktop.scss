@@ -1,3 +1,4 @@
+// min-width: 1024px
 $breakpoint: $gt-small-desktop;
 $grid: get-grid($breakpoint, $grids);
 $columns: get-grid-property("columns", $grid);
@@ -18,9 +19,6 @@ $rhythm: get-grid-property("rhythm", $grid);
     }
     .txt-title {
         font-size: to-unit(50px);
-        &--home {
-            // font-size: to-unit(48px);
-        }
     }
     .txt-title-section {
         &--drop {
@@ -30,17 +28,6 @@ $rhythm: get-grid-property("rhythm", $grid);
     .txt-header {
         font-size: to-unit(18px);
     }
-
-    // .lt-split {
-    //     display: flex;
-    //     flex-direction: row;
-    //     &__aside {
-    //
-    //     }
-    //     &__main {
-    //
-    //     }
-    // }
 
 
     /* Component styling */
@@ -87,22 +74,25 @@ $rhythm: get-grid-property("rhythm", $grid);
     }
 
     .masthead {
-        margin: 0 rhythm(1) 0 rhythm(1);
-        padding-top: 0;
-        // width: rhythm(21);
-        height: rhythm(3);
+
+        margin-left: rhythm(1);
+        margin-right: rhythm(1);
+        padding-top: rhythm(4);
+        height: rhythm(7);
+
         &__header {
             position: absolute;
-            top: rhythm(2);
+            top: rhythm(2.5);
         }
         &__title {
             &.txt-title {
-                font-size: rhythm(2);
+                font-size: rhythm(1.8);
             }
         }
         &__payoff {
-            display: block;
-            font-size: to-unit(14px);
+            // display: block;
+            color: $color-neutral-darkest-grey;
+            font-size: to-unit(28px);
             margin-top: 1em;
         }
         &__menu {
