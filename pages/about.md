@@ -5,7 +5,7 @@ category: Babs
 permalink: /about/
 hero:
     image: me/babs-gosgens_RShSSmUrV.jpg
-    focus: "998x882"
+    focus: 998x882
 ---
 
 <div class="post__intro">

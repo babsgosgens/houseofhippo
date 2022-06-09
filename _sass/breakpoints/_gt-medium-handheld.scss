@@ -22,6 +22,14 @@
 
     /* Component styling */
 
+    .author-info {
+        width: rhythm(17);
+        margin-top: 1em;
+        &__image {
+            width: rhythm(5);
+        }
+    }
+
     .input {
 
         /*
@@ -100,9 +108,9 @@
     }
 
     .post {
-        img {
-            display: block;
-        }
+        // img {
+        //     display: block;
+        // }
         p {
             margin-top: .5em;
         }
@@ -116,8 +124,11 @@
                 object-fit: cover;
             }
         }
-        &__main {
+        &__main,
+        &__aside {
             padding: 0 rhythm(3);
+        }
+        &__main {
             font-weight: 400;
         }
         &__heading,
@@ -129,7 +140,6 @@
             font-weight: 200;
             margin-bottom: 1em;
         }
-        &__aside {}
         &__grid {
             display: flex;
             flex-direction: row;
@@ -151,23 +161,25 @@
                 }
             }
         }
-        .img {
-            max-width: rhythm(20)
-        }
-        .img-s,
-        .img-p {
-            max-width: rhythm(7);
-        }
-        .img-s,
-        .img-l {
-            max-height: rhythm(7);
-        }
-        .img-banner {
-            position: relative;
-            img {
-                display: block;
-                margin: rhythm(1) rhythm(-2) 0;
-                max-width: rhythm(24);
+        &__body {
+            .img {
+                max-width: rhythm(20)
+            }
+            .img-s,
+            .img-p {
+                max-width: rhythm(7);
+            }
+            .img-s,
+            .img-l {
+                max-height: rhythm(7);
+            }
+            .img-banner {
+                position: relative;
+                img {
+                    display: block;
+                    margin: rhythm(1) rhythm(-2) 0;
+                    max-width: rhythm(24);
+                }
             }
         }
     }

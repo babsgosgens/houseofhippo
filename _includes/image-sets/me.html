@@ -1,0 +1,16 @@
+{% assign focus = "998x882" %}
+{% assign image = "me/babs-gosgens_RShSSmUrV.jpg" %}
+
+<picture class="img img--cover">
+
+    <source media="(max-width: 1023px)"
+            srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=1:1/resize=84 320w,
+                    https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=1:1/resize=135 640w">
+
+    <source media="(min-width: 1024px)"
+            srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=3:2/resize=200 1440w,
+                  https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=3:2/resize=400 2880w">
+
+    <img src="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=3:2/resize=200">
+
+</picture>

@@ -17,6 +17,12 @@
 
     /* Component styling */
 
+    .author-info {
+        &__image {
+            width: rhythm(5);
+        }
+    }
+
     // .masthead {
     //     margin: 0 rhythm(1) 0 rhythm(1);
     //     // padding-top: 0;

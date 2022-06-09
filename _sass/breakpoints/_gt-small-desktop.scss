@@ -32,6 +32,19 @@ $rhythm: get-grid-property("rhythm", $grid);
 
     /* Component styling */
 
+    .author-info {
+        align-self: flex-end;
+        flex-direction: column;
+        margin-top: 0;
+        width: auto;
+        &__image {
+            width: rhythm(7);
+        }
+        &__text {
+            padding-left: 0;
+        }
+    }
+
     .input {
 
         /*
@@ -211,9 +224,10 @@ $rhythm: get-grid-property("rhythm", $grid);
             flex: 0 0 rhythm(21);
             padding: 0 rhythm(1);
         }
-        &__sidebar {
+        &__aside {
+            padding: 0;
             // flex: 0 0 rhythm(9);
-            // padding-left: rhythm(1);
+            padding-left: rhythm(2);
 
             /*
              * Inner layout
@@ -238,7 +252,7 @@ $rhythm: get-grid-property("rhythm", $grid);
         &__intro {
             &,
             & p {
-                margin-top: rhythm(1);
+                margin-top: 0;
                 margin-bottom: 1em;
                 font-weight: 200;
             }
@@ -282,35 +296,42 @@ $rhythm: get-grid-property("rhythm", $grid);
                 max-width: rhythm(7);
             }
         }
-        .img {
-            max-width: rhythm(20)
-        }
-        .img-s,
-        .img-p {
-            max-width: rhythm(7);
-        }
-        .img-s,
-        .img-l {
-            max-height: rhythm(7);
-        }
-        .img-banner {
-            position: relative;
-            display: block;
-            margin: rhythm(1) rhythm(-10) rhythm(1);
-            max-width: rhythm(30);
-            img {
+        &__body {
+            .img {
+                max-width: rhythm(20)
+            }
+            .img-s,
+            .img-p {
+                max-width: rhythm(7);
+            }
+            .img-s,
+            .img-l {
+                max-height: rhythm(7);
+            }
+            .img-banner {
+                position: relative;
                 display: block;
-                margin: 0;
-                max-width: 100%;
+                margin: rhythm(1) rhythm(-10) rhythm(1);
+                max-width: rhythm(30);
+                img {
+                    display: block;
+                    margin: 0;
+                    max-width: 100%;
+                }
+                .txt-caption {
+                    position: absolute;
+                    bottom: 100%;
+                    width: rhythm(9);
+                    margin-bottom: rhythm(1);
+                    padding: 0 0 0 rhythm(1);
+                }
             }
-            .txt-caption {
-                position: absolute;
-                bottom: 100%;
-                width: rhythm(9);
-                margin-bottom: rhythm(1);
-                padding: 0 0 0 rhythm(1);
-            }
+
         }
+        // &>.txt-signature {
+        //     position: absolute;
+        //     top: 100%;
+        // }
     }
 
     .post-fragment {
