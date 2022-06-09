@@ -102,6 +102,19 @@
         width: rhythm(28);
     }
 
+    .post-list {
+
+        margin: auto;
+        width: rhythm(12);
+
+        &__title {
+            font-size: to-unit(22px);
+        }
+        &__item-title {
+            font-size: to-unit(28px);
+        }
+    }
+
     .project-hero {
         margin-left: rhythm(12);
         width: rhythm(20);

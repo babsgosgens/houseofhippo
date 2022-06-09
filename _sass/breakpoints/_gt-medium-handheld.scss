@@ -184,6 +184,16 @@
         }
     }
 
+    .post-list {
+
+        width: rhythm(14);
+
+        &__title,
+        &__item-title {
+            font-size: to-unit(16px);
+        }
+    }
+
     .project-hero {
         &__image {
             height: rhythm(18);

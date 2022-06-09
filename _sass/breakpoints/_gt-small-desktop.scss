@@ -441,6 +441,23 @@ $rhythm: get-grid-property("rhythm", $grid);
         }
     }
 
+    .post-list {
+
+        width: rhythm(16);
+        padding: rhythm(2) 0;
+
+        &__title {
+            margin-bottom: rhythm(2);
+            padding: rhythm(1) 0;
+            font-size: to-unit(20px);
+        }
+
+        &__item-title {
+            margin-top: rhythm(1);
+            font-size: to-unit(24px);
+        }
+    }
+
     .project-hero {
         margin-left: rhythm(12);
         width: rhythm(21);

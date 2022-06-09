@@ -22,4 +22,16 @@
             top: rhythm(-2);
         }
     }
+
+    .post-list {
+
+        width: rhythm(12);
+
+        &__title {
+            font-size: to-unit(20px);
+        }
+        &__item-title {
+            font-size: to-unit(20px);
+        }
+    }
 }
