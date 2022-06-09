@@ -47,22 +47,21 @@
     }
 
     .masthead {
+
         margin: 0 rhythm(1) 0 rhythm(3);
         padding-top: rhythm(2);
         // width: rhythm(21);
         height: rhythm(7);
-        &--section {
-            margin-left: rhythm(1);
-        }
-        &--section &__menu {
-            position: relative;
-            top: rhythm(-2);
-        }
+
         &__payoff {
             font-size: to-unit(16px);
         }
         &__menu {
             font-size: to-unit(16px);
+        }
+        &--section {
+            margin-left: rhythm(1);
+            height: rhythm(9);
         }
     }
 
@@ -121,6 +120,12 @@
         &__title {
             margin: rhythm(1) rhythm(3);
             font-size: to-unit(36px);
+        }
+        &__hero {
+            margin-bottom: 1em;
+            & > img {
+                object-fit: cover;
+            }
         }
         &__main {
             padding: 0 rhythm(3);

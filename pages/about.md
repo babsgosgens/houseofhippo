@@ -1,8 +1,11 @@
 ---
 layout: post
-title: Elk interieur vertelt een verhaal 
+title: Elk interieur vertelt een verhaal
 category: Babs
 permalink: /about/
+hero:
+    image: me/babs-gosgens_RShSSmUrV.jpg
+    focus: "998x882"
 ---
 
 <div class="post__intro">

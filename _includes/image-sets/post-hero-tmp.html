@@ -1,0 +1,20 @@
+<picture>
+
+  <source media="(max-width: 480px)"
+          srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=1:1/resize=300 300w,
+                  https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=1:1/resize=500 500w,
+                  https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=1:1/resize=700 700w,
+                  https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=1:1/resize=900 900w">
+
+  <source media="(min-width: 1024px)"
+          srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=3:1/resize=860 1024w,
+                  https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=3:1/resize=996 1239w">
+
+  <source media="(min-width: 1280px)"
+          srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=3:1/resize=800 800w,
+                  https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=3:1/resize=1000 1000w,
+                  https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=3:1/resize=1200 1200w">
+
+  <img src="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=16:9/resize=1024">
+
+</picture>

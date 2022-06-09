@@ -91,20 +91,14 @@ $rhythm: get-grid-property("rhythm", $grid);
         padding-top: 0;
         // width: rhythm(21);
         height: rhythm(3);
-        &--section {
-            height: rhythm(7);
-            padding-top: rhythm(1);
-        }
-        &--section &__header {
-            position: static;
-        }
-        &--section &__menu {
-            top: rhythm(-2);
-            line-height: rhythm(2);
-        }
         &__header {
             position: absolute;
             top: rhythm(2);
+        }
+        &__title {
+            &.txt-title {
+                font-size: rhythm(2);
+            }
         }
         &__payoff {
             display: block;
@@ -114,6 +108,22 @@ $rhythm: get-grid-property("rhythm", $grid);
         &__menu {
             font-size: to-unit(16px);
             line-height: rhythm(3);
+        }
+        &--section {
+            height: rhythm(7);
+            padding-top: rhythm(2);
+        }
+        &--section &__title {
+            &.txt-title {
+                font-size: rhythm(1.5);
+            }
+        }
+        &--section &__header {
+            position: static;
+        }
+        &--section &__menu {
+            top: rhythm(-2);
+            line-height: rhythm(2);
         }
     }
 

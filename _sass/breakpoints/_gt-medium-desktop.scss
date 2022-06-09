@@ -16,25 +16,37 @@
 
     /* Component styling */
 
+    // .masthead {
+    //     margin: 0 rhythm(1) 0 rhythm(1);
+    //     // padding-top: 0;
+    //     height: rhythm(3);
+    //     &__header {
+    //         position: absolute;
+    //         top: rhythm(2.2);
+    //     }
+    //     &__payoff {
+    //         display: block;
+    //         font-size: to-unit(16px);
+    //         margin-top: 1em;
+    //     }
+    //     &__menu {
+    //         font-size: to-unit(14px);
+    //         line-height: rhythm(2);
+    //     }
+    //     &--section {
+    //         height: rhythm(6);
+    //     }
+    // }
+
     .masthead {
-        margin: 0 rhythm(1) 0 rhythm(1);
-        // padding-top: 0;
-        height: rhythm(3);
-        &__header {
-            position: absolute;
-            top: rhythm(2.2);
-        }
-        &__payoff {
-            display: block;
-            font-size: to-unit(16px);
-            margin-top: 1em;
-        }
-        &__menu {
-            font-size: to-unit(14px);
-            line-height: rhythm(2);
+        &__title {
+            &.txt-title {
+                font-size: rhythm(1.5);
+            }
         }
         &--section {
-            height: rhythm(6);
+            height: rhythm(7);
+            padding-top: rhythm(1);
         }
     }
 
