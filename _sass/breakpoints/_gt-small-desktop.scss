@@ -217,12 +217,12 @@ $rhythm: get-grid-property("rhythm", $grid);
         &__body {
             display: flex;
             flex-direction: row-reverse;
-            font-size: to-unit(18px);
         }
         &__main {
             position: relative;
             flex: 0 0 rhythm(21);
             padding: 0 rhythm(1);
+            font-size: to-unit(18px);
         }
         &__aside {
             padding: 0;
