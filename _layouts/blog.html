@@ -11,7 +11,7 @@
             <main>
 
                 <ol class="post-grid">
-                    {% for post in site.categories.blog | limit: 1 %}
+                    {% for post in site.categories.blog limit: 1 %}
                     <li class="post-grid__item post-grid__item--stretch">
                         <article class="post-fragment post-fragment--featured">
                             <figure class="post-fragment__image">
@@ -33,7 +33,7 @@
                         </article>
                     </li>
                     {% endfor %}
-                    {% for post in site.categories.blog | offset: 1 %}
+                    {% for post in site.categories.blog offset: 1 %}
                     <li class="post-grid__item">
                         <article class="post-fragment">
                             <figure class="post-fragment__image">
