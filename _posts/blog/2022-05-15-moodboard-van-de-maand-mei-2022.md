@@ -1,16 +1,16 @@
 ---
-title:  5Van webdesign naar interieurontwerp
-date:   2022-05-12 13:09:46 +
+title:  "Moodboard van de maand Mei: “What’s popping?”"
+date:   2022-05-12 10:00:00 +
 layout: post
 cover:  /assets/images/posts/blog/covers/design.jpg
 heroes:
     - /assets/images/posts/projects/gastvrije-werkruimte/hero.jpg
+hero:
+    image: posts/moodboard-whats-popping_p6KoAdN1Y.png
+    focus: 0x0
 category: blog
 tags: interieurontwerp
 image_namespace: moodboard
-standfirst: >- # Ik begon ooit op de studio van een uitgeverij,
-    maakte toen de overstap naar digitaal en heb dus altijd ontworpen.
-    Mede daardoor ben ik een ervaren “luisteraar”.
 ---
 
 

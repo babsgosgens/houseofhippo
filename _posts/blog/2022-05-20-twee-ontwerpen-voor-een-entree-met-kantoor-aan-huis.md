@@ -1,13 +1,19 @@
 ---
-title:  3Van webdesign naar interieurontwerp
-date:   2022-05-12 13:09:46 +
+title:  "Ontwerp: een grote entree wordt werkruimte aan huis"
+date:   2022-05-20 10:00:00 +
 layout: post
 cover:  /assets/images/posts/blog/covers/design.jpg
 heroes:
     - /assets/images/posts/projects/gastvrije-werkruimte/hero.jpg
+hero:
+    image: posts/moodboard-entree-met-werkruimte_ZPWtwfNPe.jpg
+    focus: 998x705
 category: blog
 tags: interieurontwerp
 image_namespace: moodboard
+standfirst: >- # Ik begon ooit op de studio van een uitgeverij,
+    maakte toen de overstap naar digitaal en heb dus altijd ontworpen.
+    Mede daardoor ben ik een ervaren “luisteraar”.
 ---
 
 
