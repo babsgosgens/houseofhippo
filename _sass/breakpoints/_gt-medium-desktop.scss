@@ -45,14 +45,15 @@
 
     .page-intro {
         position: absolute;
+        // top: rhythm(7);
         left: rhythm(3);
-        width: rhythm(7);
+        width: rhythm(6);
         &__image {
+            z-index: 1;
             position: absolute;
             left: rhythm(-5);
             width: rhythm(4);
             height: rhythm(4);
-            z-index: 1;
         }
         &__text {
             font-size: to-unit(20px);

@@ -134,7 +134,7 @@ $rhythm: get-grid-property("rhythm", $grid);
 
     .page-intro {
         position: absolute;
-        top: rhythm(8);
+        top: rhythm(7);
         left: rhythm(1);
         width: rhythm(10);
         padding: 0;
@@ -144,6 +144,8 @@ $rhythm: get-grid-property("rhythm", $grid);
             left: rhythm(-1);
             width: rhythm(3);
             height: rhythm(3);
+            margin-right: -1em;
+
         }
         &__content {
             padding-bottom: 1em;
