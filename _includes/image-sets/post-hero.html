@@ -1,5 +1,7 @@
 {% assign focus = page.hero.focus | default: "auto" %}
-{% assign image = page.hero.image %}
+{% assign image = page.hero.image | default: false  %}
+
+{% if image %}
 
 <picture class="img img--cover">
 
@@ -26,3 +28,4 @@
     <img src="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=16:9/resize=1024">
 
 </picture>
+{% endif %}
