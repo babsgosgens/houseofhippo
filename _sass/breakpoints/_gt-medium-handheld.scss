@@ -4,6 +4,10 @@
 
     /* Utility Styling */
 
+    .is-gt-sh {
+        display: initial;
+    }
+
     .txt-meta {
         font-size: to-unit(14px);
     }
@@ -46,20 +50,17 @@
 
     .masthead {
 
-        margin-left: rhythm(3);
         padding-top: rhythm(2);
         height: rhythm(7);
 
-        &__payoff {
-            font-size: to-unit(24px);
-        }
-        &__menu {
-            font-size: to-unit(16px);
-        }
         &--section {
             margin-left: rhythm(1);
             height: rhythm(8);
         }
+    }
+
+    .menu {
+        font-size: to-unit(16px);
     }
 
     .page-intro {

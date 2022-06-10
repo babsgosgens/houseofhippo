@@ -88,29 +88,24 @@ $rhythm: get-grid-property("rhythm", $grid);
 
     .masthead {
 
-        margin-left: rhythm(1);
-        margin-right: rhythm(1);
-        padding-top: rhythm(4);
-        height: rhythm(7);
+        margin: 0 rhythm(1);
+        padding-top: rhythm(3);
+        height: 0;
 
         &__header {
             position: absolute;
-            top: rhythm(2.5);
-        }
-        &__title {
-            &.txt-title {
-                font-size: rhythm(1.8);
-            }
+            top: rhythm(2);
+            font-size: to-unit(50px);
         }
         &__payoff {
-            // display: block;
-            color: $color-neutral-darkest-grey;
-            font-size: to-unit(28px);
-            margin-top: 1em;
-        }
-        &__menu {
-            font-size: to-unit(16px);
-            line-height: rhythm(3);
+            display: block;
+            // color: $color-neutral-darkest-grey;
+            // margin-top: 1em;
+            padding: 1.6em 0;
+            font-family: $bitter-family;
+            font-weight: 400;
+            font-size: to-unit(14px,1em,50px);
+
         }
         &--section {
             height: rhythm(7);
@@ -128,6 +123,13 @@ $rhythm: get-grid-property("rhythm", $grid);
             top: rhythm(-2);
             line-height: rhythm(2);
         }
+    }
+
+    .menu {
+        line-height: rhythm(1);
+        padding: rhythm(1) 0;
+        font-size: to-unit(14px);
+
     }
 
     .page-intro {

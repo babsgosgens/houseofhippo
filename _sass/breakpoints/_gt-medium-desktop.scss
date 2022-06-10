@@ -23,38 +23,24 @@
         }
     }
 
-    // .masthead {
-    //     margin: 0 rhythm(1) 0 rhythm(1);
-    //     // padding-top: 0;
-    //     height: rhythm(3);
-    //     &__header {
-    //         position: absolute;
-    //         top: rhythm(2.2);
-    //     }
-    //     &__payoff {
-    //         display: block;
-    //         font-size: to-unit(16px);
-    //         margin-top: 1em;
-    //     }
-    //     &__menu {
-    //         font-size: to-unit(14px);
-    //         line-height: rhythm(2);
-    //     }
-    //     &--section {
-    //         height: rhythm(6);
-    //     }
-    // }
-
     .masthead {
-        &__title {
-            &.txt-title {
-                font-size: rhythm(1.5);
-            }
+
+        margin: 0 rhythm(1);
+        padding-top: rhythm(2);
+        height: 0;
+
+        &__header {
+            top: rhythm(2.4);
+            font-size: to-unit(56px);
         }
-        &--section {
-            height: rhythm(7);
-            padding-top: rhythm(1);
+        &__payoff {
+            font-size: to-unit(14px,1em,56px);
         }
+    }
+
+    .menu {
+        padding: rhythm(.5) 0;
+        line-height: rhythm(1);
     }
 
     .page-intro {
@@ -104,7 +90,6 @@
 
     .post-list {
 
-        margin: auto;
         width: rhythm(12);
 
         &__title {

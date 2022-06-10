@@ -1,19 +1,4 @@
-// min-width: 320px
-@include breakpoint($gt-small-handheld) {
-
-
-    /* Component styling */
-
-    .masthead {
-        margin: 0 rhythm(1) 0 rhythm(2);
-        &--section {
-            margin-left: rhythm(1);
-        }
-    }
-
-    /* Utility Styling */
-
-    .is-gt-sh {
-        display: initial;
-    }
-}
+// // min-width: 320px
+// @include breakpoint($gt-small-handheld) {
+//
+// }

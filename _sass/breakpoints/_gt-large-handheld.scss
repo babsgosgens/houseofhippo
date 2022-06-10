@@ -4,22 +4,21 @@
 
     /* Component styling */
 
-    .page-intro {
-        margin: rhythm(1) rhythm(6) rhythm(2) rhythm(7);
-        &__text {
-            font-size: to-unit(20px);
+    .masthead {
+
+        height: rhythm(6);
+
+        &__header {
+            font-size: to-unit(48px);
         }
     }
 
-    .masthead {
-        &__title {
-            &.txt-title {
-                font-size: rhythm(1.8);
-            }
-        }
-        &--section &__menu {
-            position: relative;
-            top: rhythm(-2);
+    .page-intro {
+
+        margin: rhythm(1) rhythm(6) rhythm(2) rhythm(7);
+
+        &__text {
+            font-size: to-unit(20px);
         }
     }
 

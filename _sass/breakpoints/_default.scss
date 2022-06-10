@@ -51,9 +51,11 @@
 .is-silent {
     speak: never;
 }
-// .is-gt-sh {
-//     display: none;
-// }
+.is-gt-sh {
+    display: none;
+    // position: absolute;
+    // left: -999em;
+}
 
 .fx-scale-image {
     position: absolute;
@@ -388,18 +390,16 @@ a,
 
 .masthead {
 
-    margin-right: rhythm(1);
-    margin-left: rhythm(2);
+    margin: 0 rhythm(1) 0 rhythm(2);
     padding-top: rhythm(4);
-    height: rhythm(11);
+    height: rhythm(10);
 
-    &__title {
-        &.txt-title {
-            font-size: rhythm(2);
-        }
+    &__header {
+        font-size: to-unit(40px);
+        line-height: 1;
     }
     &__payoff {
-        font-size: to-unit(13px);
+        font-size: .8ex;
         font-family: $overtherainbow-family;
     }
     &__menu {
@@ -407,8 +407,6 @@ a,
         top: 0;
         right: 0;
         text-align: right;
-        font-size: to-unit(13px);
-        padding: rhythm(.5);
     }
     &--section {
         height: rhythm(12);
@@ -417,8 +415,12 @@ a,
 }
 
 .menu {
-    margin-bottom: rhythm(2);
+
+    padding: rhythm(.5) 0;
+    font-size: to-unit(13px);
     font-weight: 400;
+    line-height: rhythm(1);
+
     &__item {
         & + & {
             padding-left: 1em;
@@ -497,7 +499,7 @@ a,
     &::before {
     }
     &::after {
-        top: rhythm(10);
+        top: rhythm(9);
         left: rhythm(21);
         right: 0;
         height: rhythm(3);
