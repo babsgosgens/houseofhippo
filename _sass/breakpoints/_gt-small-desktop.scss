@@ -116,7 +116,7 @@ $rhythm: get-grid-property("rhythm", $grid);
         &__header {
             // padding-bottom: .5em;
             //
-            // font-size: to-unit(36px);
+            font-size: to-unit(40px);
             // line-height: 1;
         }
         &__payoff {
@@ -124,7 +124,7 @@ $rhythm: get-grid-property("rhythm", $grid);
             // position: relative;
             // top: .6em;
             //
-            // font-size: to-unit(42px, 1em, 36px);
+            font-size: to-unit(50px, 1em, 40px);
             // font-family: $overtherainbow-family;
             // line-height: 0;
             // color: $color-accent;

@@ -54,7 +54,7 @@
         &__header {
             // padding-bottom: .5em;
             //
-            // font-size: to-unit(36px);
+            font-size: to-unit(46px);
             // line-height: 1;
         }
         &__payoff {
@@ -62,7 +62,7 @@
             // position: relative;
             // top: .6em;
             //
-            // font-size: to-unit(42px, 1em, 36px);
+            font-size: to-unit(60px, 1em, 46px);
             // font-family: $overtherainbow-family;
             // line-height: 0;
             // color: $color-accent;
@@ -84,6 +84,7 @@
 
     .menu {
         // padding: rhythm(.5) 0;
+        font-size: to-unit(16px);
         line-height: rhythm(1);
     }
 
