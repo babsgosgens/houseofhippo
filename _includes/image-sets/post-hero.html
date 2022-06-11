@@ -1,31 +1,34 @@
 {% assign focus = page.hero.focus | default: "auto" %}
 {% assign image = page.hero.image | default: false  %}
+{% assign show = page.hero.show | default: true  %}
 
-{% if image %}
+{% unless page.hero.show == false %}
+    {% if image %}
+        <picture class="img img--cover">
 
-<picture class="img img--cover">
+            <source media="(max-width: 639px)"
+                    srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=3:2/resize=320 320w,
+                            https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=3:2/resize=480 480w,
+                            https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=3:2/resize=640 639w">
 
-    <source media="(max-width: 639px)"
-            srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=3:2/resize=320 320w,
-                    https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=3:2/resize=480 480w,
-                    https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=3:2/resize=640 639w">
+            <source media="(min-width: 640px)"
+                    srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=16:9/resize=640 640w,
+                            https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=16:9/resize=800 800w,
+                            https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=16:9/resize=1023 1023w">
 
-    <source media="(min-width: 640px)"
-            srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=16:9/resize=640 640w,
-                    https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=16:9/resize=800 800w,
-                    https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=16:9/resize=1023 1023w">
+            <source media="(min-width: 1024px)"
+                    srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=16:9/resize=860 1024w,
+                          https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=16:9/resize=996 1239w">
 
-    <source media="(min-width: 1024px)"
-            srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=16:9/resize=860 1024w,
-                  https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=16:9/resize=996 1239w">
+            <source media="(min-width: 1280px)"
+                    srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=350:187/resize=996 1280w,
+                          https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=350:187/resize=1120 1440w,
+                          https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=350:187/resize=1310 1680w,
+                          https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=350:187/resize=3360 3360w">
 
-    <source media="(min-width: 1280px)"
-            srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=350:187/resize=996 1280w,
-                  https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=350:187/resize=1120 1440w,
-                  https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=350:187/resize=1310 1680w,
-                  https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=350:187/resize=3360 3360w">
+            <img src="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=16:9/resize=1024">
 
-    <img src="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=16:9/resize=1024">
-
-</picture>
-{% endif %}
+        </picture>
+    {% endif %}
+{% else %}
+{% endunless %}
