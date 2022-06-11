@@ -36,16 +36,59 @@
         &__payoff {
             font-size: to-unit(14px,1em,56px);
         }
+        &__menu {
+            padding-top: rhythm(.5);
+            padding-bottom: rhythm(.5);
+        }
+    }
+
+    .masthead-section {
+
+        margin: 0 rhythm(1);
+        padding-top: rhythm(1);
+
+        &::after {
+            height: rhythm(1);
+        }
+
+        &__header {
+            // padding-bottom: .5em;
+            //
+            // font-size: to-unit(36px);
+            // line-height: 1;
+        }
+        &__payoff {
+            // z-index: 1;
+            // position: relative;
+            // top: .6em;
+            //
+            // font-size: to-unit(42px, 1em, 36px);
+            // font-family: $overtherainbow-family;
+            // line-height: 0;
+            // color: $color-accent;
+        }
+        &__menu {
+            &::after {
+                // content: "";
+                // display: block;
+                height: rhythm(1);
+                // padding-bottom: .5em;
+
+                // font-size: to-unit(36px);
+                // line-height: 1;
+            }
+            // top: auto;
+            // bottom: 0;
+        }
     }
 
     .menu {
-        padding: rhythm(.5) 0;
+        // padding: rhythm(.5) 0;
         line-height: rhythm(1);
     }
 
     .page-intro {
         position: absolute;
-        // top: rhythm(7);
         left: rhythm(3);
         width: rhythm(6);
         &__image {

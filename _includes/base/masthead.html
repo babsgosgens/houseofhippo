@@ -1,12 +1,12 @@
-<header class="masthead masthead--section u-root">
-    <div class="masthead__header">
-        <h1 class="masthead__title lt-wrap">
+<header class="masthead-section u-root">
+    <div class="masthead-section__header">
+        <h1 class="masthead-section__title lt-wrap">
             <span class="lt-wrap__tight">House of</span>
             <span class="lt-wrap__loose">Hippo</span>
-            <span class="lt-wrap__end masthead__payoff">{{ page.category | capitalize }}</span>
+            <span class="lt-wrap__end masthead-section__payoff">{{ page.category | capitalize }}</span>
         </h1>
     </div>
-    <nav class="masthead__menu menu">
+    <nav class="masthead-section__menu menu">
         {% for item in site.data.menu %}
             <a href="{{ item.link }}" class="menu__item is-cloaked">{{ item.name }}</a>
         {% endfor %}

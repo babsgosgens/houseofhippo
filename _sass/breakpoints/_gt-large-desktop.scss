@@ -1,24 +1,8 @@
 // min-width: 1560px
 @include breakpoint($gt-desktop-large) {
 
-    // .masthead {
-    //
-    //     margin: 0 rhythm(1);
-    //     padding-top: rhythm(3);
-    //     height: 0;
-    //
-    //     &__header {
-    //         top: rhythm(2);
-    //         font-size: to-unit(56px);
-    //     }
-    //     &__payoff {
-    //         font-size: to-unit(14px,1em,56px);
-    //     }
-    // }
-
     .page-intro {
         width: rhythm(6);
     }
-
 
 }

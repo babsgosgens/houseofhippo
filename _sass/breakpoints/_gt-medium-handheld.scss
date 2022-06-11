@@ -13,14 +13,6 @@
     }
     .txt-title {
         font-size: to-unit(48px);
-        &--home {
-            // font-size: to-unit(48px);
-        }
-    }
-    .txt-title-section {
-        &--drop {
-            padding-top: .3em;
-        }
     }
 
 
@@ -49,14 +41,8 @@
     }
 
     .masthead {
-
-        padding-top: rhythm(2);
-        height: rhythm(7);
-
-        &--section {
-            margin-left: rhythm(1);
-            height: rhythm(8);
-        }
+        padding-top: rhythm(3);
+        height: rhythm(8);
     }
 
     .menu {

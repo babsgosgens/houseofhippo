@@ -20,11 +20,6 @@ $rhythm: get-grid-property("rhythm", $grid);
     .txt-title {
         font-size: to-unit(50px);
     }
-    .txt-title-section {
-        &--drop {
-            padding-top: .3em;
-        }
-    }
     .txt-header {
         font-size: to-unit(18px);
     }
@@ -99,37 +94,60 @@ $rhythm: get-grid-property("rhythm", $grid);
         }
         &__payoff {
             display: block;
-            // color: $color-neutral-darkest-grey;
-            // margin-top: 1em;
             padding: 1.6em 0;
             font-family: $bitter-family;
             font-weight: 400;
             font-size: to-unit(14px,1em,50px);
+        }
+        &__menu {
+            padding: rhythm(1) 0;
+        }
+    }
 
+    .masthead-section {
+
+        margin: 0 rhythm(1);
+        padding-top: rhythm(1);
+
+        &::after {
+            height: rhythm(1);
         }
-        &--section {
-            height: rhythm(7);
-            padding-top: rhythm(2);
+
+        &__header {
+            // padding-bottom: .5em;
+            //
+            // font-size: to-unit(36px);
+            // line-height: 1;
         }
-        &--section &__title {
-            &.txt-title {
-                font-size: rhythm(1.5);
-            }
+        &__payoff {
+            // z-index: 1;
+            // position: relative;
+            // top: .6em;
+            //
+            // font-size: to-unit(42px, 1em, 36px);
+            // font-family: $overtherainbow-family;
+            // line-height: 0;
+            // color: $color-accent;
         }
-        &--section &__header {
-            position: static;
-        }
-        &--section &__menu {
-            top: rhythm(-2);
-            line-height: rhythm(2);
+        &__menu {
+
+            // top: auto;
+            bottom: rhythm(1);
+            // padding-bottom: 1em;
+
+            // &::after {
+            //     content: "";
+            //     display: block;
+            //     padding-bottom: .5em;
+            //     font-size: to-unit(36px);
+            //     line-height: 1;
+            // }
         }
     }
 
     .menu {
         line-height: rhythm(1);
-        padding: rhythm(1) 0;
         font-size: to-unit(14px);
-
     }
 
     .page-intro {

@@ -7,10 +7,59 @@
     .masthead {
 
         height: rhythm(6);
+        padding-top: rhythm(2);
 
         &__header {
             font-size: to-unit(48px);
         }
+    }
+
+
+
+    .masthead-section {
+
+        // position: relative;
+        // margin: 0 rhythm(1);
+        padding-top: rhythm(1);
+
+        &::after {
+            height: rhythm(1);
+        }
+
+        &__header {
+            // padding-bottom: .5em;
+            //
+            // font-size: to-unit(36px);
+            // line-height: 1;
+        }
+        &__payoff {
+            // z-index: 1;
+            // position: relative;
+            // top: .6em;
+            //
+            // font-size: to-unit(42px, 1em, 36px);
+            // font-family: $overtherainbow-family;
+            // line-height: 0;
+            // color: $color-accent;
+        }
+        &__menu {
+
+            top: auto;
+            bottom: rhythm(1);
+            padding-bottom: 1em;
+
+            &::after {
+                content: "";
+                display: block;
+                padding-bottom: .5em;
+                font-size: to-unit(36px);
+                line-height: 1;
+            }
+        }
+    }
+
+    .menu {
+        line-height: rhythm(1);
     }
 
     .page-intro {
