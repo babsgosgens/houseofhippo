@@ -1,0 +1,33 @@
+
+{% unless page.hero %}
+    {% assign image = post.hero.image | default: site.placeholder_image %}
+    {% assign focus = post.hero.focus | default: "auto" %}
+{% else %}
+    {% assign image = page.hero.image | default: site.placeholder_image  %}
+    {% assign focus = page.hero.focus | default: "auto" %}
+{% endunless %}
+
+{% if image %}
+
+<picture class="img img--cover">
+
+    <source media="(max-width: 1023px)"
+        srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=6:4/resize=320 320w,
+                https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=6:4/resize=480 480w,
+                https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=6:4/resize=640 640w,
+                https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=6:4/resize=768 768w,
+                https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=6:4/resize=1024 1024w,
+                https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=6:4/resize=1279 1279w,
+                https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=6:4/resize=2558 2558w">
+
+    <source media="(min-width: 1280px)"
+        srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=6:4/resize=540 1280w,
+                https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=6:4/resize=600 1440w,
+                https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=15:8/resize=700 1680w,
+                https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=15:8/resize=1400 3360w">
+
+    <img src="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=6:4/resize=1024">
+
+</picture>
+
+{% endif %}
