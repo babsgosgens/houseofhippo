@@ -52,38 +52,19 @@
         }
 
         &__header {
-            // padding-bottom: .5em;
-            //
             font-size: to-unit(46px);
-            // line-height: 1;
         }
         &__payoff {
-            // z-index: 1;
-            // position: relative;
-            // top: .6em;
-            //
             font-size: to-unit(60px, 1em, 46px);
-            // font-family: $overtherainbow-family;
-            // line-height: 0;
-            // color: $color-accent;
         }
         &__menu {
             &::after {
-                // content: "";
-                // display: block;
                 height: rhythm(1);
-                // padding-bottom: .5em;
-
-                // font-size: to-unit(36px);
-                // line-height: 1;
             }
-            // top: auto;
-            // bottom: 0;
         }
     }
 
     .menu {
-        // padding: rhythm(.5) 0;
         font-size: to-unit(16px);
         line-height: rhythm(1);
     }
@@ -103,10 +84,6 @@
         &__text {
             font-size: to-unit(20px);
         }
-    }
-
-    .page-footer {
-
     }
 
     .page-theme {
@@ -177,8 +154,10 @@
     }
 
     .project-slider {
+
         min-width: rhythm(28);
         height: rhythm(15);
+
         &-wrapper {
         }
         &__item {
@@ -274,17 +253,11 @@
         &__item--stretch {
 
             position: relative;
-            // flex-basis: rhythm(5);
             width: rhythm(5);
             flex: 0 1 auto;
         }
         &__item--stretch {
             margin-bottom: rhythm(1);
         }
-        // &__item-stretch {
-        //     width: rhythm(5);
-        //     overflow: hidden;
-        //     flex: 0 0 rhythm(5);
-        // }
     }
 }

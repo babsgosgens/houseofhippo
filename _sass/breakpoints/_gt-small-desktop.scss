@@ -114,34 +114,13 @@ $rhythm: get-grid-property("rhythm", $grid);
         }
 
         &__header {
-            // padding-bottom: .5em;
-            //
             font-size: to-unit(40px);
-            // line-height: 1;
         }
         &__payoff {
-            // z-index: 1;
-            // position: relative;
-            // top: .6em;
-            //
             font-size: to-unit(50px, 1em, 40px);
-            // font-family: $overtherainbow-family;
-            // line-height: 0;
-            // color: $color-accent;
         }
         &__menu {
-
-            // top: auto;
             bottom: rhythm(1);
-            // padding-bottom: 1em;
-
-            // &::after {
-            //     content: "";
-            //     display: block;
-            //     padding-bottom: .5em;
-            //     font-size: to-unit(36px);
-            //     line-height: 1;
-            // }
         }
     }
 
@@ -248,7 +227,6 @@ $rhythm: get-grid-property("rhythm", $grid);
         }
         &__aside {
             padding: 0;
-            // flex: 0 0 rhythm(9);
             padding-left: rhythm(2);
 
             /*
@@ -350,19 +328,13 @@ $rhythm: get-grid-property("rhythm", $grid);
             }
 
         }
-        // &>.txt-signature {
-        //     position: absolute;
-        //     top: 100%;
-        // }
     }
 
     .post-fragment {
 
         &__image {
-            // max-width: rhythm(8);
             width: rhythm(8);
             height: rhythm(8);
-            // flex-basis: rhythm(8);
             flex-basis: auto;
         }
         &__body {
@@ -391,7 +363,6 @@ $rhythm: get-grid-property("rhythm", $grid);
                 top: rhythm(-3);
                 left:  rhythm(1);
                 margin-bottom: 0;
-                // flex: 0 0 rhythm(13);
                 width: rhythm(18);
             }
             &__title {
@@ -405,48 +376,6 @@ $rhythm: get-grid-property("rhythm", $grid);
                 margin-top: 0;
             }
         }
-        // &--featured {
-        //     width: rhythm(30);
-        //     // padding-bottom: rhythm(1);
-        //     flex-direction: row;
-        //     margin: 0 rhythm(-2);
-        // }
-        // &--featured & {
-        //
-        //     &__image,
-        //     &__body {
-        //         width: rhythm(15);
-        //         flex: auto;
-        //     }
-        //     &__title {
-        //         font-size: to-unit(36px);
-        //     }
-        //
-        //     &__image {
-        //         // padding: 0;
-        //         margin: 0;
-        //     }
-        //     &__body {
-        //         position: static;
-        //         // width: rhythm(15);
-        //
-        //         // top: 0;
-        //         flex: auto;
-        //         align-self: end;
-        //         padding: 0 rhythm(1);
-        //
-        //         .tag-cloud {
-        //             position: static;
-        //             li {
-        //                 display: inline;
-        //             }
-        //         }
-        //     }
-        //     &__standfirst {
-        //         margin: 1em 0 0;
-        //         font-size: to-unit(18px);
-        //     }
-        // }
     }
 
     .post-grid {

@@ -95,9 +95,6 @@
     }
 
     .post {
-        // img {
-        //     display: block;
-        // }
         p {
             margin-top: .5em;
         }
@@ -245,7 +242,6 @@
         }
         &--featured {
             margin: 0 rhythm(-2);
-            // width: rhythm(24);
 
             .tag-cloud {
                 top: rhythm(3);
@@ -264,7 +260,6 @@
                 top: rhythm(-3);
                 left:  rhythm(1);
                 margin-bottom: 0;
-                // flex: 0 0 rhythm(13);
                 width: rhythm(13);
             }
             &__title {
@@ -299,7 +294,4 @@
             margin-bottom: rhythm(1);
         }
     }
-
-
-
 }
