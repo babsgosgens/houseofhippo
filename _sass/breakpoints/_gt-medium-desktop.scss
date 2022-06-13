@@ -270,4 +270,37 @@
             margin-bottom: rhythm(1);
         }
     }
+
+    .sampler {
+        &__header {
+            flex: 0 0 auto;
+            width: rhythm(6);
+        }
+        &__payoff {
+            font-size: to-unit(72px, 1em, 20px);
+        }
+        &__content {
+            flex: 0 1 auto;
+        }
+        .post-grid {
+            flex-direction: row;
+            &__item {
+                flex: 1 0 auto;
+                margin-bottom: rhythm(1);
+            }
+        }
+        .post-fragment {
+
+            flex-direction: column;
+            width: rhythm(5);
+
+            &__image {
+                width: rhythm(5);
+                height: rhythm(5);
+            }
+            &__body {
+                padding-left: 0;
+            }
+        }
+    }
 }

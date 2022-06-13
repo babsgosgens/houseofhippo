@@ -71,4 +71,20 @@
             font-size: to-unit(20px);
         }
     }
+
+    .sampler {
+        &__header {
+            margin-bottom: rhythm(1);
+            padding-top: rhythm(1.5);
+
+        }
+        .post-fragment {
+            &__title {
+                font-size: to-unit(16px);
+            }
+            .txt-meta {
+                font-size: to-unit(14px);
+            }
+        }
+    }
 }

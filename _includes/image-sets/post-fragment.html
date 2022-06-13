@@ -1,10 +1,10 @@
 
-{% unless page.hero %}
-    {% assign image = post.hero.image | default: site.placeholder_image %}
-    {% assign focus = post.hero.focus | default: "auto" %}
-{% else %}
+{% unless post.hero %}
     {% assign image = page.hero.image | default: site.placeholder_image  %}
     {% assign focus = page.hero.focus | default: "auto" %}
+{% else %}
+    {% assign image = post.hero.image | default: site.placeholder_image %}
+    {% assign focus = post.hero.focus | default: "auto" %}
 {% endunless %}
 
 

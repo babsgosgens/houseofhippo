@@ -478,5 +478,53 @@ $rhythm: get-grid-property("rhythm", $grid);
         }
     }
 
+    .sampler {
 
+        display: flex;
+        margin: rhythm(2) rhythm(2) 0;
+        padding-top: rhythm(2);
+        border-top: 1px solid $color-neutral-lightest-grey;
+
+        &__header {
+            flex: 0 0 auto;
+            width: rhythm(8);
+            margin: rhythm(-1) 0 0;
+            padding-top: 0;
+            border: 0;
+            font-size: to-unit(20px);
+        }
+        &__payoff {
+            font-size: to-unit(60px, 1em, 20px);
+        }
+        &__content {
+            flex: 0 1 auto;
+        }
+        .post-grid {
+            flex-direction: column;
+            margin: 0;
+            &__item {
+                flex: 0 0 auto;
+            }
+        }
+        .post-fragment {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            &__item {
+                margin-bottom: rhythm(1);
+            }
+            &__image {
+                flex: 0 0 auto;
+                width: rhythm(7);
+                height: rhythm(7);
+            }
+            &__body {
+                flex: 0 1 auto;
+                margin-top: 0;
+                padding-left: rhythm(1);
+            }
+            &__title {
+                font-size: to-unit(18px);
+            }
+        }
+    }
 }

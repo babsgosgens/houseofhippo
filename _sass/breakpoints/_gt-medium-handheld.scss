@@ -297,4 +297,33 @@
             margin-bottom: rhythm(1);
         }
     }
+
+    .sampler {
+        &__header {
+            font-size: to-unit(18px);
+        }
+        .post-grid {
+            &__item {
+                margin-bottom: rhythm(1);
+            }
+        }
+        .post-fragment {
+            &__image {
+                width: rhythm(6);
+                height: rhythm(6);
+            }
+            &__date {
+                margin-top: 1ex;
+                margin-bottom: 0;
+            }
+            &__title {
+                margin-top: .5em;
+                margin-bottom: .5em;
+                font-size: to-unit(14px);
+            }
+            .txt-meta {
+                font-size: to-unit(10px);
+            }
+        }
+    }
 }
