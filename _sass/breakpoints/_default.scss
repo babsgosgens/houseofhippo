@@ -143,6 +143,19 @@
         display: inline-block;
     }
 }
+.lt-leader {
+    margin-top: 2em;
+    &--double {
+        margin-top: 4em;
+    }
+}
+.lt-trailer {
+    margin-bottom: 2em;
+    &--double {
+        margin-bottom: 4em;
+    }
+}
+
 
 .u-root {
     position: relative;
@@ -150,7 +163,9 @@
 .u-stretch {
     display: block;
 }
-
+.txt-paragraph {
+    margin-bottom: 2em;
+}
 .txt-personal {
     font-family: $overtherainbow-family;
 }
@@ -176,9 +191,9 @@
     font-weight: 400;
 }
 .txt-heading {
-    font-size: to-unit(18px);
+    font-size: 2em;
     line-height: 2;
-    font-weight: 400;
+    font-weight: 300;
 }
 .txt-subheading {
     font-family: $overtherainbow-family;
@@ -540,7 +555,7 @@ a,
 
 .post {
     p {
-        margin-top: .5em;
+        margin-bottom: 2em;
     }
     &__title {
         margin: rhythm(1) rhythm(2);
@@ -552,7 +567,7 @@ a,
     }
     &__intro {
         font-weight: 200;
-        margin-bottom: 1em;
+        margin-bottom: 2em;
     }
     &__main,
     &__aside {
@@ -660,6 +675,7 @@ a,
             left: rhythm(8);
             margin: 0 0 rhythm(-2) 0;
             width: rhythm(15);
+            min-height: rhythm(5);
             padding: rhythm(1) rhythm(1) rhythm(1) rhythm(1);
             background-color: $white;
         }
@@ -751,7 +767,7 @@ a,
         &::before {
             left: 0;
             width: rhythm(21);
-            height: rhythm(3);
+            min-height: rhythm(3);
             top: rhythm(27);
             background-color: inherit;
         }

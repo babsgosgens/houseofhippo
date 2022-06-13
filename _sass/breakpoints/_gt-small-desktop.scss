@@ -362,8 +362,10 @@ $rhythm: get-grid-property("rhythm", $grid);
 
                 top: rhythm(-3);
                 left:  rhythm(1);
-                margin-bottom: 0;
                 width: rhythm(18);
+                min-height: rhythm(4);
+                margin-bottom: 0;
+                padding: rhythm(1) rhythm(1) rhythm(1) rhythm(1);
             }
             &__title {
                 font-size: to-unit(30px);

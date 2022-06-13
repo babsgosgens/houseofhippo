@@ -253,14 +253,17 @@
         &--featured & {
 
             &__image {
+
+                overflow: hidden;
                 margin: 0 rhythm(-2);
             }
-            &__body {
 
+            &__body {
                 top: rhythm(-3);
                 left:  rhythm(1);
                 margin-bottom: 0;
                 width: rhythm(13);
+                min-height: rhythm(4);
             }
             &__title {
                 font-size: to-unit(30px);
