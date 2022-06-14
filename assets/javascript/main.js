@@ -12,41 +12,64 @@
         nextArrow: '<button class="project-hero__next btn-shortcut fx-theme"><i class="icn icn-chevron-thin-right"></i></button>'
     });
 
-
     $('.project-slider--child').slick({
         respondTo: 'slider',
         dots: false,
+        arrows: false,
         infinite: true,
         autoplay: true,
         autoplaySpeed: 3200,
         cssEase: 'ease-out',
         easing: 'swing',
         slidesToShow: 1,
-        centerMode: false,
-        variableWidth: true,
-        customPaging: '<span />',
-        prevArrow: '<div class="project-slider__prev"><button><i class="icn icn-chevron-thin-left"></i><span class="is-narrative">Vorige</span></button></div>',
-        nextArrow: '<div class="project-slider__next"><button><i class="icn icn-chevron-thin-right"></i><span class="is-narrative">Volgende</span></button></div>'
+        centerMode: true,
+        variableWidth: true
     });
 
-    // $('.project-slider').slick({
-    //     dots: true,
-    //     arrows: false,
-    //     draggable: false,
-    //     swipe: false,
-    //     swipeToSlide: false,
-    //     infinite: true,
-    //     autoplay: false,
-    //     cssEase: 'ease-out',
-    //     easing: 'swing',
-    //     slidesToShow: 1,
-    //     centerMode: false,
-    //     variableWidth: true
-    //     // ,
-    //     // customPaging: function(slider, i) {
-    //     //     return $('<button class="whatsthis" type="button" />').text(i + 1);
-    //     // }
-    // });
+    $('.project-slider--parent').slick({
+        dots: true,
+        arrows: false,
+        draggable: false,
+        swipe: false,
+        swipeToSlide: false,
+        infinite: false,
+        autoplay: false,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        easing: 'none',
+        slidesToShow: 1,
+        centerMode: false,
+        variableWidth: false,
+        customPaging: function(slider, i) {
+            var button = $('<button class="project-slider--nav" type="button" />'),
+                label = $(slider).data('slide-set');
+            return $('<button class="project-slider__nav" type="button"><i class="icn icn-controller-record" /><span class="is-narrative">Project ' + (i + 1) + '</span></button>');
+        }
+    });
+
+$(".filter li").on('click', function(){
+  var filter = $(this).data('filter');
+  $(".slider").slick('slickUnfilter');
+
+  if(filter == 'red'){
+    $(".slider").slick('slickFilter','.red');
+  }
+  else if(filter == 'yellow'){
+    $(".slider").slick('slickFilter','.yellow');
+  }
+  else if(filter == 'blue'){
+    $(".slider").slick('slickFilter','.blue');
+  }
+  else if(filter == 'all'){
+
+    $(".slider").slick('slickUnfilter');
+  }
+
+})
+
+
+
 
 
     $('.lazy').Lazy();
@@ -77,6 +100,18 @@
     $(document).on('click', '.project-hero__next', function(event, slick, currentSlide, nextSlide){
 
         $('.project-hero').slick('slickNext');
+
+    });
+
+    $(document).on('click', '.project-slider__next', function(event, slick, currentSlide, nextSlide){
+
+        $('.project-slider--child').slick('slickNext');
+
+    });
+
+    $(document).on('click', '.project-slider__prev', function(event, slick, currentSlide, nextSlide){
+
+        $('.project-slider--child').slick('slickPrev');
 
     });
 
