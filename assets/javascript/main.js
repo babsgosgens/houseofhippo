@@ -36,8 +36,6 @@
         autoplay: false,
         speed: 500,
         fade: true,
-        cssEase: 'linear',
-        easing: 'none',
         slidesToShow: 1,
         centerMode: false,
         variableWidth: false,
