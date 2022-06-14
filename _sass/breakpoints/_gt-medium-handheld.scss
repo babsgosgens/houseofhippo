@@ -212,10 +212,8 @@
         }
         &__prev,
         &__next {
-            width: rhythm(2);
-            .icn-slider {
-                width: rhythm(2);
-                height: rhythm(2);
+            .icn {
+                line-height: rhythm(3);
             }
         }
     }
