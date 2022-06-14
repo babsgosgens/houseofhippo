@@ -27,44 +27,63 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icn-controller-fast-forward {
+.icn-bars {
   &:before {
-    content: $icn-controller-fast-forward; 
+    content: $icn-bars;
+  }
+}
+.icn-navicon {
+  &:before {
+    content: $icn-navicon;
+  }
+}
+.icn-reorder {
+  &:before {
+    content: $icn-reorder;
   }
 }
 .icn-chevron-down {
   &:before {
-    content: $icn-chevron-down; 
+    content: $icn-chevron-down;
+  }
+}
+.icn-chevron-left {
+  &:before {
+    content: $icn-chevron-left;
   }
 }
 .icn-chevron-right {
   &:before {
-    content: $icn-chevron-right; 
+    content: $icn-chevron-right;
   }
 }
 .icn-chevron-thin-down {
   &:before {
-    content: $icn-chevron-thin-down; 
+    content: $icn-chevron-thin-down;
+  }
+}
+.icn-chevron-thin-left {
+  &:before {
+    content: $icn-chevron-thin-left;
   }
 }
 .icn-chevron-thin-right {
   &:before {
-    content: $icn-chevron-thin-right; 
+    content: $icn-chevron-thin-right;
   }
 }
 .icn-mail {
   &:before {
-    content: $icn-mail; 
+    content: $icn-mail;
   }
 }
 .icn-instagram {
   &:before {
-    content: $icn-instagram; 
+    content: $icn-instagram;
   }
 }
 .icn-pinterest {
   &:before {
-    content: $icn-pinterest; 
+    content: $icn-pinterest;
   }
 }
-

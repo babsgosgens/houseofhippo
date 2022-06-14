@@ -9,7 +9,7 @@
         fade: true,
         cssEase: 'linear',
         prevArrow: '',
-        nextArrow: '<button class="project-hero__next btn-shortcut fx-theme"><i class="icn icn-chevron-right"></i></button>'
+        nextArrow: '<button class="project-hero__next btn-shortcut fx-theme"><i class="icn icn-chevron-thin-right"></i></button>'
     });
 
 
@@ -25,8 +25,8 @@
         centerMode: false,
         variableWidth: true,
         customPaging: '<span />',
-        prevArrow: '<div class="project-slider__prev"><button><i class="icn icn-slider icn-chevron-right"></i><span class="is-narrative">Vorige</span></button></div>',
-        nextArrow: '<div class="project-slider__next"><button><i class="icn icn-slider icn-chevron-right"></i><span class="is-narrative">Volgende</span></button></div>'
+        prevArrow: '<div class="project-slider__prev"><button><i class="icn icn-chevron-thin-left"></i><span class="is-narrative">Vorige</span></button></div>',
+        nextArrow: '<div class="project-slider__next"><button><i class="icn icn-chevron-thin-right"></i><span class="is-narrative">Volgende</span></button></div>'
     });
 
     // $('.project-slider').slick({
