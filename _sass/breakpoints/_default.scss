@@ -884,10 +884,13 @@ a,
     &--parent .slick-dots {
         list-style: none;
         text-align: center;
+        padding: 0;
+        margin: 0;
         li {
             transition: color 400ms linear;
             display: inline-block;
             color: $color-neutral-lightest-grey;
+            font-size: 1.25em;
             &.slick-active {
                 color: $color-body;
             }
@@ -895,7 +898,7 @@ a,
 
     }
     &__nav {
-        padding: 1ex;
+        padding: 2ex 1ex;
         line-height: rhythm(1);
     }
     .slick-slide {
