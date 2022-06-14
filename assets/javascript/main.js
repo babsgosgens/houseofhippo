@@ -41,10 +41,11 @@
         infinite: true,
         autoplay: true,
         autoplaySpeed: 3200,
+        pauseOnHover: false,
         cssEase: 'ease-out',
         easing: 'swing',
         slidesToShow: 1,
-        centerMode: true,
+        centerMode: false,
         variableWidth: true
     });
 
