@@ -15,7 +15,7 @@
                     <li class="post-grid__item post-grid__item--stretch">
                         <article class="post-fragment post-fragment--featured">
                             <figure class="post-fragment__image">
-                                <a href="{{ post.url }}">
+                                <a class="test" href="{{ post.url }}">
                                     {% assign post.hero = post.hero %}
                                     {% include image-sets/post-fragment-featured.html %}
                                 </a>
@@ -36,7 +36,7 @@
                     {% for post in site.categories.blog offset: 1 %}
                     <li class="post-grid__item">
                         <article class="post-fragment">
-                            <figure class="post-fragment__image">
+                            <figure class="post-fragment__image fx-blend">
                                 <a href="{{ post.url }}">
                                     {% include image-sets/post-fragment.html %}
                                 </a>

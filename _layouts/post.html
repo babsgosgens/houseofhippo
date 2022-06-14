@@ -42,8 +42,7 @@
 
             <footer class="sampler">
                 <h1 class="sampler__header">
-                    <span class="">Ook in </span>
-                    <a class="sampler__payoff anchor--accent txt-personal" href="{{ "blog" | relative_url }}">{{ page.category | capitalize }}</a>
+                    Verder in <a class="sampler__payoff anchor--accent txt-personal" href="{{ "blog" | relative_url }}">{{ page.category | capitalize }}</a>
                 </h1>
                 <div class="sampler__content">
                     <ol class="post-grid">
@@ -51,7 +50,7 @@
                         {% for post in other_posts limit: 4 %}
                         <li class="post-grid__item">
                             <article class="post-fragment">
-                                <figure class="post-fragment__image">
+                                <figure class="post-fragment__image fx-blend">
                                     <a href="{{ post.url }}">
                                         {% include image-sets/post-fragment.html %}
                                     </a>
