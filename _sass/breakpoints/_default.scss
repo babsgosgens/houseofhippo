@@ -10,7 +10,7 @@ img {
 
 .fx-blend {
     transition: mix-blend-mode 300s ease-in;
-    background-color: $color-neutral-darkest-grey;
+    background-color: #242323;
     .img {
         mix-blend-mode: luminosity;
     }
