@@ -12,22 +12,9 @@
         nextArrow: '<button class="project-hero__next btn-shortcut fx-theme"><i class="icn icn-chevron-thin-right"></i></button>'
     });
 
-    $('.project-slider--child').slick({
-        respondTo: 'slider',
-        dots: false,
-        arrows: false,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 3200,
-        cssEase: 'ease-out',
-        easing: 'swing',
-        slidesToShow: 1,
-        centerMode: true,
-        variableWidth: true
-    });
-
     $('.project-slider--parent').slick({
         dots: true,
+        lazyLoad: 'ondemand',
         arrows: false,
         draggable: false,
         swipe: false,
@@ -46,6 +33,20 @@
         }
     });
 
+    $('.project-slider--child').slick({
+        respondTo: 'project-slider--parent',
+        lazyLoad: 'ondemand',
+        dots: false,
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 3200,
+        cssEase: 'ease-out',
+        easing: 'swing',
+        slidesToShow: 1,
+        centerMode: true,
+        variableWidth: true
+    });
 
     $('.lazy').Lazy();
 
@@ -87,6 +88,36 @@
     $(document).on('click', '.project-slider__prev', function(event, slick, currentSlide, nextSlide){
 
         $('.project-slider--child').slick('slickPrev');
+
+    });
+
+    $('.project-slider--parent').on('init', function(slick) { // <-- Your code here was malformed
+        console.log('Init');
+    });
+
+    $(document).on('init', '.project-slider--parent', function(event, slick, currentSlide, nextSlide){
+
+        console.log('Init');
+
+
+    });
+
+    $(document).on('beforeChange', '.project-slider--parent', function(event, slick, currentSlide, nextSlide){
+
+        if (event.target !== this)
+            return;
+
+        $('.project-slider--child.is-active').slick('slickPause');
+        $('.project-slider--child:not(.is-active)').slick('slickGoTo', 0);
+
+    });
+
+    $(document).on('afterChange', '.project-slider--parent', function(event, slick, currentSlide, nextSlide){
+
+        if (event.target !== this)
+            return;
+
+        $('.project-slider--child.slick-active').slick('slickPlay');
 
     });
 
