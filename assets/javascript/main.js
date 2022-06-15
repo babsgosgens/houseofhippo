@@ -1,5 +1,11 @@
 (function ($) {
 
+    var showSlides = function( elementID, slider = "#featured-project" ) {
+
+        var slide = $('.project-slider--child[data-slide-set="'+elementID+'"]');
+        return $("#featured-project").slick('slickGoTo', slide);
+    };
+
     $('.project-hero').slick({
         dots: false,
         lazyLoad: 'ondemand',
@@ -116,15 +122,24 @@
 
         event.preventDefault();
 
-        var anchor = $(this).attr("href").substring(1),
-            hash   = anchor.split("?")[0];
+        var anchor = $(this).attr("href").substring(1).split("?"),
+            hash   = anchor.shift();
 
-        $('html, body').animate({
-            scrollTop: $( hash ).offset().top
-        }, 1400);
+            $('html, body').animate({
+                scrollTop: $( hash ).offset().top
+            }, 1400);
+
+            for (var i = 0; i < anchor.length; i++) {
+                var fragment = anchor[i].split("="),
+                    key = fragment[0],
+                    val = fragment[1];
+
+                if(key == "name" && val != undefined ) {
+                    showSlides( val );
+                }
+            }
 
         window.location.hash = anchor;
-
     });
 
 })(jQuery);
