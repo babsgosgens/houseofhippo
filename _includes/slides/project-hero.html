@@ -1,6 +1,6 @@
 <div class="project-hero hero">
     {% for post in site.data.project.featured %}
-    <figure data-theme="#B0713C">
+    <figure data-theme="#{{ post.color }}">
         <div class="project-hero__image">
             <a class="project-hero__action" href="#">
                 {% include image-sets/project-hero.html %}

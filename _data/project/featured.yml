@@ -1,18 +1,49 @@
 -   hero:
-        image: posts/osb/osb_sOdcheYXu.jpg
-        focus: 800x600
+        image: project-heroes/keuken_K9ANFQPc-.jpg
+        focus: 960x560
+    color: 64745B
+    alt:
+    caption: Cementstuc en gelakt OSB geven deze keuken een uniek karakter.
+    link:
+-   hero:
+        image: project-heroes/811G4-02_OxOPbHpMp.jpg
+        focus: auto
+    color: A76426
+    alt:
+    caption: Donker houtsnijwerk en warme kleuren doen deze bewoners denken aan specerijen en heerlijk eten.
+    link:
+-   hero:
+        image: project-heroes/811G4-01_RuE3HKC-z.jpg
+        focus: 937x869
+    color: A76426
+    alt:
+    caption: Natuurlijke materialen, zandkleuren, sculpturen en texturen – deze woonkamer nodigt uit voor een avondje ontspannen en entertainen.
+    link:
+-   hero:
+        image: project-heroes/811G1-11_V7tFtr4jg.jpg
+        focus: 1078x1190
+    color: 947561
+    alt:
+    caption: De 3D kurkmuur is een prachtige accentmuur in deze rustge maar warme loogeerkamer.
+    link:
+-   hero:
+        image: project-heroes/811G1-01_W7PVBUXrx.jpg
+        focus: 790x547
+    color: 947561
     alt:
     caption: Dit gerieflijke kantoor-aan-huis voor een gastvrije single is perfect voor een dagje thuis werken…
     link:
 -   hero:
-        image: posts/osb/osb_sOdcheYXu.jpg
-        focus: 800x600
+        image: project-heroes/811F2-2_6WSvSXQle.jpg
+        focus: 937x869
+    color: 987052
     alt:
-    caption: Wat een heerlijke vibe, al dat prachtige donkere hout
+    caption: Deze moderne keuken knipoogt naar de jaren 20 met een betegelde mantel en een emaille gasfornuis.
     link:
 -   hero:
-        image: posts/osb/osb_sOdcheYXu.jpg
-        focus: 800x600
+        image: project-heroes/811G1-1_XVPFOa5jic.jpg
+        focus: 1060x620
+    color: 947561
     alt:
-    caption: Lekker, toch?
+    caption: Deze warme kleur doet aan rode aarde denken. Het glazen bureau en de bureaustoel zijn klassiekers. De kast is van Pastoe.
     link:
