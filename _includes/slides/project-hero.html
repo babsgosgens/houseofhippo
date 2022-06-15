@@ -2,7 +2,7 @@
     {% for post in site.data.project.featured %}
     <figure data-theme="#{{ post.color }}">
         <div class="project-hero__image">
-            <a class="project-hero__action" href="#">
+            <a class="project-hero__action" href="{{ "/#featured-project?name=project01" | relative_url }}">
                 {% include image-sets/project-hero.html %}
             </a>
         </div>

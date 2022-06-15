@@ -112,13 +112,19 @@
 
     });
 
-    $(document).on('click', 'a[href="/#contact"]', function(event){
+    $(document).on('click', 'a[href*="/#"]', function(event){
 
         event.preventDefault();
 
+        var anchor = $(this).attr("href").substring(1),
+            hash   = anchor.split("?")[0];
+
         $('html, body').animate({
-            scrollTop: $("#contact").offset().top
+            scrollTop: $( hash ).offset().top
         }, 1400);
+
+        window.location.hash = anchor;
+
     });
 
 })(jQuery);

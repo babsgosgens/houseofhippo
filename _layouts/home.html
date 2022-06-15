@@ -27,7 +27,7 @@
             {% include slides/project-hero.html %}
 
 
-            <blockquote class="page-intro" cite="/over-house-of-hipp.html">
+            <blockquote class="page-intro" cite="{{ "/about/" | relative_url }}">
                 <p class="page-intro__content">
                     <span class="page-intro__image">
                         <img class="lazy" src="{{ 'assets/images/babsgosgens.jpg' | relative_url }}" alt="" />
@@ -45,7 +45,7 @@
             </blockquote>
 
 
-            <div class="project-slider-wrapper">
+            <div class="project-slider-wrapper" id="featured-project">
                 <div class="project-slider__prev">
                     <button>
                         <i class="icn icn-chevron-thin-left"></i>
@@ -59,7 +59,7 @@
                     </button>
                 </div>
                 <div class="project-slider--parent">
-                    <article class="project-slider project-slider--child project-slider__item" id="project01">
+                    <section class="project-slider project-slider--child project-slider__item" id="project01">
                         <div>
                             <header class="project-slider__item project-slider__card lt-stack">
                                 <div class="lt-stack__item">
@@ -93,8 +93,8 @@
                                 </figure>
                             </div>
                         </div>
-                    </article>
-                    <article class="project-slider project-slider--child project-slider__item" id="project02">
+                    </section>
+                    <section class="project-slider project-slider--child project-slider__item" id="project02">
                         <div>
                             <header class="project-slider__item project-slider__card lt-stack">
                                 <div class="lt-stack__item">
@@ -121,7 +121,7 @@
                                 </figure>
                             </div>
                         </div>
-                    </article>
+                    </section>
                 </div>
             </div>
 
