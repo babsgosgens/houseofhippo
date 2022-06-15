@@ -2,8 +2,9 @@
 
     $('.project-hero').slick({
         dots: false,
+        lazyLoad: 'ondemand',
         infinite: true,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 3200,
         speed: 1200,
         fade: true,
@@ -114,7 +115,7 @@
     $(document).on('click', 'a[href="/#contact"]', function(event){
 
         event.preventDefault();
-        
+
         $('html, body').animate({
             scrollTop: $("#contact").offset().top
         }, 1400);

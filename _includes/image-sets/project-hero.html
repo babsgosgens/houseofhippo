@@ -1,6 +1,29 @@
-<img class="lazy" srcset="assets/images/project-hero__image.jpg 840w,
-             assets/images/project-hero__image-medium.jpg 1680w"
-     sizes="(max-width: 1008px) 840px,
-            1680px"
-     src="assets/images/project-hero__image.jpg"
-     alt="">
+{% assign focus = post.hero.focus | default: "auto" %}
+{% assign image = post.hero.image | default: false  %}
+
+{% if image %}
+    <picture>
+        <source media="(max-width: 639px)"
+                srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=32:39/resize=320 320w,
+                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=4:3/resize=480 480w,
+                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=4:3/resize=640 639w">
+
+        <source media="(min-width: 640px)"
+                srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=4:3/resize=640 640w,
+                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=4:3/resize=800 800w,
+                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=3:2/resize=1023 1023w">
+
+        <source media="(min-width: 1024px)"
+                srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=3:2/resize=604 1024w,
+                      https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=4:3/resize=720 1279w">
+
+        <source media="(min-width: 1280px)"
+                srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=4:3/resize=720 1280w,
+                      https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=4:3/resize=810 1440w,
+                      https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=4:3/resize=943 1680w,
+                      https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=4:3/resize=1886 3360w">
+
+        <img src="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/cover=3:2/resize=1024">
+
+    </picture>
+{% endif %}
