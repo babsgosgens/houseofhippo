@@ -145,6 +145,8 @@
                 height: rhythm(3);
             }
             &::after {
+                top: rhythm(1);
+                left: rhythm(16);
                 width: rhythm(4);
                 height: rhythm(17);
             }
