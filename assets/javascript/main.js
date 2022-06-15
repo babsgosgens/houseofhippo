@@ -2,8 +2,12 @@
 
     var showSlides = function( elementID, slider = "#featured-project" ) {
 
-        var slide = $('.project-slider--child[data-slide-set="'+elementID+'"]');
-        return $("#featured-project").slick('slickGoTo', slide);
+        var slide = $('.project-slider--child[data-slide-set="'+elementID+'"]'),
+            index = slide.data("slick-index");
+
+        $("#featured-project").slick('slickGoTo', index);
+
+        return true;
     };
 
     $('.project-hero').slick({
