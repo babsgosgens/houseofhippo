@@ -8,6 +8,10 @@ img {
     object-fit: cover;
 }
 
+[onClick] {
+    cursor: pointer;
+}
+
 .fx-blend {
     transition: mix-blend-mode 300s ease-in;
     background-color: #242323;
@@ -20,24 +24,18 @@ img {
 }
 
 .is-cloaked {
-
+    all: unset;
     color: inherit;
 
     &:hover,
-    &:active {
-        &,
-        &:visited {
-            color: inherit;
-        }
-    }
-    &:active {
-        &,
-        &:visited {
-            color: $color-anchor--active;
-        }
-    }
-    &:visited {
+    &:active,
+    &:visited,
+    &:focus {
         color: inherit;
+        all: unset;
+    }
+    &:active {
+        color: $color-anchor--active;
     }
 }
 .is-narrative {
