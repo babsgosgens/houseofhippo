@@ -1,11 +1,4 @@
 -   hero:
-        image: project-heroes/keuken_K9ANFQPc-.jpg
-        focus: 960x560
-    color: 64745B
-    alt:
-    caption: Cementstuc en gelakt OSB geven deze keuken een uniek karakter.
-    slide_set: project02
--   hero:
         image: project-heroes/811G4-02_OxOPbHpMp.jpg
         focus: auto
     color: A76426
@@ -13,12 +6,19 @@
     caption: Donker houtsnijwerk en warme kleuren doen deze bewoners denken aan specerijen en heerlijk eten.
     slide_set: project02
 -   hero:
+        image: project-heroes/keuken_K9ANFQPc-.jpg
+        focus: 960x560
+    color: 64745B
+    alt:
+    caption: Cementstuc en gelakt OSB geven deze keuken een uniek karakter.
+    slide_set: project03
+-   hero:
         image: project-heroes/811G4-01_RuE3HKC-z.jpg
         focus: 937x869
     color: A76426
     alt:
     caption: Natuurlijke materialen, zandkleuren, sculpturen en texturen – deze woonkamer nodigt uit voor een avondje ontspannen en entertainen.
-    link:
+    slide_set: project02
 -   hero:
         image: project-heroes/811G1-11_V7tFtr4jg.jpg
         focus: 1078x1190
@@ -33,13 +33,6 @@
     alt:
     caption: Dit gerieflijke kantoor-aan-huis voor een gastvrije single is perfect voor een dagje thuis werken…
     slide_set: project01
--   hero:
-        image: project-heroes/811F2-2_6WSvSXQle.jpg
-        focus: 937x869
-    color: 987052
-    alt:
-    caption: Deze moderne keuken knipoogt naar de jaren 20 met een betegelde mantel en een emaille gasfornuis.
-    slide_set: project02
 -   hero:
         image: project-heroes/811G1-1_XVPFOa5jic.jpg
         focus: 1060x620
