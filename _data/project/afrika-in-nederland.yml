@@ -1,0 +1,40 @@
+-   hero:
+        image: project-slider/principle_moodboard.jpg
+        focus: auto
+    alt:
+    caption:
+-   hero:
+        image: project-slider/concept.jpg
+        focus: auto
+    alt:
+    caption:
+-   hero:
+        image: project-slider/moodboard-living.jpg
+        focus: auto
+    alt:
+    caption:
+-   hero:
+        image: project-slider/plattegrond-living.jpg
+        focus: auto
+    alt:
+    caption:
+-   hero:
+        image: project-slider/moodboard-dining.jpg
+        focus: auto
+    alt:
+    caption:
+-   hero:
+        image: project-slider/plattegrond-dining.jpg
+        focus: auto
+    alt:
+    caption:
+-   hero:
+        image: project-slider/moodboard-keuken.jpg
+        focus: auto
+    alt:
+    caption:
+-   hero:
+        image: project-slider/plattegrond-keuken.jpg
+        focus: auto
+    alt:
+    caption:

@@ -1,0 +1,35 @@
+-   hero:
+        image: project-slider/gastvrij-kantoor/bureau.jpg
+        focus: auto
+    alt:
+    caption:
+-   hero:
+        image: project-slider/gastvrij-kantoor/computer.jpg
+        focus: auto
+    alt:
+    caption:
+-   hero:
+        image: project-slider/gastvrij-kantoor/3d-plattegrond.jpg
+        focus: auto
+    alt:
+    caption:
+-   hero:
+        image: project-slider/gastvrij-kantoor/zithoek.jpg
+        focus: auto
+    alt:
+    caption:
+-   hero:
+        image: project-slider/gastvrij-kantoor/mediahoek.jpg
+        focus: auto
+    alt:
+    caption:
+-   hero:
+        image: project-slider/gastvrij-kantoor/tweedeling.jpg
+        focus: auto
+    alt:
+    caption:
+-   hero:
+        image: project-slider/gastvrij-kantoor/logeerbed.jpg
+        focus: auto
+    alt:
+    caption:

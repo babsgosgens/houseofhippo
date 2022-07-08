@@ -33,7 +33,7 @@
                         <img class="lazy" src="{{ 'assets/images/babsgosgens.jpg' | relative_url }}" alt="" />
                     </span>
                     <span class="page-intro__text txt-intro">
-                        Elk interieur vertelt een verhaal. Maar een goed ontworpen interieur vertelt een verhaal dat je steeds weer opnieuw wilt horen.
+                        Een ontwerp vertelt een verhaal. Over jou, of over je merk. Ik help je om jouw verhaal te vertalen naar je interieur.
                     </span>
                 </p>
                 <p class="page-intro__link">
@@ -60,67 +60,13 @@
                 </div>
                 <div class="project-slider--parent" id="featured-project">
                     <section class="project-slider project-slider--child project-slider__item" data-slide-set="project01">
-                        <div>
-                            <header class="project-slider__item project-slider__card lt-stack">
-                                <div class="lt-stack__item">
-                                    <p>Impressie</p>
-                                    <h1>Thuiskantoor met audiohoek en logeerruimte</h1>
-                                    <dl>
-                                        <dt>Jaar</dt>
-                                        <dd>2021</dd>
-                                        <dd>Context</dd>
-                                        <dd>Ontwerp & 3D Visualisatie</dd>
-                                    </dl>
-                                </div>
-                                <div class="lt-stack__item">
-                                    <p>
-                                        <a href="">Apartement vol Afrika voor een diplomatengezin</a>
-                                    </p>
-                                </div>
-                            </header>
-                        </div>
-                        <div>
-                            <div class="project-slider__item">
-                                <figure class="project-slider__image">
-                                    <img class="project-slider__image lazy" src="{{ 'assets/images/project-hero__image2.jpg' | relative_url }}" />
-                                </figure>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="project-slider__item">
-                                <figure class="project-slider__image">
-                                    <img class="project-slider__image lazy" src="{{ 'assets/images/project-hero__image2.jpg' | relative_url }}" />
-                                </figure>
-                            </div>
-                        </div>
+                        {% include slides/projects/01.html %}
                     </section>
                     <section class="project-slider project-slider--child project-slider__item" data-slide-set="project02">
-                        <div>
-                            <header class="project-slider__item project-slider__card lt-stack">
-                                <div class="lt-stack__item">
-                                    <p>Impressie</p>
-                                    <h1>Iets anders</h1>
-                                    <dl>
-                                        <dt>Jaar</dt>
-                                        <dd>2021</dd>
-                                        <dd>Context</dd>
-                                        <dd>Ontwerp & 3D Visualisatie</dd>
-                                    </dl>
-                                </div>
-                                <div class="lt-stack__item">
-                                    <p>
-                                        <a href="">Apartement vol Afrika voor een diplomatengezin</a>
-                                    </p>
-                                </div>
-                            </header>
-                        </div>
-                        <div>
-                            <div class="project-slider__item">
-                                <figure class="project-slider__image">
-                                    <img class="project-slider__image lazy" src="{{ 'assets/images/project-hero__image3-medium.jpg' | relative_url }}" />
-                                </figure>
-                            </div>
-                        </div>
+                        {% include slides/projects/02.html %}
+                    </section>
+                    <section class="project-slider project-slider--child project-slider__item" data-slide-set="project03">
+                        {% include slides/projects/03.html %}
                     </section>
                 </div>
             </div>

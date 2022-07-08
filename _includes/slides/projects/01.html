@@ -1,0 +1,33 @@
+<div>
+    <header class="project-slider__item project-slider__card lt-stack">
+        <div class="lt-stack__item">
+            <p>Impressie</p>
+            <h1>Gastvrij kantoor</h1>
+            <dl>
+                <dt>Jaar</dt>
+                <dd>2021</dd>
+                <dd>Context</dd>
+                <dd>Ontwerp & 3D Visualisatie</dd>
+            </dl>
+        </div>
+        <div class="lt-stack__item">
+            <p>
+                <a href="">Een fijne thuiswerkplek met een media hoek die tevens dienst doet als een gastenverblijf – inclusief hotel flair.</a>
+            </p>
+        </div>
+    </header>
+</div>
+{% for post in site.data.project.gastvrij-kantoor %}
+<div>
+    <div class="project-slider__item">
+        <figure class="project-slider__image">
+            {% include image-sets/project-slider.html %}
+            <figcaption class="project-hero__text">
+                <p class="txt-personal">
+                    {{ post.caption }}
+                </p>
+            </figcaption>
+        </figure>
+    </div>
+</div>
+{% endfor %}

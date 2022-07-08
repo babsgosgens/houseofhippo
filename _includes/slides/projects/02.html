@@ -1,0 +1,33 @@
+<div>
+    <header class="project-slider__item project-slider__card lt-stack">
+        <div class="lt-stack__item">
+            <p>Impressie</p>
+            <h1>Afrika in Nederland</h1>
+            <dl>
+                <dt>Jaar</dt>
+                <dd>2022</dd>
+                <dd>Context</dd>
+                <dd>Interieurontwerp</dd>
+            </dl>
+        </div>
+        <div class="lt-stack__item">
+            <p>
+                <a href="">Een modern apartement vol Afrikaanse kunst en bijzondere voorwerpen.</a>
+            </p>
+        </div>
+    </header>
+</div>
+{% for post in site.data.project.afrika-in-nederland %}
+<div>
+    <div class="project-slider__item">
+        <figure class="project-slider__image">
+            {% include image-sets/project-slider.html %}
+            <figcaption class="project-hero__text">
+                <p class="txt-personal">
+                    {{ post.caption }}
+                </p>
+            </figcaption>
+        </figure>
+    </div>
+</div>
+{% endfor %}

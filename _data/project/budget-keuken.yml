@@ -1,0 +1,35 @@
+-   hero:
+        image: project-slider/budget-keuken/pan.jpg
+        focus: auto
+    alt:
+    caption:
+-   hero:
+        image: project-slider/budget-keuken/3d-render.jpg
+        focus: auto
+    alt:
+    caption:
+-   hero:
+        image: project-slider/budget-keuken/3d-plattegrond.jpg
+        focus: auto
+    alt:
+    caption:
+-   hero:
+        image: project-slider/budget-keuken/osb.jpg
+        focus: auto
+    alt:
+    caption:
+-   hero:
+        image: project-slider/budget-keuken/gloss.jpg
+        focus: auto
+    alt:
+    caption:
+-   hero:
+        image: project-slider/budget-keuken/kooktoestel.jpg
+        focus: auto
+    alt:
+    caption:
+-   hero:
+        image: project-slider/budget-keuken/kraan.jpg
+        focus: auto
+    alt:
+    caption:
