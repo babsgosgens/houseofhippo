@@ -1,0 +1,21 @@
+{% assign focus = post.hero.focus | default: "auto" %}
+{% assign image = post.hero.image | default: false  %}
+
+{% if image %}
+    <picture>
+        <source media="(max-width: 1023)"
+                srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain=480 480w,
+                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain=768 768w,
+                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain=1023 1023w">
+
+        <source media="(min-width: 1024px)"
+                srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain-max=854x455 1024w,
+                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain-max=996x534 1280w,
+                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain-max=1120x600 1440w,
+                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain-max=1307x700 1680w,
+                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain-max=1494x800 1920w">
+
+        <img src="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain=1023">
+
+    </picture>
+{% endif %}
