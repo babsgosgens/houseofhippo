@@ -4,9 +4,9 @@
 {% if image %}
     <picture>
         <source media="(max-width: 1023)"
-                srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain=480 480w,
-                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain=768 768w,
-                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain=1023 1023w">
+                srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain-max=480x340 480w,
+                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain-max=768x544 768w,
+                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain-max=1023x725 1023w">
 
         <source media="(min-width: 1024px)"
                 srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain-max=854x455 1024w,
