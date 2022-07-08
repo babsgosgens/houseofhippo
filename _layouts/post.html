@@ -9,7 +9,6 @@
             {% include base/masthead.html %}
 
             <article class="post">
-
                 <h1 class="post__title txt-title">{{ page.title }}</h1>
                 <figure class="post__hero">
                     {% include image-sets/post-hero.html %}
@@ -26,8 +25,10 @@
                         </p>
                     </div>
                     <footer class="post__aside">
-                        <div></div>
+                        <div>
+                        </div>
                         <div class="author-info">
+                            {% comment %}
                             <figure class="author-info__image">
                                 {% include image-sets/me.html %}
                                 <figcaption class="is-narrative">
@@ -35,6 +36,7 @@
                                 </figcaption>
                             </figure>
                             <p class="author-info__text txt-personal">Ik ben <a class="anchor--accent" href="{{ "about" | relative_url }}">Babs Gösgens</a>, interieur-ontwerper en life-long interieurgek. Op mijn <a class="anchor--accent" href="{{ "blog" | relative_url }}">blog</a> deel ik van alles over interieur ontwerp, DIY en mijn eigen huis. Lees hier meer over mij. Je kunt me ook volgen op Pinterest en Instagram.</p>
+                            {% endcomment %}
                         </div>
                     </footer>
                 </div>

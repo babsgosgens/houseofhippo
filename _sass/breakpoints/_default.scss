@@ -179,6 +179,11 @@ img {
     font-weight: 400;
     color: $color-accent;
 }
+.txt-credit {
+    font-size: to-unit(.7em);
+    // font-weight: 400;
+    // color: $color-accent;
+}
 .txt-title {
     transition: font-size 300ms ease-out;
     font-size: to-unit(36px);
