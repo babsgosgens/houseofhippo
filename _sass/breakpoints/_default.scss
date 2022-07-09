@@ -803,6 +803,26 @@ a,
         top: -999em;
     }
 }
+.card {
+    &__sub,
+    &__details {
+        font-size: to-unit(13px);
+    }
+    &__title {
+        margin: 1.5em 0 .5em;
+    }
+    &__term {
+        visibility: hidden;
+        position: absolute;
+        left: -9999em;
+    }
+    &__data {
+
+    }
+    &__info {
+        color: inherit;
+    }
+}
 
 .project-slider {
     display: flex;
@@ -821,18 +841,25 @@ a,
     }
     &__item {
         position: relative;
+    }
+    &__item,
+    &__image {
         height: rhythm(31);
     }
     &__card {
         position: relative;
         background: $color-neutral-lightest-grey;
-        width: rhythm(20);
-        padding: rhythm(1) 0 rhythm(1) rhythm(3);
+        width: rhythm(24);
+        padding: rhythm(1) rhythm(2);
+    }
+    &--child &__item,
+    &--child &__card {
+        border-left: rhythm(1) solid $white;
+        border-right: rhythm(1) solid $white;
     }
     &__image {
         position: relative;
         width: auto;
-        height: rhythm(31);
         background-color: $white;
         overflow: hidden;
         /*
@@ -841,10 +868,14 @@ a,
         object-fit: cover;
         */
         img {
-            min-width: 101%;
-            min-height: 101%;
-            object-fit: cover;
+
             display: block;
+            min-width: auto;
+            min-height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto;
+            object-fit: cover;
         }
     }
     &__prev,
@@ -906,13 +937,13 @@ a,
         line-height: rhythm(1);
     }
     .slick-slide {
-    	margin: 0 rhythm(1) 0 0;
+    	// margin: 0 rhythm(1) 0 0;
         &:last-child {
             margin: 0;
         }
     }
     .slick-list {
-    	margin: 0 rhythm(-1) 0 0;
+    	// margin: 0 rhythm(-1) 0 0;
     }
 
 }
