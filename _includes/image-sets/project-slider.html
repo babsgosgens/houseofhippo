@@ -4,18 +4,18 @@
 {% if image %}
     <picture>
         <source media="(max-width: 1023)"
-                srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain-max=480x340 480w,
-                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain-max=768x544 768w,
-                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain-max=1023x725 1023w">
+                srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/crop=480x620/focus={{ focus }} 480w,
+                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/crop=768x544/focus={{ focus }} 768w,
+                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/crop=1023x725/focus={{ focus }} 1023w">
 
         <source media="(min-width: 1024px)"
-                srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain-max=854x455 1024w,
-                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain-max=996x534 1280w,
-                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain-max=1120x600 1440w,
-                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain-max=1307x700 1680w,
-                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain-max=1494x800 1920w">
+                srcset="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/contain-max=854x455/focus={{ focus }} 1024w,
+                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/contain-max=996x534/focus={{ focus }} 1280w,
+                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/contain-max=1120x600/focus={{ focus }} 1440w,
+                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/contain-max=1307x700/focus={{ focus }} 1680w,
+                        https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/contain-max=1494x800/focus={{ focus }} 1920w">
 
-        <img src="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain=1023">
+        <img src="https://{{ site.twicpics_sub }}.twic.pics/{{ image }}?twic=v1/focus={{ focus }}/contain-max=1023x725">
 
     </picture>
 {% endif %}
